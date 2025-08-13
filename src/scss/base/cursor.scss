@@ -1,3 +1,5 @@
+@use "../base/mixins" as mix;
+
 * {
 	cursor: none !important;
 }
@@ -12,8 +14,8 @@
 		will-change: transform;
 		transition: all 0.05s linear 0s;
 		position: fixed;
-		width: rem(50);
-		height: rem(50);
+		width: mix.rem(50);
+		height: mix.rem(50);
 		&::after {
 			content: "";
 			position: absolute;
@@ -35,8 +37,8 @@
 	}
 	&__pointer {
 		position: fixed;
-		width: rem(3);
-		height: rem(3);
+		width: mix.rem(3);
+		height: mix.rem(3);
 		top: 0;
 		left: 0;
 		&::after {

@@ -14,18 +14,7 @@
 // </ШРИФТ></IMPORT>=================================
 
 // <VARIABLES>=================================
-$fontFamily: "PlusJakartaSans";
-$fontSize: mixins.rem(16); // где 14(px) - размер шрифта по умолчанию из макета
-// Основные цвета
-$blueColor: #4475f2;
-$mainColor: #5e6282;
-$lightGrayColor: #9a9ea6;
-$lightBlueColor: #23a6f0;
-$darkBlueColor: #181e4b;
-$hoverCololr: #4737ff;
-$mainBgColor: #fafafa; //приглушить цвет для комфорта глаз
-
-// Тип адаптива:
+@use "./variables" as var;
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
 // 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
 $responsiveType: 1;
@@ -33,15 +22,12 @@ $responsiveType: 1;
 
 // <ОБНУЛЕНИЕ>=================================
 @use "base/null";
-@use "common";
-@use "footer";
-
 // </ОБНУЛЕНИЕ>=================================
 
 // <BODY>=================================
 body {
-	background: $mainBgColor;
-	color: $mainColor;
+	background: var.$mainBgColor;
+	color: var.$mainColor;
 	// @include adaptiveValue("font-size", 25, 18);
 	font-weight: 500;
 	line-height: 187.5%;
@@ -53,8 +39,8 @@ body {
 	}
 	// Сайт загружен
 	.loaded & {
-		// transition: opacity 0.8s ease 0s;
-		// opacity: 1;
+		transition: opacity 0.8s ease 0s;
+		opacity: 1;
 	}
 }
 // </BODY>=================================
@@ -87,14 +73,14 @@ body {
 @if ($responsiveType==1) {
 	// Отзывчивая
 	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: mixins.rem($containerWidth);
+		@if (var.$maxWidthContainer>0) {
+			max-width: mixins.rem(var.$containerWidth);
 			box-sizing: content-box;
 			margin: 0 auto;
 		}
-		@if ($containerPadding>0) {
-			@if ($maxWidthContainer>0) {
-				padding: 0 mixins.rem(math.div($containerPadding, 2));
+		@if (var.$containerPadding>0) {
+			@if (var.$maxWidthContainer>0) {
+				padding: 0 mixins.rem(math.div(var.$containerPadding, 2));
 			} @else {
 				// @include adaptiveValue("padding-left", math.div($containerPadding, 2), $containerPaddingMin);
 				// @include adaptiveValue("padding-right", math.div($containerPadding, 2), $containerPaddingMin);
@@ -105,12 +91,12 @@ body {
 	// По брейк-поинтам
 	[class*="__container"] {
 		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: mixins.rem($maxWidthContainer);
+		@if (var.$maxWidthContainer>0) {
+			max-width: mixins.rem(var.$maxWidthContainer);
 			box-sizing: content-box;
 		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 mixins.rem(math.div($containerPadding, 2));
+			@if (var.$containerPadding>0) {
+				padding: 0 mixins.rem(math.div(var.$containerPadding, 2));
 			}
 		}
 		@media (max-width: $pc) {
@@ -131,14 +117,14 @@ body {
 
 // <IMPORT>=================================
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
-// Для подключения/отключения конкретных стилей смотри base.scss
+// Для подключения/отключения конкретных стилей base.scss
 @include meta.load-css("base");
 // Подключение стилей общих элементов проекта
 // Подключение стилей отдельных блоков
 @include meta.load-css("header");
 
 // Подключение стилей отдельных страниц
-// @import "home";
+// @use "home";
 // </IMPORT>=================================
 
 // <ОБЩИЙ СТИЛЬ>=================================
@@ -147,39 +133,4 @@ body {
 
 //<MAIN>=================================
 
-// ===<animation>===
-
 //</MAIN>=================================
-
-//<FEATURES>=================================
-
-//</FEATURES>=================================
-
-//<SERVICES>=================================
-
-//===<animation>===
-
-//</SERVICES>=================================
-
-//<REVIEWS>=================================
-
-//===<animation>===
-
-//</REVIEWS>=================================
-
-//<LOCATION>=================================
-
-//</LOCATION>=================================
-// </ОБЩИЙ СТИЛЬ>=================================
-
-//<screen-01>=================================
-
-//</screen-01>=================================
-
-//<screen-02>=================================
-
-//</screen-02>=================================
-
-//</screen-03>=================================
-
-//</screen-03>=================================

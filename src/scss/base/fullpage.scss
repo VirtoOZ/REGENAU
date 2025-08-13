@@ -1,3 +1,6 @@
+@use "../base/mixins" as mix;
+@use "../variables" as var;
+
 body {
 	.fp-init & {
 		// Чтобы отключить обновление страницы свайпом на телефоне
@@ -53,7 +56,7 @@ body {
 	position: fixed;
 	top: 50%;
 	transform: translate(0, -50%);
-	right: rem(40);
+	right: mix.rem(40);
 	max-height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -61,13 +64,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
-	gap: rem(10);
-	@media (max-width: $pc) {
-		right: rem(20);
+	gap: mix.rem(10);
+	@media (max-width: var.$pc) {
+		right: mix.rem(20);
 	}
-	@media (max-width: $mobileSmall) {
+	@media (max-width: var.$mobileSmall) {
 		top: auto;
-		bottom: rem(20);
+		bottom: mix.rem(20);
 		transform: translate(50%, 0);
 		flex-direction: row;
 		right: 50%;
@@ -76,15 +79,15 @@ body {
 	// Булет
 	& .fp-bullet {
 		cursor: pointer;
-		width: rem(20);
-		height: rem(20);
-		flex: 0 0 rem(20);
-		border-radius: rem(10);
+		width: mix.rem(20);
+		height: mix.rem(20);
+		flex: 0 0 mix.rem(20);
+		border-radius: mix.rem(10);
 		background-color: #100c46;
 		box-shadow:
-			rem(0) rem(0) rem(3) #6257fe,
-			0 0 rem(30) rgba(255, 255, 255, 0.8);
-		border: rem(1) solid #fff;
+			mix.rem(0) mix.rem(0) mix.rem(3) #6257fe,
+			0 0 mix.rem(30) rgba(255, 255, 255, 0.8);
+		border: mix.rem(1) solid #fff;
 		opacity: 0.6;
 		transition:
 			transform 0.4s ease-in-out 0s,
@@ -101,9 +104,9 @@ body {
 	& .fp-bullet-active {
 		opacity: 1;
 		background-color: #6257fe;
-		transform: translate3D(rem(-5), rem(-2), 0);
+		transform: translate3D(mix.rem(-5), mix.rem(-2), 0);
 		box-shadow:
-			rem(5) rem(2) rem(3) #100c46,
-			0 0 rem(30) rgba(255, 255, 255, 0.8);
+			mix.rem(5) mix.rem(2) mix.rem(3) #100c46,
+			0 0 mix.rem(30) rgba(255, 255, 255, 0.8);
 	}
 }

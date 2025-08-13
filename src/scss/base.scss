@@ -1,39 +1,39 @@
 // Общий файл элементов форм
 // Для подключения/отключения стилей конкретного элемента формы смотри base/forms/forms.scss
-// @import "base/forms/forms";
+// @use "base/forms/forms";
 
 // Стили меню + бургер
-// @import "base/menu";
+// @use "base/menu";
 
 // Стили попапов
-// @import "base/popup";
+// @use "base/popup";
 
 // Стили спойлеров
-// @import "base/spollers";
+// @use "base/spollers";
 
 // Стили табов
-// @import "base/tabs";
+// @use "base/tabs";
 
 // Стили карт
-// @import "base/maps";
+// @use "base/maps";
 
 // Стили блока "показать еще"
-// @import "base/showmore";
+// @use "base/showmore";
 
 // Стили для липкого блока
-// @import "base/sticky";
+// @use "base/sticky";
 
 // Стили для прокрутки экрана
 // Styles for fullpage scroll
-// @import "base/fullpage";
+// @use "base/fullpage";
 
 // Стили для эффекта ripple
 // Styles for ripple effect
-// @import "base/ripple";
+// @use "base/ripple";
 
 // Стили для кастомного курсора
 // Styles for custom cursor
-// @import "base/cursor";
+// @use "base/cursor";
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
@@ -77,6 +77,7 @@
 		object-fit: contain;
 	}
 }
+
 // Шаблоны (заготовки)
 // @extend %имя шаблона;
 // Сниппет (SCSS): ex

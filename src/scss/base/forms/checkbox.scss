@@ -1,7 +1,9 @@
+@use "../../base/mixins" as mix;
+
 .checkbox {
 	position: relative;
 	&:not(:last-child) {
-		margin-bottom: em(5);
+		margin-bottom: mix.em(5);
 	}
 	// .checkbox__input
 	&__input {
