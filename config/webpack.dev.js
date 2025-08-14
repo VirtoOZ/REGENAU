@@ -107,7 +107,7 @@ const config = {
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'pug-loader'
+						loader: '@webdiscus/pug-loader'
 					}, {
 						loader: 'string-replace-loader',
 						options: {
@@ -131,7 +131,7 @@ const config = {
 					}, {
 						loader: "babel-loader",
 						options: {
-							presets: ["@babel/preset-react"]
+							presets: [["@babel/preset-react", { "runtime": "automatic" }]]
 						}
 					}
 				],

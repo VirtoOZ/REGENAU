@@ -1,19 +1,18 @@
-import React, { Component } from "react";
-import './app.scss'
+import { Main } from '../pages/';
+import Header from '../header/header.jsx';
+import './App.scss'
 
-export default class App extends Component {
+const App = () => {
+	return (
+		<>
+			<Header />
+			<main className="page">
+				<div className="page__container">
+					<Main />
+				</div>
+			</main >
+		</>
+	)
+};
 
-	state = { data: '', }
-
-	render() {
-
-		return (
-			<>
-				<main className="page">
-					<section className="page__main main">
-					</section>
-				</main>
-			</>
-		)
-	}
-}
+export default App;

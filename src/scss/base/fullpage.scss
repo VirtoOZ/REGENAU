@@ -1,5 +1,6 @@
-@use "../base/mixins" as mix;
-@use "../variables" as var;
+@use "../modules/mixins" as mix;
+@use "../variables" as vars;
+@use "../modules/brake-points" as point;
 
 body {
 	.fp-init & {
@@ -65,10 +66,10 @@ body {
 	justify-content: center;
 	z-index: 2;
 	gap: mix.rem(10);
-	@media (max-width: var.$pc) {
+	@media (max-width: point.$pc) {
 		right: mix.rem(20);
 	}
-	@media (max-width: var.$mobileSmall) {
+	@media (max-width: point.$mobileSmall) {
 		top: auto;
 		bottom: mix.rem(20);
 		transform: translate(50%, 0);

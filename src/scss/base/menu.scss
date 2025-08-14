@@ -1,5 +1,6 @@
 @use "../variables" as vars;
-@use "../base/mixins" as mix;
+@use "../modules/brake-points" as point;
+@use "../modules/mixins" as mix;
 
 .menu {
 	// .menu__icon
@@ -7,7 +8,7 @@
 	}
 	// .menu__body
 	&__body {
-		@media (max-width: vars.$mobile) {
+		@media (max-width: point.$mobile) {
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -36,7 +37,7 @@
 	}
 	// .menu__list
 	&__list {
-		@media (max-width: vars.$mobile) {
+		@media (max-width: point.$mobile) {
 		}
 	}
 	// .menu__item
@@ -44,7 +45,7 @@
 	}
 	// .menu__link
 	&__link {
-		@media (max-width: vars.$mobile) {
+		@media (max-width: point.$mobile) {
 		}
 	}
 }
@@ -52,7 +53,7 @@
 //Burger Icon
 .icon-menu {
 	display: none;
-	@media (max-width: vars.$mobile) {
+	@media (max-width: point.$mobile) {
 		display: block;
 		position: relative;
 		width: mix.rem(30);

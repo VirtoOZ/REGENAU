@@ -1,5 +1,7 @@
-@use "../variables" as vars;
+@use "../variables" as var;
+@use "./main-fonts" as font;
 
+// <ОБНУЛЕНИЕ>=================================
 * {
 	padding: 0px;
 	margin: 0px;
@@ -25,13 +27,13 @@ a:active {
 html,
 body {
 	height: 100%;
-	min-width: vars.$minWidth + px;
+	min-width: var.$minWidth + px;
 }
 body {
-	color: vars.$mainCol;
+	color: var.$mainCol;
 	line-height: 1;
-	font-family: vars.$fontFamily;
-	font-size: vars.$fontSize;
+	font-family: font.$fontFamily;
+	font-size: font.$fontSize;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -42,7 +44,7 @@ body {
 input,
 button,
 textarea {
-	font-family: vars.$fontFamily;
+	font-family: font.$fontFamily;
 	font-size: inherit;
 	line-height: inherit;
 	color: inherit;
@@ -79,3 +81,4 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+// </ОБНУЛЕНИЕ>=================================

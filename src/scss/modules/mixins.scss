@@ -1,5 +1,5 @@
 @use "sass:math";
-
+@use "../variables" as var;
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
@@ -63,7 +63,14 @@
 }
 
 // Адаптивное свойство (clamp)
-@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+@mixin adaptiveValue(
+	$property,
+	$startSize,
+	$minSize,
+	$keepSize: 0,
+	$widthFrom: var.$containerWidth,
+	$widthTo: var.$minWidth
+) {
 	@if ($startSize==0) {
 		$startSize: 0.000001;
 	}
@@ -74,8 +81,8 @@
 	// Для calc();
 	$addSize: math.div($startSize - $minSize, 16);
 
-	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
-		$widthFrom: $maxWidth;
+	@if ($widthFrom == var.$containerWidth and var.$maxWidthContainer == 0) {
+		$widthFrom: var.$maxWidth;
 	}
 
 	// Брейк-пойнт в EM

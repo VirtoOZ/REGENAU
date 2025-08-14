@@ -1,10 +1,5 @@
 // <IMPORT>=================================
 @use "sass:math"; //модуль Math
-// Подключение главного файла миксина в глобальную область видимости
-//<MIXINS>=================================
-@use "sass:meta";
-@use "base/mixins";
-//</MIXINS>=================================
 
 // <VARIABLES>=================================
 @use "./variables" as var;
@@ -13,9 +8,10 @@
 $responsiveType: 1;
 // </VARIABLES>=================================
 
-// <ОБНУЛЕНИЕ>=================================
-@use "base/null";
-// </ОБНУЛЕНИЕ>=================================
+//<MIXINS>=================================
+@use "sass:meta";
+@use "modules/mixins" as mix;
+//</MIXINS>=================================
 
 // <ШРИФТ>=================================
 //&display=swap - добавить при подключении через плагин
@@ -23,7 +19,12 @@ $responsiveType: 1;
 @import url(https://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800,900&display=swap);
 // @import "fonts/icons"; // Подключить если есть файл иконочного шрифта
-// </ШРИФТ></IMPORT>=================================
+@include meta.load-css("./modules/main-fonts");
+// </ШРИФТ>=================================
+
+// <ОБНУЛЕНИЕ>=================================
+@include meta.load-css("./modules/null");
+// <>=================================
 
 // <BODY>=================================
 body {
@@ -65,26 +66,25 @@ body {
 // </WRAPPER>=================================
 
 // <CONTAINER>=================================
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
+// (i) Стили будут применяться ко
+// всем классам содержащим *__container
+// Например header__container, main__container и т.д.
+// Снипет (HTML): cnt
+
 @if ($responsiveType==1) {
 	// Отзывчивая
 	[class*="__container"] {
 		@if (var.$maxWidthContainer>0) {
-			max-width: mixins.rem(var.$containerWidth);
+			max-width: mix.rem(var.$containerWidth);
 			box-sizing: content-box;
 			margin: 0 auto;
 		}
 		@if (var.$containerPadding>0) {
 			@if (var.$maxWidthContainer>0) {
-				padding: 0 mixins.rem(math.div(var.$containerPadding, 2));
+				padding: 0 mix.rem(math.div(var.$containerPadding, 2));
 			} @else {
-				// @include adaptiveValue("padding-left", math.div($containerPadding, 2), $containerPaddingMin);
-				// @include adaptiveValue("padding-right", math.div($containerPadding, 2), $containerPaddingMin);
+				@include mix.adaptiveValue("padding-left", math.div(var.$containerPadding, 2), var.$containerPaddingMin);
+				@include mix.adaptiveValue("padding-right", math.div(var.$containerPadding, 2), var.$containerPaddingMin);
 			}
 		}
 	}
@@ -93,23 +93,23 @@ body {
 	[class*="__container"] {
 		margin: 0 auto;
 		@if (var.$maxWidthContainer>0) {
-			max-width: mixins.rem(var.$maxWidthContainer);
+			max-width: mix.rem(var.$maxWidthContainer);
 			box-sizing: content-box;
 		} @else {
 			@if (var.$containerPadding>0) {
-				padding: 0 mixins.rem(math.div(var.$containerPadding, 2));
+				padding: 0 mix.rem(math.div(var.$containerPadding, 2));
 			}
 		}
-		@media (max-width: $pc) {
-			max-width: mixins.rem(970);
+		@media (max-width: var.$pc) {
+			max-width: mix.rem(970);
 		}
-		@media (max-width: $tablet) {
-			max-width: mixins.rem(750);
+		@media (max-width: var.$tablet) {
+			max-width: mix.rem(750);
 		}
-		@media (max-width: $mobileBig) {
+		@media (max-width: var.$mobileBig) {
 			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 mixins.rem(math.div($containerPadding, 2));
+			@if (var.$containerPadding>0 and var.$maxWidthContainer>0) {
+				padding: 0 mix.rem(math.div(var.$containerPadding, 2));
 			}
 		}
 	}
@@ -117,9 +117,9 @@ body {
 // </CONTAINER>=================================
 
 // <IMPORT>=================================
-// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей base.scss
-@include meta.load-css("base");
+@include meta.load-css("modules/base");
 // Подключение стилей общих элементов проекта
 // Подключение стилей отдельных блоков
 @include meta.load-css("header");

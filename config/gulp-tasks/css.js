@@ -1,5 +1,5 @@
 import cleanCss from 'gulp-clean-css';
-import webpcss from 'gulp-webpcss';
+import webpcss from 'gulp-webp-css';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
 
@@ -26,45 +26,27 @@ export const css = () => {
 				})
 			)
 		)
-		/*
-		.pipe(
-			app.plugins.if(
-				app.isWebP,
-				app.plugins.if(
-					app.isBuild,
-					webpcss(
-						{
-							webpClass: ".webp",
-							noWebpClass: ".no-webp"
-						}
-					)
-				)
-			)
-		)
-		*/
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				cleanCss({
-					format: 'beautify',
-					level: {
-						1: {
-							tidySelectors: false
-						}
-					}
+
+		.pipe(app.plugins.if(
+			app.isWebP, app.plugins.if(
+				app.isBuild, webpcss({
+					webpClass: ".webp",
+					noWebpClass: ".no-webp"
 				})
 			)
-		)
+		))
+
+		.pipe(app.plugins.if(
+			app.isBuild, cleanCss({
+				format: 'beautify',
+				level: { 1: { tidySelectors: false } }
+			})
+		))
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(app.plugins.if(app.isBuild, cleanCss({
-			level: {
-				1: {
-					tidySelectors: false
-				}
-			}
+			level: { 1: { tidySelectors: false } }
 		})
-		)
-		)
+		))
 		.pipe(app.plugins.rename({ suffix: ".min" }))
 		.pipe(app.gulp.dest(app.path.build.css));
 }
