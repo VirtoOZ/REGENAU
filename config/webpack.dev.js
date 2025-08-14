@@ -134,9 +134,15 @@ const config = {
 							presets: [["@babel/preset-react", { "runtime": "automatic" }]]
 						}
 					}
-				],
-			}, {
-				test: /\.(png|jpe?g|gif|svg)$/i,
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				type: 'asset/resource',
+				generator: { filename: 'images/[name][ext]' }
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				resourceQuery: /webp/,
 				use: [
 					{
 						loader: 'file-loader',
