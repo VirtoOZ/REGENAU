@@ -7,7 +7,7 @@ const Header = () => {
 						<div className="header-body__top header-top">
 							<div className="header-top__logo logo">
 								<div className="logo__icon icon-logo">
-									<img className="icon-logo__img" src="@img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
+									<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
 								</div>
 								<div className="logo__text">Официалиный поставщик в России</div>
 							</div>
@@ -46,7 +46,7 @@ const Header = () => {
 							<div className="header-bottom__right bottom-right">
 								<div className="bottom-right__leng">RU</div>
 								<button className="bottom-right__checkout">
-									<img src="@img/icons/checkout.svg" alt="Корзина"></img>
+									<img src="img/icons/checkout.svg" alt="Корзина"></img>
 								</button>
 							</div>
 						</div>

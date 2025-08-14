@@ -37,6 +37,7 @@ const paths = {
 }
 const config = {
 	mode: "production",
+	entry: './src/index.jsx',
 	cache: {
 		type: 'filesystem'
 	},
@@ -127,7 +128,33 @@ const config = {
 					}
 				],
 			},
-		],
+			//============
+			{
+				test: /\.jsx?$/,
+				exclude: /node_modules/,
+				use: 'babel-loader'
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				type: 'asset/resource',
+				generator: { filename: 'images/[name][ext]' }
+			},
+			{
+				test: /\.(png|jpe?g)$/i,
+				resourceQuery: /webp/,
+				use: [
+					{
+						loader: 'responsive-loader',
+						options: {
+							adapter: require('responsive-loader/sharp'),
+							format: 'webp',
+							quality: 80
+						}
+					}
+				]
+			}
+			//==============
+		]
 	},
 	plugins: [
 		...htmlPages,
@@ -154,7 +181,20 @@ const config = {
 			],
 		})
 	],
+	plugins: [
+		new ImageMinimizerPlugin({
+			minimizer: {
+				implementation: ImageMinimizerPlugin.imageminMinify,
+				options: {
+					plugins: [
+						['imagemin-webp', { quality: 80 }]
+					]
+				}
+			}
+		})
+	],
 	resolve: {
+		extensions: ['.js', '.jsx'],
 		alias: {
 			"@scss": `${paths.src}/scss`,
 			"@js": `${paths.src}/js`,
