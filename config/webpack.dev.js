@@ -4,6 +4,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from "copy-webpack-plugin";
 import * as path from 'path';
 import sharp from 'sharp';
+import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
+
 
 const srcFolder = "src";
 const builFolder = "dist";
@@ -47,9 +49,9 @@ export default {
 		// localhost
 		//В режиме разработчика папка 
 		// результатом (dist) будет создаваться на диске)
-		devMiddleware: {
-			writeToDisk: true,
-		},
+		// devMiddleware: {
+		// 	writeToDisk: true,
+		// },
 		watchFiles: [
 			`${paths.src}/**/*.html`,
 			`${paths.src}/**/*.pug`,
@@ -99,11 +101,11 @@ export default {
 					}
 				}
 			},
-			{
-				test: /\.(png|jpe?g|gif|svg)$/i,
-				type: 'asset/resource',
-				generator: { filename: 'images/[name][ext]' }
-			},
+			// {
+			// 	test: /\.(png|jpe?g|gif|svg)$/i,
+			// 	type: 'asset/resource',
+			// 	generator: { filename: 'images/[name][ext]' }
+			// },
 			{
 				test: /\.(png|jpe?g)$/i,
 				resourceQuery: /webp/,
@@ -126,6 +128,28 @@ export default {
 				{ from: `${srcFolder}/files`, to: `files`, noErrorOnMissing: true },
 				{ from: `${paths.src}/favicon.ico`, to: `./`, noErrorOnMissing: true }
 			],
+		}),
+		new ImageMinimizerPlugin({
+			minimizer: {
+				implementation: ImageMinimizerPlugin.imageminMinify,
+				options: {
+					plugins: [
+						["imagemin-mozjpeg", { quality: 80 }],
+						["imagemin-pngquant", { quality: [0.6, 0.8] }]
+					]
+				}
+			},
+			generator: [
+				{
+					preset: "webp",
+					implementation: ImageMinimizerPlugin.imageminGenerate,
+					options: {
+						plugins: [
+							["imagemin-webp", { quality: 80 }]
+						]
+					}
+				}
+			]
 		})
 	],
 	resolve: {

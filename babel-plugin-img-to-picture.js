@@ -32,10 +32,12 @@ export default function ({ types: t }) {
 				const srcWebp = t.jsxAttribute(
 					t.jsxIdentifier('srcSet'),
 					t.jsxExpressionContainer(
-						t.binaryExpression(
-							'+',
-							srcExpression,
-							t.stringLiteral('?webp')
+						t.callExpression(
+							t.memberExpression(srcExpression, t.identifier('replace')),
+							[
+								t.regExpLiteral('\\.(png|jpe?g)$', 'i'),
+								t.stringLiteral('.webp')
+							]
 						)
 					)
 				);

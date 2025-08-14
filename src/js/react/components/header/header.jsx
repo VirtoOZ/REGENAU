@@ -1,4 +1,4 @@
-import image from '../../../../img/headers/regenau-logo.png'
+// import image from '../../../../img/headers/regenau-logo.png';
 const Header = () => {
 	return (
 		<header data-scroll="80" className="header" >
@@ -8,8 +8,8 @@ const Header = () => {
 						<div className="header-body__top header-top">
 							<div className="header-top__logo logo">
 								<div className="logo__icon icon-logo">
-									{/* <img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img> */}
-									<img className="icon-logo__img" src={image} alt="Логотип Regenau"></img>
+									<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
+									{/* <img className="icon-logo__img" src={image} alt="Логотип Regenau"></img> */}
 								</div>
 								<div className="logo__text">Официалиный поставщик в России</div>
 							</div>
