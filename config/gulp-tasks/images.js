@@ -14,7 +14,7 @@ export const WebP = () => {
 		.pipe(app.plugins.if(app.isWebP,
 			app.gulp.dest(app.path.build.images)
 		))
-}
+};
 
 export const imagesOptimize = () => {
 	return app.gulp.src(app.path.src.images, { encoding: false })
@@ -25,16 +25,16 @@ export const imagesOptimize = () => {
 			}))
 		)
 		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(app.plugins.if(app.isImgOpt, imagemin({
-			progressive: true,
-			svgoPlugins: [{ removeViewBox: false }],
-			interlaced: true,
-			optimizationLevel: 3 // 0 to 7
-		})
-		)
-		)
+		.pipe(app.plugins.if(app.isImgOpt,
+			imagemin({
+				progressive: true,
+				svgoPlugins: [{ removeViewBox: false }],
+				interlaced: true,
+				optimizationLevel: 3 // 0 to 7
+			})
+		))
 		.pipe(app.gulp.dest(app.path.build.images))
-}
+};
 
 export const copySvg = () => {
 	return app.gulp.src(app.path.src.svg)
@@ -42,8 +42,8 @@ export const copySvg = () => {
 			app.plugins.notify.onError({
 				title: "IMAGES",
 				message: "Error: <%= error.message %>"
-			}))
-		)
+			})
+		))
 		.pipe(app.plugins.newer(app.path.build.images))
 		.pipe(app.gulp.dest(app.path.build.images));
-}
+};

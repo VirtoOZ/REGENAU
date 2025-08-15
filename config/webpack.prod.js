@@ -41,7 +41,9 @@ export default {
 	},
 	optimization: {
 		minimizer: [
-			new TerserPlugin({ extractComments: false }),
+			new TerserPlugin({
+				extractComments: false
+			}),
 			// Сжатие оригиналов
 			new ImageMinimizerPlugin({
 				minimizer: {
