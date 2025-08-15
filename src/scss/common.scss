@@ -1,5 +1,32 @@
+@use "./variables" as var;
+@use "./modules/mixins" as mix;
+@use "sass:math"; //модуль Math
+
 // Заголовки, общие БЄМ блоки и проче...
 
 //<GLOBAL Animations>=================================
 
 //</GLOBAL Animations>=================================
+
+//<Стили для текста>=================================
+%main-text_16_18 {
+	font-family: "Gilroy";
+	font-weight: 600;
+	line-height: math.div(18, 16);
+	color: var.$mainTextCol;
+	@include mix.adaptiveValue("font-size", 16, 14);
+}
+
+%main-text_14_20 {
+	font-family: "Gilroy";
+	font-weight: 400;
+	line-height: math.div(20, 14);
+	color: var.$mainTextCol;
+	font-size: 14px;
+}
+
+//<Стили для текста>=================================
+
+//<Стили для кнопок>=================================
+
+//<Стили для кнопок>=================================

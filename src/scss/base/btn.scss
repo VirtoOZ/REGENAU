@@ -1,0 +1,23 @@
+@use "../variables" as var;
+@use "../modules/mixins" as mix;
+
+//<Стили для кнопок>=================================
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: mix.rem(10);
+	background-color: var.$blue;
+	color: var.$white;
+	min-width: 168px;
+	font-family: Gilroy;
+	font-weight: 600;
+	white-space: nowrap;
+	@include mix.adaptiveValue("padding-bottom", 15, 10);
+	@include mix.adaptiveValue("padding-left", 26, 20);
+	@include mix.adaptiveValue("padding-right", 26, 20);
+	@include mix.adaptiveValue("padding-top", 15, 10);
+	@include mix.adaptiveValue("font-size", 16, 14);
+}
+
+//<Стили для кнопок>=================================

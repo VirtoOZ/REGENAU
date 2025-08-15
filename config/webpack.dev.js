@@ -6,7 +6,6 @@ import * as path from 'path';
 import sharp from 'sharp';
 import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
 
-
 const srcFolder = "src";
 const builFolder = "dist";
 const rootFolder = path.basename(path.resolve());

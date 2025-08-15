@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "../variables" as var;
+
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {

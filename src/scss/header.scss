@@ -1,6 +1,9 @@
 @use "./modules/brake-points" as point;
 @use "./variables" as var;
-@use "./modules/mixins.scss" as mix;
+@use "./modules/mixins" as mix;
+@use "./common";
+@use "./base/btn";
+@use "sass:math";
 
 //<HEADER>=================================
 .header {
@@ -29,13 +32,16 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include mix.adaptiveValue("min-height", 86, 60);
+
 	// .header-top__logo
 	&__logo {
 		flex: 0 1 470px;
 	}
 	// .header-top__info
 	&__info {
-		flex: 0 1 auto;
+		flex: 0 0 50%;
+		// justify-self:;
 	}
 }
 .logo {
@@ -46,6 +52,7 @@
 	}
 	// .logo__text
 	&__text {
+		@extend %main-text_16_18;
 	}
 }
 .icon-logo {
@@ -59,23 +66,33 @@
 	align-items: center;
 	// .info-top__column
 	&__column {
-		// justify-items: center;
-		flex: 0 1 33.333%;
+		justify-items: center;
+		flex: 1 1 33.333%;
+	}
+	&__column &:last-child {
+		justify-self: flex-end;
 	}
 }
 .column-info {
 	// .column-info__text
 	&__text {
+		@extend %main-text_14_20;
+		span {
+			@extend %main-text_14_20;
+			font-weight: 600;
+			line-height: 100%;
+		}
 	}
 	// .column-info__tel
 	&__tel {
+		@extend %main-text_16_18;
+		display: block;
 	}
 	// .column-info__button
 	&__button {
 	}
 }
-.btn {
-}
+
 .header-bottom {
 	// .header-bottom__left
 	&__left {

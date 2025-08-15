@@ -25,7 +25,7 @@ const Header = () => {
 								</div>
 								<div className="info-top__column column-info">
 									<div className="column-info__text">Есть вопросы: <span>Закажите</span></div>
-									<button className="column-info__button btn">Бесплатный звонок</button>
+									<button type='button' className="column-info__button btn">Бесплатный звонок</button>
 								</div>
 							</div>
 							<div className="header__icon icon-menu">
