@@ -1,5 +1,6 @@
 import { Main } from '../pages/';
 import Header from '../header/header.jsx';
+import React from 'react';
 import './App.scss'
 
 const App = () => {

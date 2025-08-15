@@ -1,3 +1,4 @@
+import React from 'react';
 // import image from '../../../../img/headers/regenau-logo.png';
 const Header = () => {
 	return (

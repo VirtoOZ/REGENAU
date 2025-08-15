@@ -5,6 +5,7 @@ import CopyPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import TerserPlugin from "terser-webpack-plugin";
 import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
+import babelLocal from './babel.config.js';
 import sharp from 'sharp';
 import * as path from 'path';
 
@@ -89,15 +90,35 @@ export default {
 					{ loader: 'string-replace-loader', options: { search: '@img', replace: 'img', flags: 'g' } }
 				]
 			},
+			// {
+			// 	test: /\.(jsx)$/,
+			// 	exclude: /node_modules/,
+			// 	use: [
+			// 		{
+			// 			loader: 'string-replace-loader',
+			// 			options: {
+			// 				search: '@img',
+			// 				replace: '../../img',
+			// 				flags: 'g'
+			// 			}
+			// 		}, {
+			// 			loader: "babel-loader",
+			// 			options: {
+			// 				presets: ["@babel/preset-react"]
+			// 			}
+			// 		}
+			// 	],
+			// },
 			{
 				test: /\.(jsx?)$/,
-				exclude: /node_modules/,
+				// exclude: /node_modules/,
 				use: {
-					loader: "babel-loader",
-					options: {
-						presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
-						plugins: ['./babel-plugin-img-to-picture.js']
-					}
+					// 	loader: "babel-loader",
+					// 	options: {
+					// 		presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
+					// 		plugins: ['./babel-plugin-img-to-picture.js']
+					// 	}
+					...babelLocal
 				}
 			},
 			{

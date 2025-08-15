@@ -91,16 +91,36 @@ export default {
 				]
 			},
 			{
-				test: /\.(jsx?)$/,
+				test: /\.(jsx)$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
-						plugins: ['./babel-plugin-img-to-picture.js'] // плагин автоподмены
+				use: [
+					{
+						loader: 'string-replace-loader',
+						options: {
+							search: '@img',
+							replace: '../../img',
+							flags: 'g'
+						}
+					},
+					{
+						loader: "babel-loader",
+						options: {
+							presets: ["@babel/preset-react"]
+						}
 					}
-				}
+				],
 			},
+			// {
+			// 	test: /\.(jsx?)$/,
+			// 	exclude: /node_modules/,
+			// 	use: {
+			// 		loader: "babel-loader",
+			// 		options: {
+			// 			presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
+			// 			plugins: ['./babel-plugin-img-to-picture.js'] // плагин автоподмены
+			// 		}
+			// 	}
+			// },
 			// {
 			// 	test: /\.(png|jpe?g|gif|svg)$/i,
 			// 	type: 'asset/resource',

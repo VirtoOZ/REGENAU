@@ -11,7 +11,6 @@ const root = document.querySelector("#root")
 // Main rendering
 ReactDOM.createRoot(root).render(
 	<React.StrictMode>
-
 		<App />
 	</React.StrictMode>
 );
