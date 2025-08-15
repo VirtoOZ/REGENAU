@@ -61,9 +61,3 @@ export { development, build, deployFTP, deployZIP };
 
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
-
-
-
-
-
-
