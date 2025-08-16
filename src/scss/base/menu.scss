@@ -71,7 +71,7 @@
 	}
 	@media (max-width: point.$tablet) {
 		display: block;
-		flex: 0 1 mix.rem(30);
+		flex: 0 0 mix.rem(30);
 		position: relative;
 		// width: mix.rem(30);
 		height: mix.rem(18);

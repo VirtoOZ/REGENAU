@@ -4,28 +4,29 @@ const Header = () => {
 	return (
 		<header data-scroll="80" className="header" >
 			<div className="header__wrapper">
-
 				<div className="header__body header-body">
 					<div className="header__container">
 						<div className="header-body__top header-top">
-							<div className="header-top__logo logo">
-								<div className="logo__icon icon-logo -ibg_contain">
-									<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
+							<div className="header-top__box">
+								<div className="header-top__logo logo">
+									<div className="logo__icon icon-logo -ibg_contain">
+										<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
+									</div>
+									<div className="logo__text">Официалиный поставщик в России</div>
 								</div>
-								<div className="logo__text">Официалиный поставщик в России</div>
-							</div>
-							<div className="header-top__info info-top">
-								<div className="info-top__column column-info">
-									<div className="column-info__text">График работы:</div>
-									<div className="column-info__text"><span>Пн-Пт 09:00-18:00</span></div>
-								</div>
-								<div className="info-top__column column-info">
-									<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
-									<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
-								</div>
-								<div className="info-top__column column-info">
-									<div className="column-info__text">Есть вопросы: <span>Закажите</span></div>
-									<button type='button' className="column-info__button btn">Бесплатный звонок</button>
+								<div className="header-top__info info-top">
+									<div className="info-top__column column-info__schedule">
+										<div className="column-info__text">График работы:</div>
+										<div className="column-info__text"><span>Пн-Пт 09:00-18:00</span></div>
+									</div>
+									<div className="info-top__column column-info__telephone">
+										<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
+										<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
+									</div>
+									<div className="info-top__column column-info__callack">
+										<div className="column-info__text">Есть вопросы: <span>Закажите</span></div>
+										<button type='button' className="column-info__button btn-telephone">Бесплатный звонок</button>
+									</div>
 								</div>
 							</div>
 							<button type="button" className="header__icon icon-menu"><span></span></button>

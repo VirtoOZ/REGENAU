@@ -18,6 +18,7 @@
 	}
 	// .header__icon
 	&__icon {
+		display: inline-block;
 	}
 }
 
@@ -34,9 +35,16 @@
 }
 .header-top {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	@include mix.adaptiveValue("min-height", 86, 60);
+	@include mix.adaptiveValue("column-gap", 26, 6, 0, 1670, 1350);
+
+	// .header-top__box
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mix.adaptiveValue("min-height", 86, 60);
+	}
 	// .header-top__logo
 	&__logo {
 		flex: 0 1 470px;
@@ -44,7 +52,6 @@
 	// .header-top__info
 	&__info {
 		flex: 0 0 50%;
-		// justify-self:;
 	}
 	& > * {
 		@include mix.adaptiveValue("padding-top", 10, 5);
@@ -86,11 +93,7 @@
 		}
 	}
 }
-@media (max-width: point.$tablet) {
-	.info-top {
-		display: none;
-	}
-}
+
 .column-info {
 	// .column-info__text
 	& > :not(:last-child) {
@@ -111,6 +114,30 @@
 	}
 	// .column-info__button
 	&__button {
+	}
+	// .column-info__shedule
+	&__schedule {
+	}
+	// .column-info__telephone
+	&__telephone {
+	}
+	// .column-info__callback
+	&__callack {
+	}
+}
+@media (max-width: point.$tablet) {
+	.column-info {
+		// .column-info__shedule
+		&__schedule {
+			display: none;
+		}
+		// .column-info__telephone
+		&__telephone {
+			display: none;
+		}
+		// .column-info__callback
+		&__callack {
+		}
 	}
 }
 .header-bottom {
