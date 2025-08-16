@@ -9,7 +9,7 @@
 //</GLOBAL Animations>=================================
 
 //<Стили для текста>=================================
-%main-text_16_18 {
+%text_16_18 {
 	font-family: "Gilroy";
 	font-weight: 600;
 	line-height: math.div(18, 16);
@@ -17,12 +17,20 @@
 	@include mix.adaptiveValue("font-size", 16, 14);
 }
 
-%main-text_14_20 {
+%text_14_20 {
 	font-family: "Gilroy";
 	font-weight: 400;
 	line-height: math.div(20, 14);
 	color: var.$mainTextCol;
 	font-size: 14px;
+}
+
+%text_16_16 {
+	font-family: "Gilroy";
+	font-weight: 700;
+	line-height: math.div(20, 16);
+	color: var.$white;
+	@include mix.adaptiveValue("font-size", 16, 15);
 }
 
 //<Стили для текста>=================================

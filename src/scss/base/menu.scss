@@ -1,7 +1,9 @@
-@use "../variables" as vars;
+@use "../variables" as var;
 @use "../modules/brake-points" as point;
 @use "../modules/mixins" as mix;
+@use "../common";
 
+//<MENU>=======================================
 .menu {
 	// .menu__icon
 	&__icon {
@@ -37,6 +39,9 @@
 	}
 	// .menu__list
 	&__list {
+		display: flex;
+		align-items: center;
+		@include mix.adaptiveValue("column-gap", 90, 10);
 		@media (max-width: point.$mobile) {
 		}
 	}
@@ -45,20 +50,33 @@
 	}
 	// .menu__link
 	&__link {
+		@extend %text_16_16;
 		@media (max-width: point.$mobile) {
 		}
 	}
 }
+//</MENU>=======================================
 
-//Burger Icon
+//<BURGER>=======================================
 .icon-menu {
-	display: none;
-	@media (max-width: point.$mobile) {
+	// display: none;
+	@media (any-hover: hover) {
+		&:hover {
+			span,
+			&::before,
+			&::after {
+				background-color: #000;
+			}
+		}
+	}
+	@media (max-width: point.$tablet) {
 		display: block;
+		flex: 0 1 mix.rem(30);
 		position: relative;
-		width: mix.rem(30);
+		// width: mix.rem(30);
 		height: mix.rem(18);
 		z-index: 5;
+
 		@media (any-hover: none) {
 			cursor: default;
 		}
@@ -70,7 +88,8 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: mix.rem(2);
+			height: mix.rem(3);
+			border-radius: mix.rem(3);
 			background-color: #000;
 		}
 		&::before {
@@ -80,8 +99,9 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - mix.rem(1));
+			top: calc(50% - mix.rem(1.5));
 		}
+		//<MENU-OPEN>=================================
 		.menu-open & {
 			span {
 				width: 0;
@@ -90,13 +110,15 @@
 			&::after {
 			}
 			&::before {
-				top: calc(50% - mix.rem(1));
+				top: calc(50% - mix.rem(1.5));
 				transform: rotate(-45deg);
 			}
 			&::after {
-				bottom: calc(50% - mix.rem(1));
+				bottom: calc(50% - mix.rem(1.5));
 				transform: rotate(45deg);
 			}
 		}
+		//</MENU-OPEN>=================================
 	}
 }
+//</BURGER>=================================

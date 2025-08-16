@@ -1,16 +1,16 @@
 import React from 'react';
-// import image from '../../../../img/headers/regenau-logo.png';
+
 const Header = () => {
 	return (
 		<header data-scroll="80" className="header" >
 			<div className="header__wrapper">
-				<div className="header__container">
-					<div className="header__body header-body">
+
+				<div className="header__body header-body">
+					<div className="header__container">
 						<div className="header-body__top header-top">
 							<div className="header-top__logo logo">
-								<div className="logo__icon icon-logo">
+								<div className="logo__icon icon-logo -ibg_contain">
 									<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
-									{/* <img className="icon-logo__img" src={image} alt="Логотип Regenau"></img> */}
 								</div>
 								<div className="logo__text">Официалиный поставщик в России</div>
 							</div>
@@ -28,12 +28,10 @@ const Header = () => {
 									<button type='button' className="column-info__button btn">Бесплатный звонок</button>
 								</div>
 							</div>
-							<div className="header__icon icon-menu">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
+							<button type="button" className="header__icon icon-menu"><span></span></button>
 						</div>
+					</div>
+					<div className="header__container">
 						<div className="header-body__bottom header-bottom">
 							<div className="header-bottom__left">
 								<nav className="menu__body">
@@ -48,16 +46,15 @@ const Header = () => {
 							</div>
 							<div className="header-bottom__right bottom-right">
 								<div className="bottom-right__leng">RU</div>
-								<button className="bottom-right__checkout">
+								<button className="bottom-right__checkout btn-checkout">
 									<img src="img/icons/checkout.svg" alt="Корзина"></img>
 								</button>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
-		</header>
+		</header >
 	)
 };
 
