@@ -33,7 +33,7 @@ body {
 	color: var.$mainCol;
 	// @include adaptiveValue("font-size", 25, 18);
 	font-weight: 500;
-	line-height: 187.5%;
+	// line-height: 187.5%;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;

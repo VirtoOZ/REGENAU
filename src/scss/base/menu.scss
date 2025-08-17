@@ -2,8 +2,7 @@
 @use "../modules/brake-points" as point;
 @use "../modules/mixins" as mix;
 @use "../common";
-
-//<MENU>=======================================
+@use "../base/btn"; //<MENU>=======================================
 .menu {
 	// .menu__icon
 	&__icon {
@@ -59,47 +58,52 @@
 
 //<BURGER>=======================================
 .icon-menu {
+	flex: 0 0 mix.rem(33);
+	position: relative;
+	height: mix.rem(33);
+	z-index: 5;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: var.$white;
+	border-radius: mix.rem(8);
+	box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
 	// display: none;
 	@media (any-hover: hover) {
 		&:hover {
 			span,
 			&::before,
 			&::after {
-				background-color: #000;
+				background-color: var.$green;
 			}
 		}
 	}
 	@media (max-width: point.$tablet) {
-		display: block;
-		flex: 0 0 mix.rem(30);
-		position: relative;
-		// width: mix.rem(30);
-		height: mix.rem(18);
-		z-index: 5;
-
-		@media (any-hover: none) {
-			cursor: default;
-		}
+		display: flex;
 		span,
 		&::before,
 		&::after {
 			content: "";
 			transition: all 0.3s ease 0s;
-			right: 0;
+			right: 50%;
+			transform: translate(50%, 0px);
 			position: absolute;
-			width: 100%;
-			height: mix.rem(3);
-			border-radius: mix.rem(3);
+			width: mix.rem(20);
+			height: mix.rem(2);
+			border-radius: mix.rem(2);
 			background-color: #000;
 		}
 		&::before {
-			top: 0;
+			top: 25%;
 		}
 		&::after {
-			bottom: 0;
+			bottom: 25%;
 		}
 		span {
 			top: calc(50% - mix.rem(1.5));
+		}
+		@media (any-hover: none) {
+			cursor: default;
 		}
 		//<MENU-OPEN>=================================
 		.menu-open & {

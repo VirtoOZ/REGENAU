@@ -12,7 +12,7 @@ const Header = () => {
 									<div className="logo__icon icon-logo -ibg_contain">
 										<img className="icon-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
 									</div>
-									<div className="logo__text">Официалиный поставщик в России</div>
+									<div className="logo__text">Официалиный<br /> поставщик в России</div>
 								</div>
 								<div className="header-top__info info-top">
 									<div className="info-top__column column-info__schedule">
@@ -23,9 +23,14 @@ const Header = () => {
 										<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
 										<a href="tel:+7123456789" className="column-info__tel">+7(123)12-34-567</a>
 									</div>
+									<div className="info-top__column column-info__checkout">
+										<button type='button' className="column-info__button btn-checkout">
+											<img src="img/icons/checkout.svg" alt="Корзина"></img>
+										</button>
+									</div>
 									<div className="info-top__column column-info__callack">
 										<div className="column-info__text">Есть вопросы: <span>Закажите</span></div>
-										<button type='button' className="column-info__button btn-telephone">Бесплатный звонок</button>
+										<button type='button' className="column-info__button btn-telephone"><span>Бесплатный звонок</span></button>
 									</div>
 								</div>
 							</div>
@@ -47,7 +52,7 @@ const Header = () => {
 							</div>
 							<div className="header-bottom__right bottom-right">
 								<div className="bottom-right__leng">RU</div>
-								<button className="bottom-right__checkout btn-checkout">
+								<button className="bottom-right__checkout btn-checkout-big">
 									<img src="img/icons/checkout.svg" alt="Корзина"></img>
 								</button>
 							</div>
