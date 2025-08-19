@@ -101,7 +101,7 @@
 	}
 	//
 	&__text {
-		@extend %text_16_18;
+		@extend %text-g_16_18_600;
 		@include mix.adaptiveValue("font-size", 16, 10);
 	}
 }
@@ -152,16 +152,16 @@
 	}
 	// .column-info__text
 	&__text {
-		@extend %text_14_20;
+		@extend %text-g_14_20_400;
 		span {
-			@extend %text_14_20;
+			@extend %text-g_14_20_400;
 			font-weight: 600;
 			line-height: 100%;
 		}
 	}
 	// .column-info__tel
 	&__tel {
-		@extend %text_16_18;
+		@extend %text-g_16_18_600;
 		display: block;
 	}
 	// .column-info__button
@@ -249,7 +249,7 @@
 	gap: mix.rem(10);
 	// .bottom-right__leng
 	&__leng {
-		@extend %text_16_18;
+		@extend %text-g_16_18_600;
 		color: var.$white;
 	}
 	// .bottom-right__checkout

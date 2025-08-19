@@ -49,7 +49,7 @@
 	}
 	// .menu__link
 	&__link {
-		@extend %text_16_16;
+		@extend %text-g_16_20_700;
 		@media (max-width: point.$mobile) {
 		}
 	}

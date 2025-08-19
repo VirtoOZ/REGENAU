@@ -9,30 +9,43 @@
 //</GLOBAL Animations>=================================
 
 //<Стили для текста>=================================
-%text_16_18 {
+%text-g {
 	font-family: "Gilroy";
+}
+%text-g_16_18_600 {
+	@extend %text-g;
 	font-weight: 600;
 	line-height: math.div(18, 16);
 	color: var.$mainTextCol;
 	@include mix.adaptiveValue("font-size", 16, 14);
 }
-
-%text_14_20 {
-	font-family: "Gilroy";
+%text-g_14_20_400 {
+	@extend %text-g;
 	font-weight: 400;
 	line-height: math.div(20, 14);
 	color: var.$mainTextCol;
-	font-size: 14px;
+	@include mix.adaptiveValue("font-size", 14, 10);
 }
 
-%text_16_16 {
-	font-family: "Gilroy";
+%text-g_16_20_700 {
+	@extend %text-g;
 	font-weight: 700;
 	line-height: math.div(20, 16);
 	color: var.$white;
 	@include mix.adaptiveValue("font-size", 16, 15);
 }
 
+%text-g_14_20_600 {
+	@extend %text-g_14_20_400;
+	font-weight: 600;
+	color: var.$white;
+}
+%text-i_14_500 {
+	font-weight: 500;
+	color: var.$white;
+	line-height: 100%;
+	@include mix.adaptiveValue("font-size", 14, 10);
+}
 //<Стили для текста>=================================
 
 //<Стили для кнопок>=================================
