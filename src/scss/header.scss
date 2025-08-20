@@ -7,6 +7,7 @@
 
 //<HEADER>=================================
 .header {
+	display: none;
 	// .header__wrapper
 	&__wrapper {
 	}
@@ -156,6 +157,7 @@
 	&__tel {
 		@extend %text-g_16_18_600;
 		display: block;
+		white-space: nowrap;
 	}
 	// .column-info__button
 	&__button {

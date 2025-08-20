@@ -9,9 +9,7 @@ const App = () => {
 		<>
 			<Header />
 			<main className="page">
-				<div className="page__container">
-					<Main />
-				</div>
+				<Main />
 			</main >
 			<Footer />
 		</>

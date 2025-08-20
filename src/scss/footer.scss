@@ -5,6 +5,7 @@
 
 //<FOOTER>=================================
 .footer {
+	position: relative;
 	background-color: #333;
 	@include mix.adaptiveValue("padding-top", 60, 20);
 	@include mix.adaptiveValue("padding-bottom", 35, 15);
@@ -75,7 +76,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: 0 mix.rem(-7);
+		margin: mix.rem(-7);
 		@media (max-width: point.$mobileBig) {
 		}
 	}

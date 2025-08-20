@@ -1,0 +1,99 @@
+@use "sass:math"; //модуль Math
+@use "../../../../../scss/variables" as var;
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/modules/brake-points" as point;
+@use "../../../../../scss/common";
+
+.page {
+	// .page__main
+	&__main {
+	}
+}
+.main {
+	// .main__image
+	&__image {
+	}
+	// .main__content
+	&__content {
+	}
+}
+.bg {
+	// min-height: 100vh;
+	padding-bottom: 46%;
+	// .bg__cloudes
+	&__cloudes {
+	}
+	// .bg__mountains
+	&__mountains {
+	}
+	// .bg__brend
+	&__brend {
+	}
+	// .bg__forest
+	&__forest {
+	}
+}
+.content {
+	margin-top: -20%;
+	margin-bottom: mix.rem(40);
+	position: relative;
+	// .content__subtitle
+	&__subtitle {
+	}
+	// .content__slider
+	&__slider {
+	}
+}
+.slider {
+	// .slider__slides
+	&__slides {
+	}
+	// .slider__slide
+	&__slide {
+	}
+}
+.slide {
+	display: flex;
+	justify-content: flex-end;
+	// .slide__item
+	&__item {
+	}
+}
+.item-slide {
+	background-color: var.$white;
+	border-radius: mix.rem(8);
+	display: inline-block;
+	padding: mix.rem(20);
+	max-width: mix.rem(400);
+	position: relative;
+	// .item__info
+	&__info {
+	}
+	// .item__image
+	&__image-ibg {
+		padding-bottom: 60%;
+		margin-top: mix.rem(-20);
+		// z-index: 2;
+	}
+	// .item__name
+	&__name {
+		@extend %text-l_18_20_600;
+		text-transform: uppercase;
+	}
+}
+.info-item-slide {
+	// position: absolute;
+	// width: 100%;
+	// top: 0;
+	// left: 0;
+	display: flex;
+	justify-content: space-between;
+	// .info-item__kod
+	&__kod {
+		@extend %text-i_14_300;
+	}
+	// .info-item__more
+	&__more {
+		@extend %text-l_14_500;
+	}
+}
