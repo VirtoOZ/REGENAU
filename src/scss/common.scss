@@ -24,7 +24,7 @@
 	font-weight: 400;
 	line-height: math.div(20, 14);
 	color: var.$mainTextCol;
-	@include mix.adaptiveValue("font-size", 14, 10);
+	font-size: mix.rem(14);
 }
 
 %text-g_16_20_700 {
@@ -44,7 +44,7 @@
 	font-weight: 500;
 	color: var.$white;
 	line-height: 100%;
-	@include mix.adaptiveValue("font-size", 14, 10);
+	font-size: mix.rem(14);
 }
 //<Стили для текста>=================================
 

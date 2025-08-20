@@ -8,7 +8,7 @@ const Footer = () => {
 					<div className="footer__top footer-top">
 						<div className="footer-top__left">
 							<div className="footer-top__logo footer-logo">
-								<div className="footer-logo__icon -ibg_contain">
+								<div className="footer-logo__icon">
 									<img className="footer-logo__img" src="img/headers/regenau-logo.png" alt="Логотип Regenau"></img>
 								</div>
 								<div className="footer-logo__text">Официалиный поставщик в России</div>
@@ -31,7 +31,7 @@ const Footer = () => {
 							<div className="footer-right__info footer-info">
 								<div className="footer-info__column">
 									<div className="footer-info__item info-item">
-										<div className="info-item__icon -ibg_contain">
+										<div className="info-item__icon">
 											<img src="@img/icons/phone.svg" alt="Телефон" />
 										</div>
 										<div className="info-item__body">
@@ -42,7 +42,7 @@ const Footer = () => {
 								</div>
 								<div className="footer-info__column">
 									<div className="footer-info__item info-item">
-										<div className="info-item__icon -ibg_contain">
+										<div className="info-item__icon">
 											<img src="@img/icons/www.svg" alt="Телефон" />
 										</div>
 										<div className="info-item__body">
@@ -50,9 +50,10 @@ const Footer = () => {
 											<a href="mailto:mail@gmail.com" className="info-item__label">пн-пт 09:00 - 18:00</a>
 										</div>
 									</div>
-								</div><div className="footer-info__column">
+								</div>
+								<div className="footer-info__column">
 									<div className="footer-info__item info-item">
-										<div className="info-item__icon -ibg_contain">
+										<div className="info-item__icon">
 											<img src="@img/icons/location.svg" alt="Телефон" />
 										</div>
 										<div className="info-item__body">
