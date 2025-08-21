@@ -46,6 +46,12 @@
 	line-height: 100%;
 	font-size: mix.rem(14);
 }
+%text-i_22_24_500 {
+	font-weight: 500;
+	color: var.$mainTextCol;
+	line-height: math.div(24, 22);
+	font-size: mix.rem(22);
+}
 
 %text-i_14_300 {
 	font-weight: 300;
@@ -53,6 +59,7 @@
 	line-height: 100%;
 	font-size: mix.rem(14);
 }
+
 %text-l_14_500 {
 	font-family: Lato;
 	font-weight: 500;
@@ -60,13 +67,15 @@
 	line-height: 100%;
 	font-size: mix.rem(14);
 }
+
 %text-l_18_20_600 {
 	font-family: Lato;
 	font-weight: 600;
 	color: var.$mainTextCol;
 	line-height: math.div(20, 18);
-	font-size: mix.rem(18);
+	@include mix.adaptiveValue("font-size", 18, 14);
 }
+
 //<Стили для текста>=================================
 
 //<Стили для кнопок>=================================

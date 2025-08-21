@@ -1,7 +1,7 @@
-@use "./variables.scss" as var;
-@use "./modules/mixins.scss" as mix;
-@use "./common.scss";
-@use "./modules/brake-points.scss" as point;
+@use "./variables" as var;
+@use "./modules/mixins" as mix;
+@use "./common";
+@use "./modules/brake-points" as point;
 
 //<FOOTER>=================================
 .footer {
@@ -51,7 +51,7 @@
 	// .footer-logo__img
 	&__img {
 	}
-	// .logo__text
+	// .footer-logo__text
 	&__text {
 		@extend %text-i_14_500;
 		opacity: 0.8;
