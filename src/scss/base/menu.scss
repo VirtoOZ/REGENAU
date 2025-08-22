@@ -58,17 +58,17 @@
 
 //<BURGER>=======================================
 .icon-menu {
-	flex: 0 0 mix.rem(33);
-	position: relative;
-	height: mix.rem(33);
-	z-index: 5;
-	display: none;
-	justify-content: center;
-	align-items: center;
-	background-color: var.$white;
-	border-radius: mix.rem(8);
-	box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
-	// display: none;
+	span,
+	&::before,
+	&::after {
+		content: "";
+		width: 100%;
+		flex: 0 0 mix.rem(3);
+		border-radius: mix.rem(2);
+		background-color: #000;
+		transform: translate(0%, 0%) rotate(0deg);
+		transition: all 0.3s ease 0s;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			span,
@@ -79,47 +79,35 @@
 		}
 	}
 	@media (max-width: point.$tablet) {
-		display: flex;
 		span,
 		&::before,
 		&::after {
 			content: "";
-			transition: all 0.3s ease 0s;
-			right: 50%;
-			transform: translate(50%, 0px);
-			position: absolute;
-			width: mix.rem(20);
-			height: mix.rem(2);
-			border-radius: mix.rem(2);
-			background-color: #000;
 		}
 		&::before {
-			top: 25%;
 		}
 		&::after {
-			bottom: 25%;
 		}
 		span {
-			top: calc(50% - mix.rem(1.5));
 		}
 		@media (any-hover: none) {
 			cursor: default;
 		}
 		//<MENU-OPEN>=================================
 		.menu-open & {
+			justify-content: center;
+			align-items: center;
 			span {
-				width: 0;
+				opacity: 0;
 			}
 			&::before,
 			&::after {
 			}
 			&::before {
-				top: calc(50% - mix.rem(1.5));
-				transform: rotate(-45deg);
+				transform: translate(0%, 75%) rotate(-45deg);
 			}
 			&::after {
-				bottom: calc(50% - mix.rem(1.5));
-				transform: rotate(45deg);
+				transform: translate(0%, -75%) rotate(45deg);
 			}
 		}
 		//</MENU-OPEN>=================================

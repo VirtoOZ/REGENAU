@@ -7,7 +7,7 @@
 
 //<HEADER>=================================
 .header {
-	display: none;
+	// display: none;
 	// .header__wrapper
 	&__wrapper {
 	}
@@ -19,6 +19,31 @@
 	}
 	// .header__icon
 	&__icon {
+	}
+	// .header__button
+	&__button {
+		display: none;
+	}
+}
+.button-header {
+	@media (max-width: point.$tablet) {
+		flex: 0 0 mix.rem(33);
+		height: mix.rem(33);
+		z-index: 5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var.$white;
+		border-radius: mix.rem(8);
+		box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
+	}
+	// .button-header__icon
+	&__icon {
+		flex: 0 0 mix.rem(20);
+		height: mix.rem(20);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 }
 
@@ -52,6 +77,11 @@
 	}
 	// .header-top__logo
 	&__logo {
+		@media (max-width: point.$mobileBig) {
+			& :not(:last-child) {
+				margin-bottom: mix.rem(5);
+			}
+		}
 	}
 	// .header-top__info
 	&__info {
@@ -133,6 +163,11 @@
 	&__column {
 		justify-items: center;
 		flex: 1 1 33.333%;
+		@media (min-width: point.$pc) {
+			& :not(:last-child) {
+				margin-bottom: mix.rem(5);
+			}
+		}
 	}
 }
 @media (max-width: point.$pc) {

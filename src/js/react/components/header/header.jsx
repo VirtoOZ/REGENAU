@@ -34,7 +34,8 @@ const Header = () => {
 									</div>
 								</div>
 							</div>
-							<button type="button" className="header__icon icon-menu"><span></span></button>
+							<button type="button" className="header__button button-header">
+								<div className="button-header__icon icon-menu"><span></span></div></button>
 						</div>
 					</div>
 					<div className="header__container">

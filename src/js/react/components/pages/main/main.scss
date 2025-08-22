@@ -42,8 +42,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-
-	// position: relative;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -53,8 +51,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-
-		// min-height: 100%;
 	}
 	// .content__subtitle
 	&__subtitle {
@@ -65,7 +61,7 @@
 		border-radius: mix.rem(8);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 		margin: 0 0 mix.rem(5) 0;
-		@include mix.adaptiveValue("margin-bottom", 5, 100);
+		@include mix.adaptiveValue("margin-bottom", 5, 165);
 		@include mix.adaptiveValue("padding", 15, 5);
 		span {
 			font-weight: 700;
