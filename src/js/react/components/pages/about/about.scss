@@ -1,0 +1,38 @@
+@use "sass:math"; //модуль Math
+@use "../../../../../scss/variables" as var;
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/modules/brake-points" as point;
+@use "../../../../../scss/common";
+.about {
+	// .about__container
+	&__container {
+		display: flex;
+	}
+	// .about__contant
+	&__contant {
+	}
+	// .about__media
+	&__media {
+	}
+}
+.content-about {
+	// .content-about__logo
+	&__logo {
+		width: mix.rem(234);
+		@include mix.adaptiveValue("margin-bottom", 35, 20);
+		img {
+			max-width: 100%;
+		}
+	}
+	// .content-about__title
+	&__title {
+		@extend %text-l_48_54_600;
+	}
+	// .content-about__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: mix.rem(20);
+		}
+		@extend %text-i_14_22_400;
+	}
+}

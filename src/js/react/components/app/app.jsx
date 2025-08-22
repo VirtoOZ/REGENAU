@@ -1,6 +1,6 @@
-import { Main } from '../pages/index.js';
+import { Main, About } from '../pages';
 import Header from '../header/header.jsx';
-import Footer from '../footer/footer.jsx'
+import Footer from '../footer/footer.jsx';
 import React from 'react';
 import './App.scss'
 
@@ -11,6 +11,7 @@ const App = () => {
 			<main className="page">
 				<Main />
 			</main >
+			<About />
 			<Footer />
 		</>
 	)

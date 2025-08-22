@@ -65,7 +65,7 @@
 		width: 100%;
 		flex: 0 0 mix.rem(3);
 		border-radius: mix.rem(2);
-		background-color: #000;
+		background-color: var.$mainTextCol;
 		transform: translate(0%, 0%) rotate(0deg);
 		transition: all 0.3s ease 0s;
 	}
