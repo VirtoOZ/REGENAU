@@ -11,11 +11,13 @@ const About = () => {
 					</div>
 					<h1 className="content-about__title">это водосточная система, которая является результатом опыта</h1>
 					<p className="content-about__text">Стремление к <span>совершенству австрийских инженеров.</span>В ней объединено все наилучшее: первичное сырье, превосходное качество, герметичность и элегантный минимализм по доступной цене.</p>
-					<p className="content-about__text"><a href="#">Regenau</a> создана для тех, кто <span>ценит функциональность и хочет, что бы их дом был действительно <span>защищен</span> от непогоды.
-					</span></p>
+					<p className="content-about__text"><a href="#">Regenau</a> создана для тех, кто <span>ценит функциональность</span> и хочет, что бы их дом был действительно <span>защищен</span> от непогоды.
+					</p>
 				</div>
-				<div className="about__media">
-					<img src="@img/main/kollage.png" alt="Коллаж" />
+				<div className="about__media megia-about">
+					<div className="media-about__image-ibg">
+						<img src="@img/main/kollage.png" alt="Коллаж" />
+					</div>
 				</div>
 			</div>
 		</section>

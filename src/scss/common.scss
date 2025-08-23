@@ -56,7 +56,13 @@
 	font-weight: 400;
 	color: var.$mainTextCol;
 	line-height: math.div(22, 14);
-	font-size: mix.rem(14);
+	@include mix.adaptiveValue("font-size", 14, 12);
+}
+%text-i_16_22_400 {
+	font-weight: 400;
+	color: var.$mainTextCol;
+	line-height: math.div(22, 16);
+	@include mix.adaptiveValue("font-size", 16, 14);
 }
 
 %text-i_14_300 {
@@ -86,7 +92,7 @@
 	line-height: math.div(54, 48);
 	text-transform: uppercase;
 	color: var.$darkCol;
-	@include mix.adaptiveValue("font-size", 48, 38);
+	@include mix.adaptiveValue("font-size", 48, 24);
 }
 
 //<Стили для текста>=================================
