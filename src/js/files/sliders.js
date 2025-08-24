@@ -34,14 +34,14 @@ function initSliders() {
 			//Подключаем модули слайдера
 			//для конкретного случая
 			modules: [Navigation, Pagination, Autoplay],
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			slidesPerView: 1,
 			// spaceBetween: 8,
 			autoHeight: true,
-			// watchOverflow: true,
+			watchOverflow: true,
 			speed: 800,
-			// setWrapperSize: false,
+			setWrapperSize: false,
 			//touchRatio: 0,
 			// simulateTouch: false,
 			loop: true,
@@ -74,7 +74,7 @@ function initSliders() {
 			// Кнопки "влево/вправо"
 			navigation: {
 				// prevEl: '.swiper-button-prev',
-				// nextEl: '.swiper-button-next',
+				nextEl: '.swiper-button-next',
 			},
 			/*
 			// Брейкпоинты

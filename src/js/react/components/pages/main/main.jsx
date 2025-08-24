@@ -15,79 +15,87 @@ const Main = () => {
 						<div className="content__subtitle">ПВХ водосток от <span>австрийских профи</span></div>
 						<div className="content__box">
 							<div className="content__slider-box"></div>
-							<div className="content__slider slider swiper">
-								<div className="swiper-wrapper">
-									<div className="slider__slide slide swiper-slide" >
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
+							<div className="content__slider-wrap">
+								<div className="content__abs">
+									<div className="content__slider slider swiper">
+										<div className="swiper-wrapper">
+											<div className="slider__slide slide swiper-slide" >
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
+											<div className="slider__slide slide swiper-slide">
+												<div className="slide__info info-slide">
+													<div className="info-slide__kod">Код: 014/114</div>
+													<button type="button" className="info-slide__more">Детальнее</button>
+												</div>
+												<div className="slide__image-ibg_contain">
+													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+												</div>
+												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+											</div>
 										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
 									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
-									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
-									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
-									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
-									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
-									</div>
-									<div className="slider__slide slide swiper-slide">
-										<div className="slide__info info-slide">
-											<div className="info-slide__kod">Код: 014/114</div>
-											<button type="button" className="info-slide__more">Детальнее</button>
-										</div>
-										<div className="slide__image-ibg_contain">
-											<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
-										</div>
-										<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
+									<div className="slider__navigation">
+										<button type='button' className="slider__button swiper-button-next"><span>next</span></button>
 									</div>
 								</div>
+								<div className="slider__paginations swiper-pagination"></div>
 							</div>
 						</div>
 					</div>
