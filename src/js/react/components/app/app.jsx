@@ -1,4 +1,4 @@
-import { Main, About } from '../pages';
+import { Main, About, Advantages } from '../pages';
 import Header from '../header/header.jsx';
 import Footer from '../footer/footer.jsx';
 import React from 'react';
@@ -12,6 +12,7 @@ const App = () => {
 				<Main />
 			</main >
 			<About />
+			<Advantages />
 			<Footer />
 		</>
 	)

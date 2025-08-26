@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, Parallax } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 //Стили Swiper
 //Базовые стили
 import "../../scss/base/swiper.scss";
-//Полный набор стилей с scss/libs/swiper.scss
+// Полный набор стилей с scss / libs / swiper.scss
 // import "../../scss/libs/swiper.scss";
 //Полный набор стилей с node_modules
 // import 'swiper/css';
@@ -44,7 +44,7 @@ function initSliders() {
 			setWrapperSize: false,
 			//touchRatio: 0,
 			// simulateTouch: false,
-			loop: true,
+			// loop: true,
 			preloadImages: false,
 			// lazy: true,
 			// parallax: true,
@@ -103,6 +103,57 @@ function initSliders() {
 			},
 		});
 	}
+
+	// Слайдер Преимущества
+	new Swiper('.advantages__slider.swiper', {
+		modules: [Pagination, Parallax, Autoplay],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		// slidesPerGroup: 0,
+		spaceBetween: 50,
+		// autoHeight: true,
+		watchOverflow: true,
+		speed: 800,
+		setWrapperSize: true,
+		// touchRatio: 0,
+		// simulateTouch: false,
+		// loop: true,
+		// preloadImages: false,
+		// lazy: true,
+		parallax: true,
+		// loopAdditionalSlides: 5,
+
+		// Эффекты
+		// effect: 'fade',
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
+
+		// Пагинация
+		pagination: {
+			el: '.advantages__control .swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				const controlIcons = document.querySelectorAll('.advantages__control .control__icon');
+				return '<div class="' + className + '"><span>' + controlIcons[index].outerHTML + "</span></div>";
+			},
+		},
+
+		// Скроллбар
+		/*
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+		},
+		*/
+		// События
+		on: {
+		},
+	});
+
+
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
 // function initSlidersScroll() {

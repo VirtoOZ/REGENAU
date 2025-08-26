@@ -4,6 +4,7 @@
 @use "../../../../../scss/modules/brake-points" as point;
 @use "../../../../../scss/common";
 .about {
+	display: none;
 	// .about__container
 	&__container {
 		@include mix.adaptiveValue("margin-top", 165, 100);
