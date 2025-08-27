@@ -148,6 +148,14 @@ function initSliders() {
 			draggable: true,
 		},
 		*/
+		// Брейкпоинты
+		breakpoints: {
+			640: {
+				spaceBetween: 20,
+			},
+			992: { spaceBetween: 50 }
+		},
+
 		// События
 		on: {
 		},

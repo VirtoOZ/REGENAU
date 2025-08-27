@@ -1,3 +1,5 @@
+@use "../modules/mixins.scss" as mix;
+
 .swiper {
 	overflow: hidden;
 }
@@ -38,9 +40,6 @@
 // 	display: none !important;
 // }
 .swiper-slide {
-	display: flex;
-	height: 100%;
-	width: 100%;
-
-	position: relative;
+	// @include mix.adaptiveValue("margin-left", 50, 20);
+	// @include mix.adaptiveValue("margin-right", 50, 20);
 }
