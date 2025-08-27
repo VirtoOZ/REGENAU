@@ -79,6 +79,7 @@ const Advantages = () => {
 						</article>
 						<article className="advantages__item item item_warranty item_right swiper-slide">
 							<div className="item__image-back">
+								<img src="@img/main/advantage/warranty/iso.png" alt="ISO" />
 							</div>
 							<div className="item__contant" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" >
 								<div className="item__title title">

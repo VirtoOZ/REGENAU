@@ -128,7 +128,7 @@
 
 .item {
 	align-items: center;
-	min-height: 100%;
+	height: 100%;
 	width: 100%;
 	position: relative;
 	background-color: var.$white;
@@ -155,6 +155,7 @@
 		}
 		@include mix.adaptiveValue("padding-top", 200, 100);
 	}
+
 	@media (min-width: point.$mobileBig) {
 		display: flex;
 	}
@@ -249,7 +250,11 @@
 		}
 	}
 }
-
+.item_warranty .item__image-back {
+	transform: rotate(0deg);
+	img {
+	}
+}
 .mark {
 	width: 100%;
 
@@ -259,7 +264,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex: 0 0 25%;
+		flex: 1 1 10%;
 	}
 }
 
