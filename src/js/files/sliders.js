@@ -112,7 +112,6 @@ function initSliders() {
 		slidesPerView: 1,
 		// slidesPerGroup: 0,
 		spaceBetween: 50,
-		// autoHeight: true,
 		watchOverflow: true,
 		speed: 800,
 		setWrapperSize: true,

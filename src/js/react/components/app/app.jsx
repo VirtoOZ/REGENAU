@@ -1,4 +1,4 @@
-import { Main, About, Advantages } from '../pages';
+import { Main, About, Advantages, HelpForm } from '../pages';
 import Header from '../header/header.jsx';
 import Footer from '../footer/footer.jsx';
 import React from 'react';
@@ -7,13 +7,14 @@ import './App.scss'
 const App = () => {
 	return (
 		<>
-			<Header />
+			{/* <Header />
 			<main className="page">
 				<Main />
 			</main >
 			<About />
-			<Advantages />
+			<Advantages /> */}
 			<Footer />
+			<HelpForm />
 		</>
 	)
 };

@@ -1,0 +1,165 @@
+@use "../../../../../scss/modules/brake-points" as point;
+@use "../../../../../scss/variables" as var;
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/fonts/fonts";
+@use "../../../../../scss/common";
+@use "sass:math";
+
+.help {
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	padding-bottom: 25%;
+	// 	top: 0;
+	// 	left: 0;
+	// 	background: url("@img/main/help-form/bg.png") 100% / cover no-repeat;
+	// }
+	&__wrapper {
+		position: relative;
+	}
+	// .help__container
+	&__container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+	}
+	// .help__image
+	&__image {
+		flex: 0 0 38.7%;
+		// padding-top: 38.3%;
+		// position: absolute;
+		&-1 {
+		}
+		&-2 {
+		}
+		&-1,
+		&-2 {
+			position: absolute;
+			top: 0;
+			left: auto;
+			width: 56.6%;
+			// height: 100%;
+			// height: auto;
+			transform: translate(-41%, -24.6%);
+			object-fit: cover;
+		}
+	}
+	// .help__body
+	&__body {
+		flex: 1 1 auto;
+	}
+	// .help__form
+	&__form {
+	}
+	// .help__bg-image
+	&__bg-image {
+		width: 100%;
+		padding-bottom: 25%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+.help-form {
+	color: var.$white;
+	& > :not(:last-child) {
+		@include mix.adaptiveValue("margin-bottom", 43, 20);
+	}
+	@include mix.adaptiveValue("padding-top", 62, 40);
+	@include mix.adaptiveValue("padding-bottom", 62, 40);
+	// .help-form__title
+	&__title {
+		text-align: left;
+		font-family: Lato;
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		&::before {
+			display: none;
+		}
+		@include mix.adaptiveValue("font-size", 40, 30);
+	}
+	// .help-form__body
+	&__body {
+		display: flex;
+		@include mix.adaptiveValue("gap", 10, 5);
+	}
+	// .help-form__name
+	&__name {
+	}
+	// .help-form__tel
+	&__tel {
+	}
+	&__name,
+	&__tel {
+		border: mix.rem(1) solid var.$white;
+		border-radius: mix.rem(8);
+		color: rgba(255, 255, 255, 0.8);
+		font-family: Lato;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__name,
+	&__tel,
+	&__button {
+		border: mix.rem(1) solid var.$white;
+		border-radius: mix.rem(8);
+		padding: mix.rem(18) mix.rem(20);
+		// min-width: mix.rem(235);
+		flex: 0 1 33.333%;
+	}
+	// .help-form__button
+	&__button {
+		background-color: var.$green;
+		border-color: var.$green;
+	}
+}
+.title {
+}
+.footer-right {
+	// .footer-right__info
+	&__info {
+	}
+	// .footer-right__item
+	&__item {
+	}
+}
+.help-bottom {
+	// .help-bottom__container
+	&__container {
+	}
+	// .help-bottom__info
+	&__info {
+	}
+	// .help-bottom__item
+	&__info {
+	}
+}
+.info {
+	// .info__icon
+	&__icon {
+	}
+	// .info__body
+	&__body {
+	}
+	// .info__label
+	&__label {
+	}
+	// .info__mail
+	&__mail {
+	}
+	// .info__tel
+	&__tel {
+	}
+}

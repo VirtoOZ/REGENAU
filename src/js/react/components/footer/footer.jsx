@@ -28,38 +28,32 @@ const Footer = () => {
 									</ul>
 								</nav>
 							</div>
-							<div className="footer-right__info footer-info">
-								<div className="footer-info__column">
-									<div className="footer-info__item info-item">
-										<div className="info-item__icon">
-											<img src="@img/icons/phone.svg" alt="Телефон" />
-										</div>
-										<div className="info-item__body">
-											<a href="tel:+01234567890" className="info-item__sublabel">+0 (123) 456-78-90</a>
-											<a href="mailto:mail@gmail.com" className="info-item__label">mail@gmail.com</a>
-										</div>
+							<div className="footer-right__info">
+								<div className="footer-right__item info">
+									<div className="info__icon">
+										<img src="@img/icons/phone.svg" alt="Телефон" />
+									</div>
+									<div className="info__body">
+										<a href="tel:+01234567890" className="info__tel">+0 (123) 456-78-90</a>
+										<a href="mailto:mail@gmail.com" className="info__mail">mail@gmail.com</a>
 									</div>
 								</div>
-								<div className="footer-info__column">
-									<div className="footer-info__item info-item">
-										<div className="info-item__icon">
-											<img src="@img/icons/www.svg" alt="Телефон" />
-										</div>
-										<div className="info-item__body">
-											<a href="tel:+01234567890" className="info-item__sublabel">График работы</a>
-											<a href="mailto:mail@gmail.com" className="info-item__label">пн-пт 09:00 - 18:00</a>
-										</div>
+								<div className="footer-right__item info">
+									<div className="info__icon">
+										<img src="@img/icons/www.svg" alt="Телефон" />
+									</div>
+									<div className="info__body">
+										<div className="info__label">График работы</div>
+										<div className="info__sublabel">пн-пт 09:00 - 18:00</div>
 									</div>
 								</div>
-								<div className="footer-info__column">
-									<div className="footer-info__item info-item">
-										<div className="info-item__icon">
-											<img src="@img/icons/location.svg" alt="Телефон" />
-										</div>
-										<div className="info-item__body">
-											<a href="tel:+01234567890" className="info-item__sublabel">Центральный офис</a>
-											<a href="mailto:mail@gmail.com" className="info-item__label">г.Москва проспек Ленина д.1</a>
-										</div>
+								<div className="footer-right__item info">
+									<div className="info__icon">
+										<img src="@img/icons/location.svg" alt="Телефон" />
+									</div>
+									<div className="info__body">
+										<div className="info__label">Центральный офис</div>
+										<div className="info__sublabel">г.Москва проспек Ленина д.1</div>
 									</div>
 								</div>
 							</div>
@@ -69,7 +63,7 @@ const Footer = () => {
 						<div className="footer-bottom__copyright">© 2024 MIZOL. All Rights Reserved.</div>
 					</div>
 				</div>
-			</footer>
+			</footer >
 		</>
 	)
 };

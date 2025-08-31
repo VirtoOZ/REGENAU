@@ -5,10 +5,11 @@
 @use "../../../../../scss/common";
 @use "sass:math";
 .advantages {
+	min-height: 100vh;
 	// min-width: 0;
 	background-color: #f8f8f6;
-	@include mix.adaptiveValue("padding-top", 100, 50);
-	@include mix.adaptiveValue("padding-bottom", 200, 50);
+	// @include mix.adaptiveValue("padding-top", 100, 50);
+	// @include mix.adaptiveValue("padding-bottom", 200, 50);
 	// .advantages__title
 	&__title {
 	}
@@ -51,14 +52,12 @@
 		@include mix.adaptiveValue("margin-bottom", -220, -110);
 	}
 	&__pagination .swiper-pagination-bullet {
-		// top: 0;
-		// left: 0;
-		// position: relative;
-		border-color: transparent;
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background-color: var.$white;
+		border-color: transparent;
 		border-radius: mix.rem(6);
 		box-shadow: 0 3.213px 24.416px 0 rgba(169, 165, 165, 0.25);
 		transition:
@@ -128,12 +127,13 @@
 
 .item {
 	align-items: center;
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	position: relative;
 	background-color: var.$white;
 	@media (max-width: point.$mobileBig) {
 		@include mix.adaptiveValue("padding-top", 120, 80);
+		height: 100%;
 	}
 	// .item_right
 	&_right {
@@ -150,8 +150,10 @@
 		justify-content: center;
 		& .item__contant {
 			flex-basis: 0;
-			width: mix.rem(500);
+			max-width: mix.rem(500);
 			margin: 0 auto;
+			@media (min-width: point.$mobileBig) {
+			}
 		}
 		@include mix.adaptiveValue("padding-top", 200, 100);
 	}
@@ -257,14 +259,20 @@
 }
 .mark {
 	width: 100%;
-
-	// flex: 1 1 auto;
 	// .mark__logo
 	&__logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex: 1 1 10%;
+		position: relative;
+		padding-bottom: 15%;
+		flex: 0 0 25%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			object-fit: contain;
+		}
 	}
 }
 
