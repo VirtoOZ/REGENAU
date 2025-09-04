@@ -5,28 +5,41 @@
 @use "../../../../../scss/common";
 @use "sass:math";
 .advantages {
+	padding: 5vh 0;
+	position: relative;
 	min-height: 100vh;
 	// min-width: 0;
 	background-color: #f8f8f6;
-	// @include mix.adaptiveValue("padding-top", 100, 50);
-	// @include mix.adaptiveValue("padding-bottom", 200, 50);
 	// .advantages__title
 	&__title {
+		height: 10vh;
+		// margin: mix.rem(50) 0 mix.rem(20) 0;
+		// @include mix.adaptiveValue("margin-top", 50, 50);
 	}
 	// .advantages__text
 	&__text {
 	}
 	// .advantages__control
 	&__control {
+		z-index: 2;
+		position: absolute;
+		width: 100%;
+		height: auto;
+		left: 0;
+		top: initial;
+		transform: translateY(50%);
 	}
 	// .advantages__slider
 	&__slider {
+		height: 80vh;
 		// overflow: hidden;
 		@include mix.adaptiveValue("padding-right", 50, 20);
 		@include mix.adaptiveValue("padding-left", 50, 20);
 	}
 	// .advantages__wrapper
 	&__wrapper {
+		// @include mix.adaptiveValue("padding-bottom", 200, 50);
+
 		// overflow: hidden;
 	}
 	// .advantages__item
@@ -35,8 +48,8 @@
 		overflow: hidden;
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 		@include mix.adaptiveValue("border-radius", 26, 10);
-		@include mix.adaptiveValue("margin-top", 60, 30);
-		@include mix.adaptiveValue("margin-bottom", 50, 50);
+		// @include mix.adaptiveValue("margin-top", 60, 30);
+		// @include mix.adaptiveValue("margin-bottom", 50, 50);
 	}
 }
 .control {
@@ -48,8 +61,8 @@
 		position: relative;
 		z-index: 2;
 		@include mix.adaptiveValue("column-gap", 30, 4);
-		@include mix.adaptiveValue("margin-top", 110, 55);
-		@include mix.adaptiveValue("margin-bottom", -220, -110);
+		// @include mix.adaptiveValue("margin-top", 110, 55);
+		// @include mix.adaptiveValue("margin-bottom", -220, -110);
 	}
 	&__pagination .swiper-pagination-bullet {
 		cursor: pointer;
@@ -102,26 +115,6 @@
 		.swiper-pagination-bullet.swiper-pagination-bullet-active {
 			border-width: mix.rem(2);
 		}
-	}
-}
-
-.title {
-	text-align: center;
-	&::before {
-		content: "";
-		width: mix.rem(29);
-		height: mix.rem(3);
-		background-color: var.$green;
-		margin-bottom: mix.rem(17);
-	}
-	// .title__text
-	&__text {
-		font-family: Lato;
-		color: var.$darkCol;
-		font-weight: 600;
-		line-height: math.div(54, 48);
-		text-transform: uppercase;
-		@include mix.adaptiveValue("font-size", 48, 32);
 	}
 }
 
@@ -236,19 +229,6 @@
 		&::before {
 			content: "";
 			display: none;
-		}
-	}
-	// .item__text
-	&__text {
-		color: #4c4b47;
-		font-weight: 400;
-		line-height: math.div(18, 16);
-		@include mix.adaptiveValue("font-size", 16, 14);
-		span {
-			font-weight: 700;
-		}
-		a {
-			color: var.$blue;
 		}
 	}
 }

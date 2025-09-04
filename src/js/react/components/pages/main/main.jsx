@@ -35,7 +35,7 @@ const Main = () => {
 													<button type="button" className="info-slide__more">Детальнее</button>
 												</div>
 												<div className="slide__image-ibg_contain">
-													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+													<img src="@img/main/advantage/item-2/adventage-item-2.png" alt="Защелка-фиксатор" />
 												</div>
 												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
 											</div>
@@ -45,7 +45,7 @@ const Main = () => {
 													<button type="button" className="info-slide__more">Детальнее</button>
 												</div>
 												<div className="slide__image-ibg_contain">
-													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+													<img src="@img/main/advantage/item-3/adventage-item-3.png" alt="Защелка-фиксатор" />
 												</div>
 												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
 											</div>
@@ -55,7 +55,7 @@ const Main = () => {
 													<button type="button" className="info-slide__more">Детальнее</button>
 												</div>
 												<div className="slide__image-ibg_contain">
-													<img src="@img/main/item-1.png" alt="Защелка-фиксатор" />
+													<img src="@img/main/advantage/item-4/adventage-item-4.png" alt="Защелка-фиксатор" />
 												</div>
 												<div className="slide__name">Защёлка фиксатор и дополнительные крепления</div>
 											</div>

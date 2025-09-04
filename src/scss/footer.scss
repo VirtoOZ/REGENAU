@@ -7,6 +7,7 @@
 .footer {
 	position: relative;
 	background-color: #333;
+	color: var.$white;
 	@include mix.adaptiveValue("padding-top", 60, 20);
 	@include mix.adaptiveValue("padding-bottom", 35, 15);
 	// .footer__container
@@ -106,70 +107,7 @@
 		@extend %text-i_14_500;
 	}
 }
-.info {
-	display: flex;
-	align-items: center;
-	flex: 0 0 33.333%;
-	@include mix.adaptiveValue("column-gap", 12, 5);
-	// min-width: 200px;
-	@media (max-width: 1250px) {
-		flex: 0 0 50%;
-	}
-	@media (max-width: point.$tablet) {
-		flex: 0 0 100%;
-	}
-	// .info__icon
-	&__icon {
-		flex: 0 0 mix.rem(39);
-		height: mix.rem(39);
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0%;
-			right: 0%;
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			background-color: var.$green;
-		}
-		img {
-			z-index: 2;
-		}
-	}
-	// .info__body
-	&__body {
-		display: flex;
-		flex-direction: column;
-		@extend %text-i_14_500;
-		// .info__body-main
-		&-main {
-			color: var.$mainTextCol;
-		}
-	}
-	// .info__label
-	&__label {
-	}
-	// .info__sublabel
-	&__sublabel {
-	}
-	// .info__tel
-	&__tel {
-	}
-	// .info__mail
-	&__mail {
-	}
-	&__tel,
-	&__mail,
-	&__label,
-	&__sublabel {
-		@include mix.adaptiveValue("padding-top", 5, 2.5);
-		@include mix.adaptiveValue("padding-bottom", 5, 2.5);
-	}
-}
+
 .footer-bottom {
 	// .footer-bottom__copyright
 	&__copyright {

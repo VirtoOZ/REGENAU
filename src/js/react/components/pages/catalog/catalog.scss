@@ -1,0 +1,286 @@
+@use "../../../../../scss/modules/brake-points" as point;
+@use "../../../../../scss/variables" as var;
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/fonts/fonts";
+@use "../../../../../scss/common";
+@use "sass:math";
+
+.catalog {
+	padding: mix.rem(50) mix.rem(0);
+	// .catalog__container
+	&__container {
+	}
+	// .catalog__titel
+	&__title {
+		margin: 0 auto;
+		max-width: mix.rem(650);
+	}
+	// .catalog__text
+	&__text {
+	}
+	// .catalog__wrapper
+	&__wrapper {
+		// margin-left: -20px;
+		// margin-right: -20px;
+		margin-top: mix.rem(50);
+		@media (min-width: point.$tablet) {
+			display: flex;
+			gap: 20px;
+		}
+	}
+	// .catalog__contant
+	&__contant {
+		flex: 1 1 auto;
+		// overflow: hidden;
+		border: mix.rem(1) solid #cfcfcf;
+		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+		border-radius: mix.rem(10);
+		img {
+			max-width: 100%;
+		}
+	}
+	// .catalog__filter
+	&__filter {
+		flex: 0 0 17.5%;
+	}
+}
+.title {
+	// .title__title
+	&__title {
+	}
+	// .title__text
+	&__text {
+	}
+}
+.filter-catalog {
+	@include mix.adaptiveValue("font-size", 16, 10);
+	& > :not(:last-child) {
+		margin-bottom: mix.rem(10);
+	}
+	// .filter-catalog__wrapper
+	&__wrapper {
+		overflow: hidden;
+		@media (max-width: point.$tablet) {
+			display: flex;
+			@include mix.adaptiveValue("gap", 50, 5, 0, 992, 320);
+		}
+		@media (min-width: point.$tablet) {
+			border: mix.rem(1) solid #cfcfcf;
+			box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+			border-radius: mix.rem(10);
+			background-color: var.$white;
+		}
+	}
+	// .filter-catalog__title
+	&__title {
+		padding: mix.rem(10);
+		background-color: var.$green;
+		color: var.$white;
+		@media (max-width: point.$tablet) {
+			display: none;
+		}
+	}
+	// .filter-catalog__color
+	&__color {
+		position: relative;
+		padding: 0 0 0 mix.rem(30);
+		&::before {
+			content: "";
+			background: url("@img/icons/catalog.svg") center / cover no-repeat;
+			position: absolute;
+			width: mix.rem(20);
+			height: mix.rem(20);
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+	// .filter-catalog__body
+	&__body {
+		@include mix.adaptiveValue("margin-top", 10, 30);
+		@include mix.adaptiveValue("margin-bottom", 10, 30);
+		& > :not(:last-child) {
+			margin-bottom: mix.rem(15);
+		}
+		@media (max-width: point.$tablet) {
+			flex: 1 1 33.333%;
+		}
+		@media (min-width: point.$tablet) {
+			padding: mix.rem(0) mix.rem(10);
+		}
+	}
+	// .filter-catalog__button
+	&__button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var.$blue;
+		color: var.$white;
+		font-size: mix.rem(16);
+		font-weight: 600;
+		border-radius: mix.rem(8);
+		padding-left: mix.rem(10);
+		padding-right: mix.rem(10);
+		@include mix.adaptiveValue("padding-top", 16, 18);
+		@include mix.adaptiveValue("padding-bottom", 16, 18);
+	}
+}
+.filter-item {
+	// .filter-item__border
+	&__border {
+		border-radius: mix.rem(6);
+		border: mix.rem(1) solid #cfcfcf;
+		// overflow: hidden;
+	}
+	// .filter-item__box
+	&__box {
+		margin: mix.rem(6);
+		// border-radius: mix.rem(6);
+		// border: mix.rem(6) solid var.$white;
+		// background: var.$white;
+		// padding: mix.rem(6);
+	}
+	// .filter-item__contant
+	&__contant {
+		// overflow: hidden;
+		width: 100%;
+		display: block;
+		border-radius: mix.rem(6);
+		padding-bottom: 100%;
+		// .filter-item__contant-white
+		&-white {
+			background-color: var.$white;
+		}
+		// .filter-item__contant-graphite
+		&-graphite {
+			background-color: var.$mainTextCol;
+		}
+		// .filter-item__contant-brown
+		&-brown {
+			background-color: darkred;
+		}
+	}
+	// .filter-item__box-white
+	&__box-white {
+	}
+	// .filter-item__sublabel
+	&__sublabel {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: mix.rem(0) mix.rem(5);
+	}
+	// .filter-item__color
+	&__color {
+	}
+	// .filter-item__color-number
+	&__color-number {
+	}
+}
+.filter-item_active .filter-item__border {
+	background-color: var.$green;
+}
+.filter-item_active .filter-item__box {
+	// border: mix.rem(6) solid var.$green;
+}
+
+.contant-catalog {
+	padding: 0 mix.rem(10);
+	@media (min-width: point.$tablet) {
+		position: relative;
+	}
+	// .contant-catalog__info
+	&__info {
+		padding: mix.rem(20);
+		position: relative;
+		display: flex;
+		gap: mix.rem(6);
+		span {
+			padding: 0 mix.rem(10);
+		}
+		& > * {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(146, 182, 33, 0.06);
+			border-radius: mix.rem(4);
+			box-shadow: 0 mix.rem(4) mix.rem(30.4) 0 rgba(169, 165, 165, 0.25);
+			backdrop-filter: blur(1.75px);
+		}
+	}
+	// .contant-catalog__image
+	&__image {
+		position: relative;
+		width: mix.rem(30);
+		height: mix.rem(30);
+		img {
+			position: absolute;
+			width: mix.rem(20);
+			height: mix.rem(20);
+			top: auto;
+			left: auto;
+			z-index: 2;
+			object-fit: cover;
+		}
+	}
+	// .contant-catalog__navigation
+	&__navigation {
+		margin: mix.rem(10) mix.rem(0);
+	}
+	// .contant-catalog__slider
+	&__slider {
+		@media (max-width: point.$tablet) {
+			position: relative;
+			padding-bottom: 80%;
+		}
+		@media (min-width: point.$tablet) {
+			position: absolute;
+			width: 40%;
+			height: auto;
+			padding-bottom: 30%;
+			top: 35%;
+			left: 18%;
+		}
+	}
+}
+.catalog-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: mix.rem(5);
+	@media (min-width: point.$tablet) {
+		display: none;
+	}
+	// .catalog-list__item
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1 1 auto;
+		border: mix.rem(1) solid var.$mainTextCol;
+		border-radius: mix.rem(20);
+		box-shadow: 0 0 mix.rem(10) transparent;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s,
+			box-shadow 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var.$green;
+				color: var.$white;
+				box-shadow: 0 0 mix.rem(10) var.$green;
+			}
+		}
+		&.active {
+			background-color: var.$green;
+			color: var.$white;
+			box-shadow: 0 0 mix.rem(10) var.$green;
+		}
+	}
+	// .catalog-list__button
+	&__button {
+		padding: mix.rem(5) mix.rem(10);
+		width: 100%;
+	}
+}

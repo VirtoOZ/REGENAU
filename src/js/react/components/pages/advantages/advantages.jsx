@@ -7,7 +7,7 @@ const Advantages = () => {
 		<>
 			<section className="advantages">
 				<div className="advantages__title title">
-					<h1 className="advantages__text title__text">Преимущества</h1>
+					<h1 className="advantages__text title__title">Преимущества</h1>
 				</div>
 				<div className="advantages__control control">
 					<div className="control__pagination swiper-pagination"></div>
@@ -30,9 +30,9 @@ const Advantages = () => {
 							</div>
 							<div data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" className="item__contant">
 								<div className="item__title title">
-									<h2 className='title__text'>Симметричный желоб</h2>
+									<h2 className='title__title'>Симметричный желоб</h2>
+									<p className="title__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 								</div>
-								<p className="item__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 							</div>
 						</article>
 						<article className="advantages__item item swiper-slide">
@@ -44,9 +44,9 @@ const Advantages = () => {
 							</div>
 							<div data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" className="item__contant">
 								<div className="item__title title">
-									<h2 className='title__text'>Усиленный держатель желоба</h2>
+									<h2 className='title__title'>Усиленный держатель желоба</h2>
+									<p className="title__text"><span>Держатель желоба</span> в водостоке <span>это фундамент <a href="#">надежности.</a></span> по этому держа это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 								</div>
-								<p className="item__text"><span>Держатель желоба</span> в водостоке <span>это фундамент <a href="#">надежности.</a></span> по этому держа это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 							</div>
 						</article>
 						<article className="advantages__item item item_right swiper-slide">
@@ -58,9 +58,9 @@ const Advantages = () => {
 							</div>
 							<div data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" className="item__contant">
 								<div className="item__title title">
-									<h2 className='title__text'>Симметричный желоб</h2>
+									<h2 className='title__title'>Симметричный желоб</h2>
+									<p className="title__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 								</div>
-								<p className="item__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 							</div>
 						</article>
 						<article className="advantages__item item swiper-slide">
@@ -72,9 +72,9 @@ const Advantages = () => {
 							</div>
 							<div data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" className="item__contant">
 								<div className="item__title title">
-									<h2 className='title__text'>Симметричный желоб</h2>
+									<h2 className='title__title'>Симметричный желоб</h2>
+									<p className="title__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 								</div>
-								<p className="item__text">Желоб <span>имеет одинаковую <a href="#">геометрию</a> с обоих сторон,</span> это позволяет безошибочно совершить монтаж системы без профессиональных навыков.</p>
 							</div>
 						</article>
 						<article className="advantages__item item item_warranty item_right swiper-slide">
@@ -83,9 +83,9 @@ const Advantages = () => {
 							</div>
 							<div className="item__contant" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" >
 								<div className="item__title title">
-									<h2 className='title__text'>Чесная гарантия</h2>
+									<h2 className='title__title'>Чесная гарантия</h2>
+									<p className="title__text"><span>Качетво водостока  <a href="#">Regenau</a> подтверждена десятилетней</span> чесной <span>гарантией</span>без лишней бюрократии: если что-то случилось с REGENAU, мы обязательно это исправим за свой счет.</p>
 								</div>
-								<p className="item__text"><span>Качетво водостока  <a href="#">Regenau</a> подтверждена десятилетней</span> чесной <span>гарантией</span>без лишней бюрократии: если что-то случилось с REGENAU, мы обязательно это исправим за свой счет.</p>
 							</div>
 							<div className="item__mark mark">
 								<div className="mark__logo">

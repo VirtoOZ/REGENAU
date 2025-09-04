@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Footer = () => {
 	return (
@@ -18,18 +19,18 @@ const Footer = () => {
 							<div className="footer-right__menu footer-menu">
 								<nav className="footer-menu__body">
 									<ul className="footer-menu__list">
-										<li className="footer-menu__item"><a href="" className="footer-menu__link">Каталог</a></li>
-										<li className="footer-menu__item"><a href="" className="footer-menu__link">Калькулятор</a></li>
-										<li className="footer-menu__item"><a href="" className="footer-menu__link">Про нас</a></li>
-										<li className="footer-menu__item"><a href="" className="footer-menu__link">Монтаж</a></li>
+										<li className="footer-menu__item"><Link to="/Catalog" className="footer-menu__link">Каталог</Link></li>
+										<li className="footer-menu__item"><Link to="/Calculate" className="footer-menu__link">Калькулятор</Link></li>
+										<li className="footer-menu__item"><Link to="/About" className="footer-menu__link">Про нас</Link></li>
+										<li className="footer-menu__item"><Link to="/Installation" className="footer-menu__link">Монтаж</Link></li>
 										<li className="footer-menu__item"><a href="" className="footer-menu__link">Доставка и оплата</a></li>
 										<li className="footer-menu__item"><a href="" className="footer-menu__link">Гарантии и возврат</a></li>
 										<li className="footer-menu__item"><a href="" className="footer-menu__link">Политика конфиденциальности</a></li>
 									</ul>
 								</nav>
-							</div>
-							<div className="footer-right__info">
-								<div className="footer-right__item info">
+							</div >
+							<div className="footer-right__info info">
+								<div className="footer-right__item info__item">
 									<div className="info__icon">
 										<img src="@img/icons/phone.svg" alt="Телефон" />
 									</div>
@@ -38,7 +39,7 @@ const Footer = () => {
 										<a href="mailto:mail@gmail.com" className="info__mail">mail@gmail.com</a>
 									</div>
 								</div>
-								<div className="footer-right__item info">
+								<div className="footer-right__item info__item">
 									<div className="info__icon">
 										<img src="@img/icons/www.svg" alt="Телефон" />
 									</div>
@@ -47,7 +48,7 @@ const Footer = () => {
 										<div className="info__sublabel">пн-пт 09:00 - 18:00</div>
 									</div>
 								</div>
-								<div className="footer-right__item info">
+								<div className="footer-right__item info__item">
 									<div className="info__icon">
 										<img src="@img/icons/location.svg" alt="Телефон" />
 									</div>
@@ -57,12 +58,12 @@ const Footer = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div >
+					</div >
 					<div className="footer__bottom footer-bottom">
 						<div className="footer-bottom__copyright">© 2024 MIZOL. All Rights Reserved.</div>
 					</div>
-				</div>
+				</div >
 			</footer >
 		</>
 	)

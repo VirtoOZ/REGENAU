@@ -160,6 +160,40 @@ function initSliders() {
 		},
 	});
 
+	new Swiper('.contant-catalog__slider.slider', {
+		modules: [Navigation, Pagination, Autoplay],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		// spaceBetween: 8,
+		autoHeight: true,
+		watchOverflow: true,
+		speed: 800,
+		setWrapperSize: false,
+		//touchRatio: 0,
+		// simulateTouch: false,
+		// loop: true,
+		preloadImages: false,
+		// Эффекты
+		// effect: 'fade',
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
+		// Пагинация
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		// Кнопки "влево/вправо"
+		navigation: {
+			// prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+		},
+		// События
+		on: {
+		},
+	});
 
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)

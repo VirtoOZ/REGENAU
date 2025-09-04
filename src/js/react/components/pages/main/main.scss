@@ -113,6 +113,7 @@
 		position: absolute;
 		width: 100%;
 		// height: 100%;
+		height: auto;
 		top: 0;
 		left: 0;
 		// position: relative;
@@ -242,6 +243,7 @@
 }
 .slide.swiper-slide.swiper-slide-prev,
 .slide.swiper-slide.swiper-slide-next {
+	transition: all 0.8s ease 0s;
 }
 .slide.swiper-slide.swiper-slide-active .slide__image-ibg_contain {
 	padding-bottom: 48%;
