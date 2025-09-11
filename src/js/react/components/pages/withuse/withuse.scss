@@ -1,0 +1,56 @@
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/modules/brake-points.scss" as point;
+
+.withuse {
+	flex: 1 1 auto;
+	align-content: center;
+	// .withuse__wrapper
+	&__wrapper {
+	}
+	// .withuse__container
+	&__container {
+		@media (min-width: point.$tablet) {
+			display: flex;
+			@include mix.adaptiveValue("column-gap", 50, 10);
+		}
+	}
+	// .withuse__contant
+	&__contant {
+		flex: 1 1 auto;
+		@media (max-width: point.$tablet) {
+			margin-bottom: mix.rem(20);
+		}
+		@media (min-width: point.$tablet) {
+			min-height: 500px;
+			align-content: center;
+		}
+	}
+	// .withuse__title
+	&__title {
+	}
+	// .withuse__image
+	&__image-ibg {
+		flex: 0 0 50%;
+		border-radius: mix.rem(14);
+		overflow: hidden;
+		img {
+			transform: rotateY(180deg);
+		}
+		@media (max-width: point.$tablet) {
+			padding-bottom: 100%;
+		}
+		@media (min-width: point.$tablet) {
+			flex: 0 0 40%;
+		}
+	}
+}
+.title-line {
+}
+.title {
+	// .title__title
+	&__title {
+	}
+	// .title__text
+	&__text {
+	}
+}

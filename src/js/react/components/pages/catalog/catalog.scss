@@ -191,11 +191,17 @@
 		position: relative;
 	}
 	// .contant-catalog__info
+
 	&__info {
-		padding: mix.rem(20);
+		@extend %text-i_14_18_400;
+		padding-top: mix.rem(20);
+		padding-bottom: mix.rem(20);
 		position: relative;
 		display: flex;
+		flex-wrap: wrap;
 		gap: mix.rem(6);
+		@include mix.adaptiveValue("padding-left", 20, 0);
+		@include mix.adaptiveValue("padding-right", 20, 0);
 		span {
 			padding: 0 mix.rem(10);
 		}

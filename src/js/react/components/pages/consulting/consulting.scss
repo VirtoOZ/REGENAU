@@ -1,0 +1,100 @@
+@use "sass:math"; //модуль Math
+@use "../../../../../scss/variables" as var;
+@use "../../../../../scss/modules/mixins" as mix;
+@use "../../../../../scss/modules/brake-points" as point;
+@use "../../../../../scss/common";
+
+.questions {
+	overflow: auto;
+	// .questions__container
+	&__container {
+	}
+	// .questions__wrapper
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		min-height: 100vh;
+	}
+	// .questions__border
+	&__border {
+		height: 100%;
+		flex: 1 1 auto;
+		border-radius: mix.rem(20);
+		align-items: center;
+		background-color: var.$white;
+		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+		@include mix.adaptiveValue("gap", 30, 10);
+		@media (min-width: point.$tablet) {
+			display: flex;
+		}
+		@media (max-width: point.$tablet) {
+			& > :not(:last-child) {
+				margin-bottom: mix.rem(30);
+			}
+		}
+	}
+	// .questions__content
+	&__content {
+		margin-top: mix.rem(30);
+		flex: 1 1 auto;
+	}
+	// .questions__image
+	&__image {
+		&-ibg {
+			border-radius: mix.rem(10);
+			overflow: hidden;
+			flex: 0 0 60%;
+			padding-bottom: 71%;
+
+			@media (min-width: point.$tablet) {
+				padding-bottom: 46%;
+				img {
+				}
+			}
+			img {
+			}
+		}
+	}
+}
+.question {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// .question__title
+	&__title {
+		margin-bottom: mix.rem(20);
+	}
+	// .question__body
+	&__body {
+		padding: mix.rem(10);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: mix.rem(10);
+		& > :nth-child(even) {
+			margin-left: 20%;
+		}
+		& > :nth-child(odd) {
+			margin-left: 10%;
+		}
+		:first-child {
+			margin-left: 0;
+		}
+	}
+	// .question__item
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: mix.rem(10);
+		background-color: var.$white;
+		padding: mix.rem(10);
+		border-radius: mix.rem(10);
+		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+	}
+	// .question__icon
+	&__icon {
+	}
+	// .question__text
+	&__text {
+	}
+}

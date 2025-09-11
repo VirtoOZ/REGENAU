@@ -3,57 +3,66 @@
 @use "../modules/brake-points" as point;
 
 //<Стили для кнопок>=================================
-.btn-telephone {
-	position: relative;
-	display: flex;
+.button {
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	display: flex;
 	border-radius: mix.rem(10);
 	background-color: var.$blue;
 	color: var.$white;
-	// min-width: 160px;
-	// flex: 0 1 160px;
 	font-family: Gilroy;
 	font-weight: 600;
 	white-space: nowrap;
 	box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
+	@include mix.adaptiveValue("padding-top", 15, 10);
 	@include mix.adaptiveValue("padding-bottom", 15, 10);
 	@include mix.adaptiveValue("padding-left", 26, 20);
 	@include mix.adaptiveValue("padding-right", 26, 20);
-	@include mix.adaptiveValue("padding-top", 15, 10);
 	@include mix.adaptiveValue("font-size", 16, 14);
-	&::before {
-		display: none;
-		content: "";
-		position: absolute;
-		width: mix.rem(16);
-		height: mix.rem(16);
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 3;
-		background: url("@img/icons/tel.svg") 0 / cover no-repeat;
-	}
-}
-@media (max-width: point.$tablet) {
-	.btn-telephone {
-		@extend %btn-tablet-media;
-		padding: 0;
+	&-ico {
+		@include mix.adaptiveValue("padding", 15, 10);
 		&::before {
-			display: block;
+			content: "";
+			// position: absolute;
+			width: mix.rem(16);
+			height: mix.rem(16);
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
+			// z-index: 3;
 		}
 	}
-	.btn-checkout {
-		@extend %btn-tablet-media;
+	&-telephone {
+		::before {
+			background: url("@img/icons/tel.svg") 0 / cover no-repeat;
+		}
 	}
-	%btn-tablet-media {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: mix.rem(33);
-		height: mix.rem(33);
-		background-color: var.$blue;
-		border-radius: mix.rem(8);
+	&-gift {
+		::before {
+			background: url("@img/icons/gift.svg") 0 / cover no-repeat;
+		}
+	}
+	@media (max-width: point.$tablet) {
+		&-telephone {
+			@extend %btn-tablet-media;
+			padding: 0;
+			&::before {
+				display: block;
+			}
+		}
+		&-checkout {
+			@extend %btn-tablet-media;
+		}
+		%btn-tablet-media {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: mix.rem(33);
+			height: mix.rem(33);
+			background-color: var.$blue;
+			border-radius: mix.rem(8);
+		}
 	}
 }
 %btn-tablet {

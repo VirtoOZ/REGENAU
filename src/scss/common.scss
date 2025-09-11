@@ -49,7 +49,7 @@
 }
 %text-i_14_18_400 {
 	font-weight: 400;
-	color: var.$white;
+	color: var.$mainTextCol;
 	line-height: 1.28;
 	@include mix.adaptiveValue("font-size", 14, 12);
 }
@@ -126,21 +126,32 @@
 
 //<Стили для текста>=================================
 .title {
-	text-align: center;
-	&::before {
-		content: "";
-		width: mix.rem(29);
-		height: mix.rem(3);
-		background-color: var.$green;
-		margin-bottom: mix.rem(17);
+	// text-align: center;
+	// .title-line
+	&-line {
+		@include mix.adaptiveValue("margin-bottom", 40, 10);
+		&::before {
+			content: "";
+			width: mix.rem(29);
+			height: mix.rem(3);
+			background-color: var.$green;
+			margin-bottom: mix.em(17);
+		}
+	}
+	& > p:not(:last-child) {
+		margin-bottom: mix.em(15);
 	}
 	// .title__title
 	&__title {
+		// text-align: center;
+		// padding: 0 mix.rem(10);
+		margin-bottom: mix.rem(20);
 		@extend %text-l_48_54_600;
 		@include mix.adaptiveValue("font-size", 48, 32);
 	}
 	// .title__text
 	&__text {
+		// padding: 0 mix.rem(10);
 		color: #4c4b47;
 		font-weight: 400;
 		line-height: math.div(18, 16);
@@ -234,6 +245,44 @@
 		@include mix.adaptiveValue("padding-bottom", 5, 2.5);
 	}
 }
-//<Стили для кнопок>=================================
+//<Стили для навигации swiper>=================================
+.slider-navigation {
+	display: inline-block;
+	& > :not(:last-child) {
+		margin-right: mix.rem(15);
+	}
+	@media (max-width: point.$pc) {
+		bottom: 5%;
+		display: none;
+	}
+	@media (min-width: point.$tablet) {
+	}
 
+	// .slider-navbutton__button
+	&__button {
+		width: mix.rem(40);
+		height: mix.rem(40);
+		color: #a8a8a8;
+		background-color: var.$white;
+		border-radius: mix.rem(8);
+		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+		&::before {
+			content: "";
+			background: url("@img/icons/arrow-right.svg") center no-repeat;
+			top: 0;
+			left: 0;
+			width: mix.rem(16);
+			height: mix.rem(16);
+		}
+		// .slider-navigation__button-next
+		&-next {
+		}
+		// .slider-navigtion__button-prev
+		&-prev {
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
 //<Стили для кнопок>=================================
