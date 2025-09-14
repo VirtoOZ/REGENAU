@@ -1,5 +1,4 @@
 import React from 'react';
-import './helpForm.scss'
 
 const HelpForm = () => {
 	return (

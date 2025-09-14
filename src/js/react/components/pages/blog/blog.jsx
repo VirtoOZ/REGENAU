@@ -1,10 +1,10 @@
 import React from 'react';
-import './blog.scss';
 
 const Blog = () => {
 	return (
 		<>
 			<section className="blog">
+				<div className="test"></div>
 				<div className="blog__wrapper">
 					<div className="blog__container">
 						<div className="blog__header">

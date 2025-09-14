@@ -1,8 +1,7 @@
-@use "../variables" as var;
-@use "../modules/brake-points" as point;
-@use "../modules/mixins" as mix;
-@use "../common";
-@use "../base/btn"; //<MENU>=======================================
+@use "../abstracts" as *;
+@use "../common" as *;
+
+//<MENU>=======================================
 .menu {
 	// .menu__icon
 	&__icon {
@@ -16,13 +15,13 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
-			padding: rem(50) rem(15) rem(15) rem(30);
+			padding: rems(50) rems(15) rems(15) rems(30);
 			transition: left 0.3s;
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: rem(70);
+				height: rems(70);
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;
@@ -63,8 +62,8 @@
 	&::after {
 		content: "";
 		width: 100%;
-		flex: 0 0 rem(3);
-		border-radius: rem(2);
+		flex: 0 0 rems(3);
+		border-radius: rems(2);
 		background-color: $mainTextCol;
 		transform: translate(0%, 0%) rotate(0deg);
 		transition: all 0.3s ease 0s;

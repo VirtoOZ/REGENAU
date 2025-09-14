@@ -1,9 +1,4 @@
-// @use "sass:math"; //модуль Math
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/common";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
 .questions {
 	overflow: auto;
 	// .questions__container
@@ -19,7 +14,7 @@
 	&__border {
 		height: 100%;
 		flex: 1 1 auto;
-		border-radius: rem(20);
+		border-radius: rems(20);
 		align-items: center;
 		background-color: $white;
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
@@ -29,19 +24,19 @@
 		}
 		@media (max-width: $tablet) {
 			& > :not(:last-child) {
-				margin-bottom: rem(30);
+				margin-bottom: rems(30);
 			}
 		}
 	}
 	// .questions__content
 	&__content {
-		margin-top: rem(30);
+		margin-top: rems(30);
 		flex: 1 1 auto;
 	}
 	// .questions__image
 	&__image {
 		&-ibg {
-			border-radius: rem(10);
+			border-radius: rems(10);
 			overflow: hidden;
 			flex: 0 0 60%;
 			padding-bottom: 71%;
@@ -62,15 +57,15 @@
 	justify-content: center;
 	// .question__title
 	&__title {
-		margin-bottom: rem(20);
+		margin-bottom: rems(20);
 	}
 	// .question__body
 	&__body {
-		padding: rem(10);
+		padding: rems(10);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: rem(10);
+		gap: rems(10);
 		& > :nth-child(even) {
 			margin-left: 20%;
 		}
@@ -85,10 +80,10 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		gap: rem(10);
+		gap: rems(10);
 		background-color: $white;
-		padding: rem(10);
-		border-radius: rem(10);
+		padding: rems(10);
+		border-radius: rems(10);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 	}
 	// .question__icon

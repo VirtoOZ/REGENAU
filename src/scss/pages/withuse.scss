@@ -1,6 +1,4 @@
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/modules/brake-points.scss" as point;
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
 
 .withuse {
 	flex: 1 1 auto;
@@ -19,7 +17,7 @@
 	&__contant {
 		flex: 1 1 auto;
 		@media (max-width: $tablet) {
-			margin-bottom: rem(20);
+			margin-bottom: rems(20);
 		}
 		@media (min-width: $tablet) {
 			min-height: 500px;
@@ -32,7 +30,7 @@
 	// .withuse__image
 	&__image-ibg {
 		flex: 0 0 50%;
-		border-radius: rem(14);
+		border-radius: rems(14);
 		overflow: hidden;
 		img {
 			transform: rotateY(180deg);

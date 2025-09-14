@@ -1,6 +1,5 @@
 
 import React from 'react';
-import './advantages.scss';
 
 const Advantages = () => {
 	return (

@@ -1,9 +1,5 @@
-@use "./modules/brake-points" as point;
-@use "./variables" as var;
-@use "./modules/mixins" as mix;
-@use "./common";
-// @use "./base/btn";
-@use "sass:math";
+@use "../abstracts" as *;
+@use "../common" as *;
 
 //<HEADER>=================================
 .header {
@@ -27,20 +23,20 @@
 }
 .button-header {
 	@media (max-width: $tablet) {
-		flex: 0 0 rem(33);
-		height: rem(33);
+		flex: 0 0 rems(33);
+		height: rems(33);
 		z-index: 5;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: $white;
-		border-radius: rem(8);
+		border-radius: rems(8);
 		box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
 	}
 	// .button-header__icon
 	&__icon {
-		flex: 0 0 rem(23);
-		height: rem(23);
+		flex: 0 0 rems(23);
+		height: rems(23);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -79,7 +75,7 @@
 	&__logo {
 		@media (max-width: $mobileBig) {
 			& :not(:last-child) {
-				margin-bottom: rem(5);
+				margin-bottom: rems(5);
 			}
 		}
 	}
@@ -165,7 +161,7 @@
 		flex: 1 1 33.333%;
 		@media (min-width: $pc) {
 			& :not(:last-child) {
-				margin-bottom: rem(5);
+				margin-bottom: rems(5);
 			}
 		}
 	}
@@ -177,7 +173,7 @@
 }
 .column-info {
 	& > :not(:last-child) {
-		margin-bottom: rem(3);
+		margin-bottom: rems(3);
 	}
 	// .column-info__text
 	&__text {
@@ -276,7 +272,7 @@
 .bottom-right {
 	display: flex;
 	align-items: center;
-	gap: rem(10);
+	gap: rems(10);
 	// .bottom-right__leng
 	&__leng {
 		@extend %text-g_16_18_600;

@@ -1,9 +1,7 @@
 @use "sass:math"; //модуль Math
-@use "../../../../../scss/globals" as *;
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/common";
+@use "../abstracts" as *;
+@use "../common" as *;
+
 .about {
 	// display: none;
 	// .about__container
@@ -11,7 +9,6 @@
 		@include adaptiveValue("margin-top", 165, 100);
 		@include adaptiveValue("margin-bottom", 165, 100);
 	}
-
 	// .about__contant
 	&__contant {
 		flex: 0 0 50%;
@@ -50,7 +47,7 @@
 .content-about {
 	// .content-about__logo
 	&__logo {
-		width: rem(234);
+		width: rems(234);
 		@include adaptiveValue("margin-top", 16, 10);
 		@include adaptiveValue("margin-bottom", 35, 20);
 		img {
@@ -70,10 +67,10 @@
 		position: relative;
 		z-index: 2;
 		@extend %text-i_16_22_400;
-		padding-right: rem(60);
+		padding-right: rems(60);
 
 		&:not(:last-child) {
-			margin-bottom: rem(20);
+			margin-bottom: rems(20);
 		}
 		span,
 		a {

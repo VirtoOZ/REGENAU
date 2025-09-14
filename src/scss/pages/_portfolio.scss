@@ -1,9 +1,4 @@
-// @use "sass:math"; //модуль Math
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/common";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
 
 .portfolio {
 	// flex: 1 1 auto;
@@ -48,7 +43,7 @@
 		&::after {
 			// z-index: 1;
 			right: -30%;
-			border-radius: 0 rem(20) rem(20) 0;
+			border-radius: 0 rems(20) rems(20) 0;
 		}
 		@media (min-width: $tablet) {
 			position: relative;
@@ -72,7 +67,7 @@
 		z-index: 3;
 		position: relative;
 		display: flex;
-		gap: rem(5);
+		gap: rems(5);
 		justify-content: center;
 		@media (max-width: $tablet) {
 			position: absolute;
@@ -111,7 +106,7 @@
 		right: 0;
 		z-index: 2;
 		& > :not(:last-child) {
-			margin-right: rem(15);
+			margin-right: rems(15);
 		}
 		@media (max-width: $pc) {
 			bottom: 5%;
@@ -137,9 +132,9 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		border-radius: rem(8);
+		border-radius: rems(8);
 		@media (min-width: $tablet) {
-			border: rem(2) solid $white;
+			border: rems(2) solid $white;
 			height: 66%;
 			width: 100%;
 			flex: 1 1 auto;
@@ -171,13 +166,13 @@
 .swiper-slide-active .portfolio__image-ibg {
 	width: 100%;
 	height: 100%;
-	border-radius: rem(14);
+	border-radius: rems(14);
 	@media (min-width: $tablet) {
 		position: absolute;
 		width: 42vw;
 		height: 100%;
-		border-width: rem(1);
-		@include adaptiveValue("left", -375, -100);
+		border-width: rems(1);
+		// @include adaptiveValue("left", -375, -100);
 	}
 }
 .swiper-slide-next .portfolio__image-ibg {

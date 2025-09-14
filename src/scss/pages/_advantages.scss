@@ -4,7 +4,7 @@
 // @use "../../../../../scss/fonts/fonts";
 // @use "../../../../../scss/common";
 // @use "sass:math";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
 
 .advantages {
 	padding: 5vh 0;
@@ -15,7 +15,7 @@
 	// .advantages__title
 	&__title {
 		height: 10vh;
-		// margin: rem(50) 0 rem(20) 0;
+		// margin: rems(50) 0 rems(20) 0;
 		// @include adaptiveValue("margin-top", 50, 50);
 	}
 	// .advantages__text
@@ -73,7 +73,7 @@
 		justify-content: center;
 		background-color: $white;
 		border-color: transparent;
-		border-radius: rem(6);
+		border-radius: rems(6);
 		box-shadow: 0 3.213px 24.416px 0 rgba(169, 165, 165, 0.25);
 		transition:
 			border-color 0.8s ease 0s,
@@ -83,7 +83,7 @@
 		span {
 			transition: opacity 0.8s ease 0s;
 			position: relative;
-			// flex: 0 1 rem(60);
+			// flex: 0 1 rems(60);
 			height: 100%;
 			opacity: 0.5;
 			@include adaptiveValue("width", 60, 40);
@@ -99,7 +99,7 @@
 		}
 	}
 	&__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-		border: rem(4) solid;
+		border: rems(4) solid;
 		border-color: $green;
 		transform: translateY(-10px);
 		transition:
@@ -115,7 +115,7 @@
 	}
 	@media (max-width: $mobile) {
 		.swiper-pagination-bullet.swiper-pagination-bullet-active {
-			border-width: rem(2);
+			border-width: rems(2);
 		}
 	}
 }
@@ -145,7 +145,7 @@
 		justify-content: center;
 		& .item__contant {
 			flex-basis: 0;
-			max-width: rem(500);
+			max-width: rems(500);
 			margin: 0 auto;
 			@media (min-width: $mobileBig) {
 			}

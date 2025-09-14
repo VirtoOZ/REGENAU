@@ -1,9 +1,5 @@
-// @use "sass:math"; //модуль Math
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/common";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
+@use "../common" as *;
 
 .page {
 	display: none;
@@ -63,9 +59,9 @@
 		@extend %text-i_22_24_500;
 		background-color: $white;
 		display: inline-block;
-		border-radius: rem(8);
+		border-radius: rems(8);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-		margin: 0 0 rem(5) 0;
+		margin: 0 0 rems(5) 0;
 		// @include adaptiveValue("margin-top", 5, 165);
 		// @include adaptiveValue("margin-bottom", 5, 165);
 		@include adaptiveValue("padding", 15, 5);
@@ -82,7 +78,7 @@
 		@include adaptiveValue("margin-bottom", 40, 28);
 		@media (min-width: $mobileSmall) {
 		}
-		// height: rem(100);
+		// height: rems(100);
 		@media (max-width: $mobileBig) {
 			justify-content: center;
 		}
@@ -139,13 +135,13 @@
 	}
 	&__button {
 		position: absolute;
-		width: rem(40);
-		height: rem(40);
+		width: rems(40);
+		height: rems(40);
 		bottom: 0;
 		right: -15%;
 		color: #a8a8a8;
 		background-color: $white;
-		border-radius: rem(8);
+		border-radius: rems(8);
 		span {
 			font-size: 0;
 		}
@@ -154,18 +150,18 @@
 			background: url("@img/icons/arrow-right.svg") center no-repeat;
 			top: 0;
 			left: 0;
-			width: rem(16);
-			height: rem(16);
+			width: rems(16);
+			height: rems(16);
 		}
 		@media (max-width: $mobileBig) {
 			display: none;
 		}
 	}
-	// swiper-button-next
+
 	// .sider__paginations
 	&__paginations {
 		// position: relative;
-		// margin-top: rem(16);
+		// margin-top: rems(16);
 		display: none;
 		// justify-content: flex-end;
 		justify-content: center;
@@ -177,9 +173,9 @@
 		}
 	}
 	&__paginations .swiper-pagination-bullet {
-		// padding: rem(5);
-		flex: 0 0 rem(17);
-		height: rem(17);
+		// padding: rems(5);
+		flex: 0 0 rems(17);
+		height: rems(17);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -188,18 +184,18 @@
 			transition: all 0.5s ease 0s;
 			background-color: #d9d9d9;
 			border-radius: 50%;
-			flex: 0 0 rem(7);
-			height: rem(7);
+			flex: 0 0 rems(7);
+			height: rems(7);
 			top: 0;
 			left: 0;
 		}
 	}
 	&__paginations .swiper-pagination-bullet-active {
-		// width: rem(22);
+		// width: rems(22);
 		&::before {
 			background-color: $blue;
-			border-radius: rem(20);
-			flex: 0 0 rem(22);
+			border-radius: rems(20);
+			flex: 0 0 rems(22);
 		}
 	}
 }
@@ -207,13 +203,13 @@
 	// min-height: 100%;
 	align-self: flex-start;
 	background-color: $white;
-	border-radius: rem(8);
+	border-radius: rems(8);
 	position: relative;
 	transition: all 0.8s ease 0s;
 	opacity: 0;
 	transform: scale(0.5) translateY(-100%);
 	// margin-bottom: -200px;
-	// height: rem(250);
+	// height: rems(250);
 	// @include adaptiveValue("max-width", 389, 278);
 	// @include adaptiveValue("min-height", 150, 200);
 	// @include adaptiveValue("min-height", 284, 215);

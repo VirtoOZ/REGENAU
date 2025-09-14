@@ -1,19 +1,15 @@
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/fonts/fonts";
-// @use "../../../../../scss/common";
-// @use "sass:math";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
+@use "../common" as *;
+
 .catalog {
-	padding: rem(50) rem(0);
+	padding: rems(50) rems(0);
 	// .catalog__container
 	&__container {
 	}
 	// .catalog__titel
 	&__title {
 		margin: 0 auto;
-		max-width: rem(650);
+		max-width: rems(650);
 	}
 	// .catalog__text
 	&__text {
@@ -22,7 +18,7 @@
 	&__wrapper {
 		// margin-left: -20px;
 		// margin-right: -20px;
-		margin-top: rem(50);
+		margin-top: rems(50);
 		@media (min-width: $tablet) {
 			display: flex;
 			gap: 20px;
@@ -32,9 +28,9 @@
 	&__contant {
 		flex: 1 1 auto;
 		// overflow: hidden;
-		border: rem(1) solid #cfcfcf;
+		border: rems(1) solid #cfcfcf;
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-		border-radius: rem(10);
+		border-radius: rems(10);
 		img {
 			max-width: 100%;
 		}
@@ -55,7 +51,7 @@
 .filter-catalog {
 	@include adaptiveValue("font-size", 16, 10);
 	& > :not(:last-child) {
-		margin-bottom: rem(10);
+		margin-bottom: rems(10);
 	}
 	// .filter-catalog__wrapper
 	&__wrapper {
@@ -65,15 +61,15 @@
 			@include adaptiveValue("gap", 50, 5, 0, 992, 320);
 		}
 		@media (min-width: $tablet) {
-			border: rem(1) solid #cfcfcf;
+			border: rems(1) solid #cfcfcf;
 			box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-			border-radius: rem(10);
+			border-radius: rems(10);
 			background-color: $white;
 		}
 	}
 	// .filter-catalog__title
 	&__title {
-		padding: rem(10);
+		padding: rems(10);
 		background-color: $green;
 		color: $white;
 		@media (max-width: $tablet) {
@@ -83,13 +79,13 @@
 	// .filter-catalog__color
 	&__color {
 		position: relative;
-		padding: 0 0 0 rem(30);
+		padding: 0 0 0 rems(30);
 		&::before {
 			content: "";
 			background: url("@img/icons/catalog.svg") center / cover no-repeat;
 			position: absolute;
-			width: rem(20);
-			height: rem(20);
+			width: rems(20);
+			height: rems(20);
 			top: 50%;
 			transform: translateY(-50%);
 			left: 0;
@@ -100,13 +96,13 @@
 		@include adaptiveValue("margin-top", 10, 30);
 		@include adaptiveValue("margin-bottom", 10, 30);
 		& > :not(:last-child) {
-			margin-bottom: rem(15);
+			margin-bottom: rems(15);
 		}
 		@media (max-width: $tablet) {
 			flex: 1 1 33.333%;
 		}
 		@media (min-width: $tablet) {
-			padding: rem(0) rem(10);
+			padding: rems(0) rems(10);
 		}
 	}
 	// .filter-catalog__button
@@ -117,11 +113,11 @@
 		align-items: center;
 		background-color: $blue;
 		color: $white;
-		font-size: rem(16);
+		font-size: rems(16);
 		font-weight: 600;
-		border-radius: rem(8);
-		padding-left: rem(10);
-		padding-right: rem(10);
+		border-radius: rems(8);
+		padding-left: rems(10);
+		padding-right: rems(10);
 		@include adaptiveValue("padding-top", 16, 18);
 		@include adaptiveValue("padding-bottom", 16, 18);
 	}
@@ -129,24 +125,24 @@
 .filter-item {
 	// .filter-item__border
 	&__border {
-		border-radius: rem(6);
-		border: rem(1) solid #cfcfcf;
+		border-radius: rems(6);
+		border: rems(1) solid #cfcfcf;
 		// overflow: hidden;
 	}
 	// .filter-item__box
 	&__box {
-		margin: rem(6);
-		// border-radius: rem(6);
-		// border: rem(6) solid $white;
+		margin: rems(6);
+		// border-radius: rems(6);
+		// border: rems(6) solid $white;
 		// background: $white;
-		// padding: rem(6);
+		// padding: rems(6);
 	}
 	// .filter-item__contant
 	&__contant {
 		// overflow: hidden;
 		width: 100%;
 		display: block;
-		border-radius: rem(6);
+		border-radius: rems(6);
 		padding-bottom: 100%;
 		// .filter-item__contant-white
 		&-white {
@@ -169,7 +165,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: rem(0) rem(5);
+		padding: rems(0) rems(5);
 	}
 	// .filter-item__color
 	&__color {
@@ -182,11 +178,11 @@
 	background-color: $green;
 }
 .filter-item_active .filter-item__box {
-	// border: rem(6) solid $green;
+	// border: rems(6) solid $green;
 }
 
 .contant-catalog {
-	padding: 0 rem(10);
+	padding: 0 rems(10);
 	@media (min-width: $tablet) {
 		position: relative;
 	}
@@ -194,36 +190,36 @@
 
 	&__info {
 		@extend %text-i_14_18_400;
-		padding-top: rem(20);
-		padding-bottom: rem(20);
+		padding-top: rems(20);
+		padding-bottom: rems(20);
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
-		gap: rem(6);
+		gap: rems(6);
 		@include adaptiveValue("padding-left", 20, 0);
 		@include adaptiveValue("padding-right", 20, 0);
 		span {
-			padding: 0 rem(10);
+			padding: 0 rems(10);
 		}
 		& > * {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			background-color: rgba(146, 182, 33, 0.06);
-			border-radius: rem(4);
-			box-shadow: 0 rem(4) rem(30.4) 0 rgba(169, 165, 165, 0.25);
+			border-radius: rems(4);
+			box-shadow: 0 rems(4) rems(30.4) 0 rgba(169, 165, 165, 0.25);
 			backdrop-filter: blur(1.75px);
 		}
 	}
 	// .contant-catalog__image
 	&__image {
 		position: relative;
-		width: rem(30);
-		height: rem(30);
+		width: rems(30);
+		height: rems(30);
 		img {
 			position: absolute;
-			width: rem(20);
-			height: rem(20);
+			width: rems(20);
+			height: rems(20);
 			top: auto;
 			left: auto;
 			z-index: 2;
@@ -232,7 +228,7 @@
 	}
 	// .contant-catalog__navigation
 	&__navigation {
-		margin: rem(10) rem(0);
+		margin: rems(10) rems(0);
 	}
 	// .contant-catalog__slider
 	&__slider {
@@ -254,7 +250,7 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	gap: rem(5);
+	gap: rems(5);
 	@media (min-width: $tablet) {
 		display: none;
 	}
@@ -264,9 +260,9 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1 1 auto;
-		border: rem(1) solid $mainTextCol;
-		border-radius: rem(20);
-		box-shadow: 0 0 rem(10) transparent;
+		border: rems(1) solid $mainTextCol;
+		border-radius: rems(20);
+		box-shadow: 0 0 rems(10) transparent;
 		transition:
 			background-color 0.3s ease 0s,
 			color 0.3s ease 0s,
@@ -275,18 +271,18 @@
 			&:hover {
 				background-color: $green;
 				color: $white;
-				box-shadow: 0 0 rem(10) $green;
+				box-shadow: 0 0 rems(10) $green;
 			}
 		}
 		&.active {
 			background-color: $green;
 			color: $white;
-			box-shadow: 0 0 rem(10) $green;
+			box-shadow: 0 0 rems(10) $green;
 		}
 	}
 	// .catalog-list__button
 	&__button {
-		padding: rem(5) rem(10);
+		padding: rems(5) rems(10);
 		width: 100%;
 	}
 }

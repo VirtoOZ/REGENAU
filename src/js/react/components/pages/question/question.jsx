@@ -1,5 +1,4 @@
 import React from "react";
-import "./question.scss";
 
 const Question = () => {
 	return (

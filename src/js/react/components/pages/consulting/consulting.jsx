@@ -1,5 +1,4 @@
 import React from "react";
-import "./consulting.scss";
 
 const Consulting = () => {
 	return (

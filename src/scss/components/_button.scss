@@ -1,7 +1,5 @@
-// @use "../variables" as var;
-// @use "../modules/mixins" as mix;
-// @use "../modules/brake-points" as point;
-// @use "../globals" as *;
+@use "../abstracts" as *;
+// @use "../common" as *;
 
 //<Стили для кнопок>=================================
 .button {
@@ -9,7 +7,7 @@
 	align-items: center;
 	position: relative;
 	display: flex;
-	border-radius: rem(10);
+	border-radius: rems(10);
 	background-color: $blue;
 	color: $white;
 	font-family: Gilroy;
@@ -26,8 +24,8 @@
 		&::before {
 			content: "";
 			// position: absolute;
-			width: rem(16);
-			height: rem(16);
+			width: rems(16);
+			height: rems(16);
 			// top: 50%;
 			// left: 50%;
 			// transform: translate(-50%, -50%);
@@ -59,10 +57,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: rem(33);
-			height: rem(33);
+			width: rems(33);
+			height: rems(33);
 			background-color: $blue;
-			border-radius: rem(8);
+			border-radius: rems(8);
 		}
 	}
 }
@@ -70,10 +68,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: rem(33);
-	height: rem(33);
+	width: rems(33);
+	height: rems(33);
 	background-color: $blue;
-	border-radius: rem(8);
+	border-radius: rems(8);
 }
 .btn-checkout {
 	@extend %btn-tablet;
@@ -82,10 +80,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: rem(40);
-	height: rem(40);
+	width: rems(40);
+	height: rems(40);
 	background-color: $white;
-	border-radius: rem(8);
+	border-radius: rems(8);
 }
 .btn-checkout-big {
 	@extend %btn-mini;

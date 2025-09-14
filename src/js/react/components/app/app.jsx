@@ -6,7 +6,6 @@ import Header from '../header/header.jsx';
 import Footer from '../footer/footer.jsx';
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import './App.scss'
 
 const App = () => {
 	return (

@@ -1,7 +1,5 @@
-@use "./variables" as var;
-@use "./modules/mixins" as mix;
-@use "./common";
-@use "./modules/brake-points" as point;
+@use "../abstracts" as *;
+@use "../common" as *;
 
 //<FOOTER>=================================
 .footer {
@@ -47,7 +45,7 @@
 	// .footer-logo__icon
 	&__icon {
 		// padding-bottom: 17%;
-		margin-bottom: rem(12);
+		margin-bottom: rems(12);
 	}
 	// .footer-logo__img
 	&__img {
@@ -73,7 +71,7 @@
 		}
 		@media (max-width: 1250px) {
 			flex-wrap: wrap;
-			row-gap: rem(30);
+			row-gap: rems(30);
 			// @include adaptiveValue("row-gap", 30, 30);
 		}
 	}
@@ -90,7 +88,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: rem(-7);
+		margin: rems(-7);
 		@media (max-width: $mobileBig) {
 		}
 	}
@@ -102,7 +100,7 @@
 	}
 	// .footer-menu__link
 	&__link {
-		padding: rem(7);
+		padding: rems(7);
 		// @include adaptiveValue("padding", 7, 5);
 		@extend %text-i_14_500;
 	}

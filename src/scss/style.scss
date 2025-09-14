@@ -1,164 +1,27 @@
 // <IMPORT>=================================
-@use "sass:math"; //модуль Math
-@use "sass:meta"; //модуль Math
-@use "./modules/null.scss";
-@use "./modules/main-fonts.scss" as *;
-@use "./globals" as *;
-@use "./modules/base.scss";
+// @use "abstracts" as *;
+@use "layout";
+@use "common";
+@use "fonts";
+@use "components";
+@use "base";
+@use "pages";
 
 // <VARIABLES>=================================
-// @include meta.load-css("./common.scss");
-// @use "./common.scss" as *;
-// @use "./variables" as var;
-// 1 = отзывчивость (у контейнера нет брейкпоинтов),
-// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
-$responsiveType: 1;
 // </VARIABLES>=================================
 
 //<MIXINS>=================================
-// @use "sass:meta";
-// @use "modules/mixins" as mix;
 //</MIXINS>=================================
 
 // <ШРИФТ>=================================
 //&display=swap - добавить при подключении через плагин
-// @use "fonts/fonts"; // Подключить если есть локальные файлы шрифтов
 // @import url("https://fonts.googleapis.com/css2?family=Lato:400,500,600,700,800,900&display=swap");
-// @import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800,900&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // @import "fonts/icons"; // Подключить если есть файл иконочного шрифта
 // @include meta.load-css("./modules/main-fonts");
 // </ШРИФТ>=================================
 
 // <ОБНУЛЕНИЕ>=================================
-// @include meta.load-css("./modules/null");
-// @include meta.load-css("./common");
-// <>=================================
-//<Настройки из обнуления>=================================
-html,
-body {
-	height: 100%;
-	min-width: $minWidth + px;
-}
-input,
-button,
-textarea {
-	font-family: $fontFamily;
-}
-//<Настройки из обнуления>=================================
-
-// <BODY>=================================
-body {
-	background: $mainBgCol;
-	color: $mainCol;
-	// @include adaptiveValue("font-size", 25, 18);
-	font-weight: 500;
-	font-family: $fontFamily;
-	font-size: $fontSize;
-	// line-height: 187.5%;
-	// Скролл заблокирован
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-		overscroll-behavior: none;
-	}
-	// Сайт загружен
-	.loaded & {
-		transition: opacity 0.8s ease 0s;
-		opacity: 1;
-	}
-}
-// </BODY>=================================
-
-// <WRAPPER>=================================
-.wrapper {
-	// width: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	// Прижимаем footer
-	> main {
-		flex: 1 1 auto;
-	}
-	// Фикс для слайдеров
-	> * {
-		min-width: 0;
-	}
-	& :first-child {
-		// flex: 1 1 auto;
-	}
-}
-// </WRAPPER>=================================
+// <ОБНУЛЕНИЕ>=================================
 
 // <CONTAINER>=================================
-// (i) Стили будут применяться ко
-// всем классам содержащим *__container
-// Например header__container, main__container и т.д.
-// Снипет (HTML): cnt
-
-@if ($responsiveType==1) {
-	// Отзывчивая
-	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: rem($containerWidth);
-			box-sizing: content-box;
-			margin: 0 auto;
-		}
-		@if ($containerPadding>0) {
-			@if ($maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			} @else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), $containerPaddingMin);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), $containerPaddingMin);
-			}
-		}
-	}
-} @else {
-	// По брейк-поинтам
-	[class*="__container"] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-		@media (max-width: $pc) {
-			max-width: rem(970);
-		}
-		@media (max-width: $tablet) {
-			max-width: rem(750);
-		}
-		@media (max-width: $mobileBig) {
-			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-	}
-}
 // </CONTAINER>=================================
-
-// <IMPORT>=================================
-// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
-// Для подключения/отключения конкретных стилей base.scss
-// @include meta.load-css("modules/base");
-// Подключение стилей общих элементов проекта
-// Подключение стилей отдельных блоков
-// @include meta.load-css("header");
-// @include meta.load-css("footer");
-
-// Подключение стилей отдельных страниц
-// @use "home";
-// </IMPORT>=================================
-
-// <ОБЩИЙ СТИЛЬ>=================================
-
-//</ОБЩИЕ СТИЛИ>=================================
-
-//<MAIN>=================================
-
-//</MAIN>=================================

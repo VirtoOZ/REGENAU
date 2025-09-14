@@ -1,10 +1,5 @@
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/fonts/fonts";
-// @use "../../../../../scss/common";
-// @use "sass:math";
-@use "../../../../../scss/globals" as *;
+@use "../abstracts" as *;
+@use "../common" as *;
 
 .help {
 	// .help__container
@@ -80,7 +75,7 @@
 }
 .help-form {
 	color: $white;
-	padding: rem(63) 0;
+	padding: rems(63) 0;
 	& > :not(:last-child) {
 		@include adaptiveValue("margin-bottom", 43, 24);
 	}
@@ -97,7 +92,7 @@
 	&__body {
 		@media (max-width: $pc) {
 			& > :not(:last-child) {
-				margin-bottom: rem(10);
+				margin-bottom: rems(10);
 			}
 		}
 		@media (min-width: $pc) {
@@ -113,8 +108,8 @@
 	}
 	&__name,
 	&__tel {
-		border: rem(1) solid $white;
-		border-radius: rem(8);
+		border: rems(1) solid $white;
+		border-radius: rems(8);
 		// color: rgba(255, 255, 255);
 		[placeholder] {
 			color: $white;
@@ -123,10 +118,10 @@
 	&__name,
 	&__tel,
 	&__button {
-		border: rem(1) solid $white;
-		border-radius: rem(8);
-		padding: rem(18) rem(20);
-		// min-width: rem(235);
+		border: rems(1) solid $white;
+		border-radius: rems(8);
+		padding: rems(18) rems(20);
+		// min-width: rems(235);
 		flex: 0 1 33.333%;
 		@extend %text-l_18_500;
 		color: $white;
@@ -139,7 +134,7 @@
 		font-weight: 800;
 		@include adaptiveValue("font-size", 18, 16);
 		@media (max-width: $pc) {
-			margin-top: rem(8);
+			margin-top: rems(8);
 		}
 	}
 }
@@ -177,10 +172,10 @@
 		flex: 1 1 auto;
 		display: flex;
 		font-family: Lato;
-		margin: rem(40) 0;
+		margin: rems(40) 0;
 		@media (max-width: $mobileSmall) {
 			flex-wrap: wrap;
-			row-gap: rem(10);
+			row-gap: rems(10);
 		}
 		& .info__mail,
 		& .info__tel {

@@ -1,5 +1,4 @@
 import React from 'react';
-import './withuse.scss';
 
 const Withuse = () => {
 	return (
