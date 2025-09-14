@@ -1,9 +1,10 @@
-@use "../../../../../scss/modules/brake-points" as point;
-@use "../../../../../scss/variables" as var;
-@use "../../../../../scss/modules/mixins" as mix;
-@use "../../../../../scss/fonts/fonts";
-@use "../../../../../scss/common";
-@use "sass:math";
+// @use "../../../../../scss/modules/brake-points" as point;
+// @use "../../../../../scss/variables" as var;
+// @use "../../../../../scss/modules/mixins" as mix;
+// @use "../../../../../scss/fonts/fonts";
+// @use "../../../../../scss/common";
+// @use "sass:math";
+@use "../../../../../scss/globals" as *;
 
 .help {
 	// .help__container
@@ -13,14 +14,14 @@
 	&__wrapper {
 		position: relative;
 		display: flex;
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			display: block;
 		}
 	}
 	// .help__image
 	&__image {
 		flex: 0 0 38.7%;
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			position: relative;
 			padding-top: 130%;
 			img {
@@ -39,7 +40,7 @@
 			object-fit: cover;
 			@media (min-width: 1680) {
 			}
-			@media (max-width: point.$mobileBig) {
+			@media (max-width: $mobileBig) {
 				transform: translate(-42%, -40%);
 				height: 100%;
 				width: 100%;
@@ -49,7 +50,7 @@
 		}
 		&-2 {
 			transform: translate(-39%, -24.6%) rotate(7deg);
-			@media (max-width: point.$mobileBig) {
+			@media (max-width: $mobileBig) {
 				transform: translate(-23%, -40%) rotate(7deg);
 			}
 		}
@@ -59,8 +60,8 @@
 		flex: 0 1 62%;
 		position: relative;
 		z-index: 1;
-		@media (max-width: point.$mobileBig) {
-			@include mix.adaptiveValue("margin-top", -400, -200, 320, 766);
+		@media (max-width: $mobileBig) {
+			@include adaptiveValue("margin-top", -400, -200, 320, 766);
 			// margin-top: -240px;
 		}
 	}
@@ -78,10 +79,10 @@
 	}
 }
 .help-form {
-	color: var.$white;
-	padding: mix.rem(63) 0;
+	color: $white;
+	padding: rem(63) 0;
 	& > :not(:last-child) {
-		@include mix.adaptiveValue("margin-bottom", 43, 24);
+		@include adaptiveValue("margin-bottom", 43, 24);
 	}
 	// .help-form__title
 	&__title {
@@ -94,13 +95,13 @@
 	}
 	// .help-form__body
 	&__body {
-		@media (max-width: point.$pc) {
+		@media (max-width: $pc) {
 			& > :not(:last-child) {
-				margin-bottom: mix.rem(10);
+				margin-bottom: rem(10);
 			}
 		}
-		@media (min-width: point.$pc) {
-			@include mix.adaptiveValue("gap", 10, 5);
+		@media (min-width: $pc) {
+			@include adaptiveValue("gap", 10, 5);
 			display: flex;
 		}
 	}
@@ -112,33 +113,33 @@
 	}
 	&__name,
 	&__tel {
-		border: mix.rem(1) solid var.$white;
-		border-radius: mix.rem(8);
+		border: rem(1) solid $white;
+		border-radius: rem(8);
 		// color: rgba(255, 255, 255);
 		[placeholder] {
-			color: var.$white;
+			color: $white;
 		}
 	}
 	&__name,
 	&__tel,
 	&__button {
-		border: mix.rem(1) solid var.$white;
-		border-radius: mix.rem(8);
-		padding: mix.rem(18) mix.rem(20);
-		// min-width: mix.rem(235);
+		border: rem(1) solid $white;
+		border-radius: rem(8);
+		padding: rem(18) rem(20);
+		// min-width: rem(235);
 		flex: 0 1 33.333%;
 		@extend %text-l_18_500;
-		color: var.$white;
+		color: $white;
 	}
 	// .help-form__button
 	&__button {
 		width: 100%;
-		background-color: var.$green;
-		border-color: var.$green;
+		background-color: $green;
+		border-color: $green;
 		font-weight: 800;
-		@include mix.adaptiveValue("font-size", 18, 16);
-		@media (max-width: point.$pc) {
-			margin-top: mix.rem(8);
+		@include adaptiveValue("font-size", 18, 16);
+		@media (max-width: $pc) {
+			margin-top: rem(8);
 		}
 	}
 }
@@ -155,7 +156,7 @@
 .help-bottom {
 	// .help-bottom__container
 	&__container {
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			display: flex;
 		}
 	}
@@ -164,7 +165,7 @@
 		flex: 0 1 50%;
 	}
 	&__image {
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			flex: 0 1 38.7%;
 		}
 	}
@@ -176,14 +177,14 @@
 		flex: 1 1 auto;
 		display: flex;
 		font-family: Lato;
-		margin: mix.rem(40) 0;
-		@media (max-width: point.$mobileSmall) {
+		margin: rem(40) 0;
+		@media (max-width: $mobileSmall) {
 			flex-wrap: wrap;
-			row-gap: mix.rem(10);
+			row-gap: rem(10);
 		}
 		& .info__mail,
 		& .info__tel {
-			color: var.$darkCol;
+			color: $darkCol;
 			@extend %text-l_20_28_400;
 		}
 		& .info__tel {

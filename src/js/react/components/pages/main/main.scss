@@ -1,8 +1,9 @@
-@use "sass:math"; //модуль Math
-@use "../../../../../scss/variables" as var;
-@use "../../../../../scss/modules/mixins" as mix;
-@use "../../../../../scss/modules/brake-points" as point;
-@use "../../../../../scss/common";
+// @use "sass:math"; //модуль Math
+// @use "../../../../../scss/variables" as var;
+// @use "../../../../../scss/modules/mixins" as mix;
+// @use "../../../../../scss/modules/brake-points" as point;
+// @use "../../../../../scss/common";
+@use "../../../../../scss/globals" as *;
 
 .page {
 	display: none;
@@ -53,21 +54,21 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		@include mix.adaptiveValue("row-gap", 40, 20);
+		@include adaptiveValue("row-gap", 40, 20);
 	}
 	// .content__subtitle
 	&__subtitle {
 		position: relative;
 		align-self: flex-start;
 		@extend %text-i_22_24_500;
-		background-color: var.$white;
+		background-color: $white;
 		display: inline-block;
-		border-radius: mix.rem(8);
+		border-radius: rem(8);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-		margin: 0 0 mix.rem(5) 0;
-		// @include mix.adaptiveValue("margin-top", 5, 165);
-		// @include mix.adaptiveValue("margin-bottom", 5, 165);
-		@include mix.adaptiveValue("padding", 15, 5);
+		margin: 0 0 rem(5) 0;
+		// @include adaptiveValue("margin-top", 5, 165);
+		// @include adaptiveValue("margin-bottom", 5, 165);
+		@include adaptiveValue("padding", 15, 5);
 		span {
 			font-weight: 700;
 		}
@@ -78,11 +79,11 @@
 		position: relative;
 		display: flex;
 		justify-content: flex-end;
-		@include mix.adaptiveValue("margin-bottom", 40, 28);
-		@media (min-width: point.$mobileSmall) {
+		@include adaptiveValue("margin-bottom", 40, 28);
+		@media (min-width: $mobileSmall) {
 		}
-		// height: mix.rem(100);
-		@media (max-width: point.$mobileBig) {
+		// height: rem(100);
+		@media (max-width: $mobileBig) {
 			justify-content: center;
 		}
 	}
@@ -91,7 +92,7 @@
 		// justify-self: flex-end;
 		flex: 1 1 auto;
 		// display: none;
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			display: none;
 		}
 	}
@@ -102,11 +103,11 @@
 		// align-self: flex-start;
 		// flex: 1 1auto;
 
-		@include mix.adaptiveValue("flex-basis", 389, 278);
+		@include adaptiveValue("flex-basis", 389, 278);
 	}
 	.content__abs {
 		position: relative;
-		@include mix.adaptiveValue("min-height", 254, 215);
+		@include adaptiveValue("min-height", 254, 215);
 	}
 	// .content__slider
 	&__slider {
@@ -117,11 +118,11 @@
 		top: 0;
 		left: 0;
 		// position: relative;
-		// @include mix.adaptiveValue("margin-bottom", 5, 165);
-		// @include mix.adaptiveValue("padding", 15, 5);
-		// @include mix.adaptiveValue("max-width", 389, 278);
-		// @include mix.adaptiveValue("height", 200, 215);
-		@media (min-width: point.$mobileSmall) {
+		// @include adaptiveValue("margin-bottom", 5, 165);
+		// @include adaptiveValue("padding", 15, 5);
+		// @include adaptiveValue("max-width", 389, 278);
+		// @include adaptiveValue("height", 200, 215);
+		@media (min-width: $mobileSmall) {
 			// align-self: flex-end;
 		}
 	}
@@ -138,13 +139,13 @@
 	}
 	&__button {
 		position: absolute;
-		width: mix.rem(40);
-		height: mix.rem(40);
+		width: rem(40);
+		height: rem(40);
 		bottom: 0;
 		right: -15%;
 		color: #a8a8a8;
-		background-color: var.$white;
-		border-radius: mix.rem(8);
+		background-color: $white;
+		border-radius: rem(8);
 		span {
 			font-size: 0;
 		}
@@ -153,10 +154,10 @@
 			background: url("@img/icons/arrow-right.svg") center no-repeat;
 			top: 0;
 			left: 0;
-			width: mix.rem(16);
-			height: mix.rem(16);
+			width: rem(16);
+			height: rem(16);
 		}
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			display: none;
 		}
 	}
@@ -164,21 +165,21 @@
 	// .sider__paginations
 	&__paginations {
 		// position: relative;
-		// margin-top: mix.rem(16);
+		// margin-top: rem(16);
 		display: none;
 		// justify-content: flex-end;
 		justify-content: center;
 		span {
 			display: inline-block;
 		}
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			display: flex;
 		}
 	}
 	&__paginations .swiper-pagination-bullet {
-		// padding: mix.rem(5);
-		flex: 0 0 mix.rem(17);
-		height: mix.rem(17);
+		// padding: rem(5);
+		flex: 0 0 rem(17);
+		height: rem(17);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -187,40 +188,40 @@
 			transition: all 0.5s ease 0s;
 			background-color: #d9d9d9;
 			border-radius: 50%;
-			flex: 0 0 mix.rem(7);
-			height: mix.rem(7);
+			flex: 0 0 rem(7);
+			height: rem(7);
 			top: 0;
 			left: 0;
 		}
 	}
 	&__paginations .swiper-pagination-bullet-active {
-		// width: mix.rem(22);
+		// width: rem(22);
 		&::before {
-			background-color: var.$blue;
-			border-radius: mix.rem(20);
-			flex: 0 0 mix.rem(22);
+			background-color: $blue;
+			border-radius: rem(20);
+			flex: 0 0 rem(22);
 		}
 	}
 }
 .slide {
 	// min-height: 100%;
 	align-self: flex-start;
-	background-color: var.$white;
-	border-radius: mix.rem(8);
+	background-color: $white;
+	border-radius: rem(8);
 	position: relative;
 	transition: all 0.8s ease 0s;
 	opacity: 0;
 	transform: scale(0.5) translateY(-100%);
 	// margin-bottom: -200px;
-	// height: mix.rem(250);
-	// @include mix.adaptiveValue("max-width", 389, 278);
-	// @include mix.adaptiveValue("min-height", 150, 200);
-	// @include mix.adaptiveValue("min-height", 284, 215);
-	@include mix.adaptiveValue("padding-bottom", 20, 14);
-	@include mix.adaptiveValue("padding-top", 20, 14);
-	@include mix.adaptiveValue("padding-left", 20, 14);
-	@include mix.adaptiveValue("padding-right", 20, 14);
-	@media (max-width: point.$mobileSmall) {
+	// height: rem(250);
+	// @include adaptiveValue("max-width", 389, 278);
+	// @include adaptiveValue("min-height", 150, 200);
+	// @include adaptiveValue("min-height", 284, 215);
+	@include adaptiveValue("padding-bottom", 20, 14);
+	@include adaptiveValue("padding-top", 20, 14);
+	@include adaptiveValue("padding-left", 20, 14);
+	@include adaptiveValue("padding-right", 20, 14);
+	@media (max-width: $mobileSmall) {
 		min-width: 100%;
 	}
 	// .slide__info

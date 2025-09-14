@@ -111,20 +111,10 @@ function initSliders() {
 		observer: true,
 		observeParents: true,
 		slidesPerView: "auto",
-		// slidesPerView: 1,
-
-		// slidesOffsetBefore: 300,
-		// autoHeight: false,
 		watchOverflow: true,
 		speed: 800,
-		// loop: true,
 		infinity: true,
 		setWrapperSize: false,
-		// preloadImages: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: true,
-		// },
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -156,26 +146,9 @@ function initSliders() {
 	// БЛОГ-big
 	const blogSliderFirst = new Swiper('.blog__slider-big', {
 		modules: [Navigation, Pagination, Autoplay, Controller],
-		// observer: true,
-		// observeParents: true,
 		slidesPerView: 2,
-		// spaceBetween: 16,
-		// slidesOffsetBefore: 300,
-		// autoHeight: false,
-		// watchOverflow: true,
 		speed: 800,
-		// loop: true,
-		// infinity: true,
-		// setWrapperSize: false,
-		// preloadImages: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: true,
-		// },
-		// pagination: {
-		// 	el: '.swiper-pagination',
-		// 	clickable: true,
-		// },
+		grabCursor: true,
 		nested: true,
 		navigation: {
 			nextEl: '.blog__navigation .swiper-button-next',
@@ -200,8 +173,6 @@ function initSliders() {
 				slidesPerView: 2,
 				spaceBetween: 32,
 			},
-			// 	1268: {
-			// 	},
 		},
 	});
 
@@ -211,48 +182,10 @@ function initSliders() {
 		observer: true,
 		observeParents: true,
 		observeChildren: true,
-		// slidesPerView: "auto",
 		slidesPerView: 2,
-		// spaceBetween: 30,
-		// slidesOffsetBefore: 300,
-		// autoHeight: true,
-		// watchOverflow: true,
+		grabCursor: true,
 		direction: 'vertical',
 		speed: 800,
-		// loop: true,
-		// infinity: true,
-		// setWrapperSize: false,
-		// preloadImages: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: true,
-		// },
-		// pagination: {
-		// 	el: '.swiper-pagination',
-		// 	clickable: true,
-		// },
-		// navigation: {
-		// 	nextEl: '.blog__navigation .swiper-button-next',
-		// 	prevEl: '.blog__navigation .swiper-button-prev'
-		// },
-		// on: {
-		// },
-		// breakpoints: {
-		// 	320: {
-		// 		spaceBetween: 8,
-		// 	},
-		// 	640: {
-		// 		spaceBetween: 10,
-		// 	},
-		// 	768: {
-		// 		spaceBetween: 15,
-		// 	},
-		// 	992: {
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 	},
-		// },
 	});
 	blogSliderFirst.controller.control = blogSliderSecond;
 	blogSliderSecond.controller.control = blogSliderFirst;

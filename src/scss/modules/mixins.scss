@@ -1,5 +1,6 @@
+// @use "../globals" as g;
 @use "sass:math";
-@use "../variables" as var;
+@use "../variables" as *;
 
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
@@ -64,14 +65,7 @@
 }
 
 // Адаптивное свойство (clamp)
-@mixin adaptiveValue(
-	$property,
-	$startSize,
-	$minSize,
-	$keepSize: 0,
-	$widthFrom: var.$containerWidth,
-	$widthTo: var.$minWidth
-) {
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
 	@if ($startSize==0) {
 		$startSize: 0.000001;
 	}
@@ -82,8 +76,8 @@
 	// Для calc();
 	$addSize: math.div($startSize - $minSize, 16);
 
-	@if ($widthFrom == var.$containerWidth and var.$maxWidthContainer == 0) {
-		$widthFrom: var.$maxWidth;
+	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+		$widthFrom: $maxWidth;
 	}
 
 	// Брейк-пойнт в EM
@@ -121,8 +115,8 @@
 		// Если не поддерживается clamp();
 		@supports not (#{$property}: $propertyValue) {
 			#{$property}: calc(
-				#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
-					math.div($widthTo, 16)}
+				#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) /
+					#{math.div($widthFrom, 16) - math.div($widthTo, 16)}
 			);
 		}
 	}

@@ -1,8 +1,10 @@
-@use "sass:math"; //модуль Math
-@use "../../../../../scss/variables" as var;
-@use "../../../../../scss/modules/mixins" as mix;
-@use "../../../../../scss/modules/brake-points" as point;
-@use "../../../../../scss/common";
+// @use "sass:math"; //модуль Math
+// @use "../../../../../scss/variables" as var;
+// @use "../../../../../scss/modules/mixins" as mix;
+// @use "../../../../../scss/modules/brake-points" as point;
+// @use "../../../../../scss/common";
+@use "../../../../../scss/globals" as *;
+
 .portfolio {
 	// flex: 1 1 auto;
 	// .portfolio__container
@@ -15,10 +17,10 @@
 	&__wrapper {
 		flex: 1 1 auto;
 		position: relative;
-		@media (max-width: point.$tablet) {
+		@media (max-width: $tablet) {
 			top: -20px;
 		}
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			min-height: 100vh;
 			display: flex;
 			align-items: center;
@@ -28,7 +30,7 @@
 	&__content {
 		text-align: center;
 		flex: 0 0 30%;
-		@include mix.adaptiveValue("padding-right", 25, 10);
+		@include adaptiveValue("padding-right", 25, 10);
 		&::before,
 		&::after {
 			content: "";
@@ -46,12 +48,12 @@
 		&::after {
 			// z-index: 1;
 			right: -30%;
-			border-radius: 0 mix.rem(20) mix.rem(20) 0;
+			border-radius: 0 rem(20) rem(20) 0;
 		}
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			position: relative;
 		}
-		@media (max-width: point.$tablet) {
+		@media (max-width: $tablet) {
 			&::before,
 			&::after {
 				display: none;
@@ -70,9 +72,9 @@
 		z-index: 3;
 		position: relative;
 		display: flex;
-		gap: mix.rem(5);
+		gap: rem(5);
 		justify-content: center;
-		@media (max-width: point.$tablet) {
+		@media (max-width: $tablet) {
 			position: absolute;
 			top: 100%;
 			left: 50%;
@@ -91,11 +93,11 @@
 	}
 	// .portfolio__slider
 	&__slider {
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			min-width: 0;
 			flex: 1 1 70%;
 			transition: left 0.8s ease 0s;
-			@include mix.adaptiveValue("left", 375, 100);
+			@include adaptiveValue("left", 375, 100);
 		}
 	}
 	// .portfolio__slider
@@ -109,13 +111,13 @@
 		right: 0;
 		z-index: 2;
 		& > :not(:last-child) {
-			margin-right: mix.rem(15);
+			margin-right: rem(15);
 		}
-		@media (max-width: point.$pc) {
+		@media (max-width: $pc) {
 			bottom: 5%;
 			display: none;
 		}
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 		}
 	}
 	// .portfolio__slide
@@ -125,7 +127,7 @@
 		height: 60vh;
 		display: flex;
 		align-items: center;
-		@media (min-width: point.$tablet) {
+		@media (min-width: $tablet) {
 			height: 73vh;
 			width: 37%;
 		}
@@ -135,9 +137,9 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		border-radius: mix.rem(8);
-		@media (min-width: point.$tablet) {
-			border: mix.rem(2) solid var.$white;
+		border-radius: rem(8);
+		@media (min-width: $tablet) {
+			border: rem(2) solid $white;
 			height: 66%;
 			width: 100%;
 			flex: 1 1 auto;
@@ -169,13 +171,13 @@
 .swiper-slide-active .portfolio__image-ibg {
 	width: 100%;
 	height: 100%;
-	border-radius: mix.rem(14);
-	@media (min-width: point.$tablet) {
+	border-radius: rem(14);
+	@media (min-width: $tablet) {
 		position: absolute;
 		width: 42vw;
 		height: 100%;
-		border-width: mix.rem(1);
-		@include mix.adaptiveValue("left", -375, -100);
+		border-width: rem(1);
+		@include adaptiveValue("left", -375, -100);
 	}
 }
 .swiper-slide-next .portfolio__image-ibg {

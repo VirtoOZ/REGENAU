@@ -11,13 +11,13 @@ const Blog = () => {
 							<div className="title-line">
 								<h1 className="blog__title title__title">Блог</h1>
 							</div>
-							<div className="blog__box">
-								<div className="blog__navigation slider-navigation">
-									<button className="slider-navigation__button slider-navigation__button-prev swiper-button-prev" type='button' aria-description='slider button prev'></button>
-									<button className="slider-navigation__button slider-navigation__button-next swiper-button-next" type='button' aria-description="slider button next"></button>
-								</div>
-								<button className="blog__button button" type="button" aria-description=''>Добвавить фото к портфолио</button>
+						</div>
+						<div className="blog__box">
+							<div className="blog__navigation slider-navigation">
+								<button className="slider-navigation__button slider-navigation__button-prev swiper-button-prev" type='button' aria-description='slider button prev'></button>
+								<button className="slider-navigation__button slider-navigation__button-next swiper-button-next" type='button' aria-description="slider button next"></button>
 							</div>
+							<button className="blog__button button" type="button" aria-description=''>Добвавить фото к портфолио</button>
 						</div>
 						<div className="blog__sliders ">
 							<div className="blog__slider-big big-slider-blog swiper">

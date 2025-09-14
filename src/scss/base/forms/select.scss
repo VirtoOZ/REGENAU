@@ -24,9 +24,9 @@
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		height: mix.rem(30);
-		padding: 0 mix.rem(15);
-		gap: mix.rem(10);
+		height: rem(30);
+		padding: 0 rem(15);
+		gap: rem(10);
 		> * {
 			flex: 1 1 auto;
 		}
@@ -72,7 +72,7 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: calc(100% - mix.rem(1));
+		top: calc(100% - rem(1));
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
@@ -87,7 +87,7 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 		// Максимальная высота
-		max-height: mix.rem(200);
+		max-height: rem(200);
 		// Стили скроллбара
 		.simplebar-scrollbar {
 			&::before {
@@ -125,7 +125,7 @@
 	&--show-top {
 		.select__options {
 			top: auto;
-			bottom: calc(100% - mix.rem(1));
+			bottom: calc(100% - rem(1));
 			border: 1px solid #d9d9d9;
 			border-bottom: 0;
 			border-radius: 4px 4px 0 0;

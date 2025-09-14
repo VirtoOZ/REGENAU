@@ -1,9 +1,11 @@
-@use "../../../../../scss/modules/brake-points" as point;
-@use "../../../../../scss/variables" as var;
-@use "../../../../../scss/modules/mixins" as mix;
-@use "../../../../../scss/fonts/fonts";
-@use "../../../../../scss/common";
-@use "sass:math";
+// @use "../../../../../scss/modules/brake-points" as point;
+// @use "../../../../../scss/variables" as var;
+// @use "../../../../../scss/modules/mixins" as mix;
+// @use "../../../../../scss/fonts/fonts";
+// @use "../../../../../scss/common";
+// @use "sass:math";
+@use "../../../../../scss/globals" as *;
+
 .advantages {
 	padding: 5vh 0;
 	position: relative;
@@ -13,8 +15,8 @@
 	// .advantages__title
 	&__title {
 		height: 10vh;
-		// margin: mix.rem(50) 0 mix.rem(20) 0;
-		// @include mix.adaptiveValue("margin-top", 50, 50);
+		// margin: rem(50) 0 rem(20) 0;
+		// @include adaptiveValue("margin-top", 50, 50);
 	}
 	// .advantages__text
 	&__text {
@@ -33,12 +35,12 @@
 	&__slider {
 		height: 80vh;
 		// overflow: hidden;
-		@include mix.adaptiveValue("padding-right", 50, 20);
-		@include mix.adaptiveValue("padding-left", 50, 20);
+		@include adaptiveValue("padding-right", 50, 20);
+		@include adaptiveValue("padding-left", 50, 20);
 	}
 	// .advantages__wrapper
 	&__wrapper {
-		// @include mix.adaptiveValue("padding-bottom", 200, 50);
+		// @include adaptiveValue("padding-bottom", 200, 50);
 
 		// overflow: hidden;
 	}
@@ -47,9 +49,9 @@
 		border: 1px solid #cfcfcf;
 		overflow: hidden;
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-		@include mix.adaptiveValue("border-radius", 26, 10);
-		// @include mix.adaptiveValue("margin-top", 60, 30);
-		// @include mix.adaptiveValue("margin-bottom", 50, 50);
+		@include adaptiveValue("border-radius", 26, 10);
+		// @include adaptiveValue("margin-top", 60, 30);
+		// @include adaptiveValue("margin-bottom", 50, 50);
 	}
 }
 .control {
@@ -60,31 +62,31 @@
 		justify-content: center;
 		position: relative;
 		z-index: 2;
-		@include mix.adaptiveValue("column-gap", 30, 4);
-		// @include mix.adaptiveValue("margin-top", 110, 55);
-		// @include mix.adaptiveValue("margin-bottom", -220, -110);
+		@include adaptiveValue("column-gap", 30, 4);
+		// @include adaptiveValue("margin-top", 110, 55);
+		// @include adaptiveValue("margin-bottom", -220, -110);
 	}
 	&__pagination .swiper-pagination-bullet {
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: var.$white;
+		background-color: $white;
 		border-color: transparent;
-		border-radius: mix.rem(6);
+		border-radius: rem(6);
 		box-shadow: 0 3.213px 24.416px 0 rgba(169, 165, 165, 0.25);
 		transition:
 			border-color 0.8s ease 0s,
 			transform 0.8s ease 0s;
-		@include mix.adaptiveValue("width", 102, 50);
-		@include mix.adaptiveValue("height", 102, 50);
+		@include adaptiveValue("width", 102, 50);
+		@include adaptiveValue("height", 102, 50);
 		span {
 			transition: opacity 0.8s ease 0s;
 			position: relative;
-			// flex: 0 1 mix.rem(60);
+			// flex: 0 1 rem(60);
 			height: 100%;
 			opacity: 0.5;
-			@include mix.adaptiveValue("width", 60, 40);
+			@include adaptiveValue("width", 60, 40);
 		}
 		img {
 			// z-index: 3;
@@ -97,8 +99,8 @@
 		}
 	}
 	&__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-		border: mix.rem(4) solid;
-		border-color: var.$green;
+		border: rem(4) solid;
+		border-color: $green;
 		transform: translateY(-10px);
 		transition:
 			border-color 0.8s ease 0s,
@@ -111,9 +113,9 @@
 	&__icons {
 		display: none;
 	}
-	@media (max-width: point.$mobile) {
+	@media (max-width: $mobile) {
 		.swiper-pagination-bullet.swiper-pagination-bullet-active {
-			border-width: mix.rem(2);
+			border-width: rem(2);
 		}
 	}
 }
@@ -123,14 +125,14 @@
 	min-height: 100%;
 	width: 100%;
 	position: relative;
-	background-color: var.$white;
-	@media (max-width: point.$mobileBig) {
-		@include mix.adaptiveValue("padding-top", 120, 80);
+	background-color: $white;
+	@media (max-width: $mobileBig) {
+		@include adaptiveValue("padding-top", 120, 80);
 		height: 100%;
 	}
 	// .item_right
 	&_right {
-		@media (min-width: point.$mobileBig) {
+		@media (min-width: $mobileBig) {
 			display: flex;
 			flex-direction: row-reverse;
 		}
@@ -138,20 +140,20 @@
 
 	// .item_warranty
 	&_warranty {
-		background-color: var.$white;
+		background-color: $white;
 		flex-direction: column;
 		justify-content: center;
 		& .item__contant {
 			flex-basis: 0;
-			max-width: mix.rem(500);
+			max-width: rem(500);
 			margin: 0 auto;
-			@media (min-width: point.$mobileBig) {
+			@media (min-width: $mobileBig) {
 			}
 		}
-		@include mix.adaptiveValue("padding-top", 200, 100);
+		@include adaptiveValue("padding-top", 200, 100);
 	}
 
-	@media (min-width: point.$mobileBig) {
+	@media (min-width: $mobileBig) {
 		display: flex;
 	}
 	// .item__image
@@ -159,11 +161,11 @@
 		position: relative;
 		flex: 0 1 50%;
 		padding-bottom: 53%;
-		@media (max-width: point.$mobileSmall) {
+		@media (max-width: $mobileSmall) {
 			padding-bottom: 100%;
 		}
-		@media (max-width: point.$mobileBig) {
-			// @include mix.adaptiveValue("margin-top", 120, 80);
+		@media (max-width: $mobileBig) {
+			// @include adaptiveValue("margin-top", 120, 80);
 		}
 		img {
 			position: absolute;
@@ -172,7 +174,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
-			@media (max-width: point.$mobileBig) {
+			@media (max-width: $mobileBig) {
 			}
 		}
 		&-left {
@@ -210,13 +212,13 @@
 	// .item__contant
 	&__contant {
 		flex: 0 1 60%;
-		@include mix.adaptiveValue("padding-left", 20, 16);
-		@include mix.adaptiveValue("padding-right", 20, 16);
+		@include adaptiveValue("padding-left", 20, 16);
+		@include adaptiveValue("padding-right", 20, 16);
 		& :not(:last-child) {
-			@include mix.adaptiveValue("margin-bottom", 24, 16);
+			@include adaptiveValue("margin-bottom", 24, 16);
 		}
-		@media (max-width: point.$mobileBig) {
-			@include mix.adaptiveValue("margin-bottom", 60, 60);
+		@media (max-width: $mobileBig) {
+			@include adaptiveValue("margin-bottom", 60, 60);
 		}
 	}
 	// .item__title
@@ -224,7 +226,7 @@
 		text-align: left;
 		h2 {
 			color: #212121;
-			@include mix.adaptiveValue("font-size", 48, 24);
+			@include adaptiveValue("font-size", 48, 24);
 		}
 		&::before {
 			content: "";

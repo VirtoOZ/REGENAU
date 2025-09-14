@@ -1,14 +1,12 @@
-@use "./variables" as var;
-@use "./modules/mixins" as mix;
-@use "./modules/brake-points" as point;
+// @use "./variables" as var;
+// @use "./modules/mixins" as mix;
 @use "sass:math"; //модуль Math
-
+@use "./modules/brake-points" as *;
+@use "./variables" as *;
+@use "./modules/mixins.scss" as *;
 // Заголовки, общие БЄМ блоки и проче...
-
 //<GLOBAL Animations>=================================
-
 //</GLOBAL Animations>=================================
-
 //<Стили для текста>=================================
 %text-g {
 	font-family: "Gilroy";
@@ -17,66 +15,66 @@
 	@extend %text-g;
 	font-weight: 600;
 	line-height: math.div(18, 16);
-	color: var.$mainTextCol;
-	@include mix.adaptiveValue("font-size", 16, 14);
+	color: $mainTextCol;
+	@include adaptiveValue("font-size", 16, 14);
 }
 %text-g_14_20_400 {
 	@extend %text-g;
 	font-weight: 400;
 	line-height: math.div(20, 14);
-	color: var.$mainTextCol;
-	font-size: mix.rem(14);
+	color: $mainTextCol;
+	font-size: rem(14);
 }
 
 %text-g_16_20_700 {
 	@extend %text-g;
 	font-weight: 700;
 	line-height: math.div(20, 16);
-	color: var.$white;
-	@include mix.adaptiveValue("font-size", 16, 15);
+	color: $white;
+	@include adaptiveValue("font-size", 16, 15);
 }
 
 %text-g_14_20_600 {
 	@extend %text-g_14_20_400;
 	font-weight: 600;
-	color: var.$white;
+	color: $white;
 }
 %text-i_14_500 {
 	font-weight: 500;
-	color: var.$white;
+	color: $white;
 	line-height: 100%;
-	font-size: mix.rem(14);
+	font-size: rem(14);
 }
 %text-i_14_18_400 {
 	font-weight: 400;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: 1.28;
-	@include mix.adaptiveValue("font-size", 14, 12);
+	@include adaptiveValue("font-size", 14, 12);
 }
 %text-i_22_24_500 {
 	font-weight: 500;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: math.div(24, 22);
-	font-size: mix.rem(22);
+	font-size: rem(22);
 }
 %text-i_14_22_400 {
 	font-weight: 400;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: math.div(22, 14);
-	@include mix.adaptiveValue("font-size", 14, 12);
+	@include adaptiveValue("font-size", 14, 12);
 }
 %text-i_16_22_400 {
 	font-weight: 400;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: math.div(22, 16);
-	@include mix.adaptiveValue("font-size", 16, 14);
+	@include adaptiveValue("font-size", 16, 14);
 }
 
 %text-i_14_300 {
 	font-weight: 300;
 	color: #323232;
 	line-height: 100%;
-	font-size: mix.rem(14);
+	font-size: rem(14);
 }
 
 %text-l_14_500 {
@@ -84,44 +82,44 @@
 	font-weight: 500;
 	color: #82817e;
 	line-height: 100%;
-	font-size: mix.rem(14);
+	font-size: rem(14);
 }
 %text-l_18_20_600 {
 	font-family: Lato;
 	font-weight: 600;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: math.div(20, 18);
-	@include mix.adaptiveValue("font-size", 18, 14);
+	@include adaptiveValue("font-size", 18, 14);
 }
 %text-l_18_500 {
 	font-family: Lato;
 	font-weight: 500;
-	color: var.$mainTextCol;
+	color: $mainTextCol;
 	line-height: 1;
-	@include mix.adaptiveValue("font-size", 18, 14);
+	@include adaptiveValue("font-size", 18, 14);
 }
 %text-l_20_28_400 {
 	font-weight: 400;
 	font-family: Lato;
 	line-height: math.div(20, 28);
-	color: var.$darkCol;
-	letter-spacing: mix.rem(0.4);
-	@include mix.adaptiveValue("font-size", 20, 14);
+	color: $darkCol;
+	letter-spacing: rem(0.4);
+	@include adaptiveValue("font-size", 20, 14);
 }
 
 %text-l_40_48_500 {
 	font-family: Lato;
 	line-height: math.div(48, 40);
 	text-transform: uppercase;
-	color: var.$white;
-	@include mix.adaptiveValue("font-size", 40, 26);
+	color: $white;
+	@include adaptiveValue("font-size", 40, 26);
 }
 %text-l_48_54_600 {
 	font-family: Lato;
 	line-height: math.div(54, 48);
 	text-transform: uppercase;
-	color: var.$darkCol;
-	@include mix.adaptiveValue("font-size", 48, 24);
+	color: $darkCol;
+	@include adaptiveValue("font-size", 48, 24);
 }
 
 //<Стили для текста>=================================
@@ -129,68 +127,67 @@
 	// text-align: center;
 	// .title-line
 	&-line {
-		@include mix.adaptiveValue("margin-bottom", 40, 10);
+		@include adaptiveValue("margin-bottom", 40, 10);
 		&::before {
 			content: "";
-			width: mix.rem(29);
-			height: mix.rem(3);
-			background-color: var.$green;
-			margin-bottom: mix.em(17);
+			width: rem(29);
+			height: rem(3);
+			background-color: $green;
+			margin-bottom: em(17);
 		}
 	}
 	& > p:not(:last-child) {
-		margin-bottom: mix.em(15);
+		margin-bottom: em(15);
 	}
 	// .title__title
 	&__title {
 		// text-align: center;
-		// padding: 0 mix.rem(10);
-		margin-bottom: mix.rem(20);
+		// padding: 0 rem(10);
+		margin-bottom: rem(20);
 		@extend %text-l_48_54_600;
-		@include mix.adaptiveValue("font-size", 48, 32);
+		@include adaptiveValue("font-size", 48, 32);
 	}
 	// .title__text
 	&__text {
-		// padding: 0 mix.rem(10);
+		// padding: 0 rem(10);
 		color: #4c4b47;
 		font-weight: 400;
 		line-height: math.div(18, 16);
-		@include mix.adaptiveValue("font-size", 16, 14);
+		@include adaptiveValue("font-size", 16, 14);
 		span {
 			font-weight: 700;
 		}
 		a {
-			color: var.$blue;
+			color: $blue;
 		}
 	}
 }
 
 .info {
-	@media (min-width: point.$tablet) {
+	@media (min-width: $tablet) {
 		// flex: 0 1 100%;
 		// flex-wrap: nowrap;
 	}
 	// .info__item
 	&__item {
 		display: flex;
-
 		align-items: center;
 		flex: 0 0 33.333%;
 		@extend %text-i_14_500;
 		// min-width: 200px;
 		flex: 0 0 50%;
-		@include mix.adaptiveValue("column-gap", 12, 5);
+		@include adaptiveValue("column-gap", 12, 5);
 		@media (max-width: 1250px) {
 		}
-		@media (max-width: point.$tablet) {
+		@media (max-width: $tablet) {
 			flex: 0 1 100%;
 		}
 	}
 
 	// .info__icon
 	&__icon {
-		flex: 0 0 mix.rem(40);
-		height: mix.rem(40);
+		flex: 0 0 rem(40);
+		height: rem(40);
 		position: relative;
 		display: flex;
 		justify-content: center;
@@ -203,7 +200,7 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 50%;
-			background-color: var.$green;
+			background-color: $green;
 		}
 		img {
 			z-index: 2;
@@ -215,12 +212,12 @@
 		flex-direction: column;
 		// .info__body-main
 		&-main {
-			color: var.$mainTextCol;
+			color: $mainTextCol;
 		}
 	}
 	// .info__label
 	&__label {
-		@media (max-width: point.$mobile) {
+		@media (max-width: $mobile) {
 			opacity: 0.5;
 		}
 	}
@@ -241,38 +238,38 @@
 	&__mail,
 	&__label,
 	&__sublabel {
-		@include mix.adaptiveValue("padding-top", 5, 2.5);
-		@include mix.adaptiveValue("padding-bottom", 5, 2.5);
+		@include adaptiveValue("padding-top", 5, 2.5);
+		@include adaptiveValue("padding-bottom", 5, 2.5);
 	}
 }
 //<Стили для навигации swiper>=================================
 .slider-navigation {
 	display: inline-block;
 	& > :not(:last-child) {
-		margin-right: mix.rem(15);
+		margin-right: rem(15);
 	}
-	@media (max-width: point.$pc) {
+	@media (max-width: $pc) {
 		bottom: 5%;
 		display: none;
 	}
-	@media (min-width: point.$tablet) {
+	@media (min-width: $tablet) {
 	}
 
 	// .slider-navbutton__button
 	&__button {
-		width: mix.rem(40);
-		height: mix.rem(40);
+		width: rem(40);
+		height: rem(40);
 		color: #a8a8a8;
-		background-color: var.$white;
-		border-radius: mix.rem(8);
+		background-color: $white;
+		border-radius: rem(8);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 		&::before {
 			content: "";
 			background: url("@img/icons/arrow-right.svg") center no-repeat;
 			top: 0;
 			left: 0;
-			width: mix.rem(16);
-			height: mix.rem(16);
+			width: rem(16);
+			height: rem(16);
 		}
 		// .slider-navigation__button-next
 		&-next {

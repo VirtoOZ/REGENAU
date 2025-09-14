@@ -7,9 +7,9 @@
 .footer {
 	position: relative;
 	background-color: #333;
-	color: var.$white;
-	@include mix.adaptiveValue("padding-top", 60, 20);
-	@include mix.adaptiveValue("padding-bottom", 35, 15);
+	color: $white;
+	@include adaptiveValue("padding-top", 60, 20);
+	@include adaptiveValue("padding-bottom", 35, 15);
 	// .footer__container
 	&__container {
 	}
@@ -21,9 +21,9 @@
 	}
 }
 .footer-top {
-	@include mix.adaptiveValue("column-gap", 75, 50);
-	@include mix.adaptiveValue("margin-bottom", 80, 63);
-	@media (min-width: point.$mobileBig) {
+	@include adaptiveValue("column-gap", 75, 50);
+	@include adaptiveValue("margin-bottom", 80, 63);
+	@media (min-width: $mobileBig) {
 		display: flex;
 		align-items: center;
 	}
@@ -31,8 +31,8 @@
 	&__left {
 		flex: 0 0 20%;
 		align-self: flex-start;
-		@media (max-width: point.$mobileBig) {
-			@include mix.adaptiveValue("margin-bottom", 40, 30);
+		@media (max-width: $mobileBig) {
+			@include adaptiveValue("margin-bottom", 40, 30);
 		}
 	}
 	// .footer-top__logo
@@ -47,7 +47,7 @@
 	// .footer-logo__icon
 	&__icon {
 		// padding-bottom: 17%;
-		margin-bottom: mix.rem(12);
+		margin-bottom: rem(12);
 	}
 	// .footer-logo__img
 	&__img {
@@ -56,25 +56,25 @@
 	&__text {
 		@extend %text-i_14_500;
 		opacity: 0.8;
-		@include mix.adaptiveValue("font-size", 12, 10);
+		@include adaptiveValue("font-size", 12, 10);
 	}
 }
 .footer-right {
 	// .footer-right__menu
 	&__menu {
-		@include mix.adaptiveValue("margin-bottom", 34, 20);
+		@include adaptiveValue("margin-bottom", 34, 20);
 	}
 	// .footer-right__info
 	&__info {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			// flex-wrap: wrap;
 		}
 		@media (max-width: 1250px) {
 			flex-wrap: wrap;
-			row-gap: mix.rem(30);
-			// @include mix.adaptiveValue("row-gap", 30, 30);
+			row-gap: rem(30);
+			// @include adaptiveValue("row-gap", 30, 30);
 		}
 	}
 	// .footer-right__item
@@ -90,20 +90,20 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: mix.rem(-7);
-		@media (max-width: point.$mobileBig) {
+		margin: rem(-7);
+		@media (max-width: $mobileBig) {
 		}
 	}
 	// .footer-menu__item
 	&__item {
-		@media (max-width: point.$pc) {
+		@media (max-width: $pc) {
 			flex: 0 1 50%;
 		}
 	}
 	// .footer-menu__link
 	&__link {
-		padding: mix.rem(7);
-		// @include mix.adaptiveValue("padding", 7, 5);
+		padding: rem(7);
+		// @include adaptiveValue("padding", 7, 5);
 		@extend %text-i_14_500;
 	}
 }

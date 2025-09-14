@@ -26,21 +26,21 @@
 	}
 }
 .button-header {
-	@media (max-width: point.$tablet) {
-		flex: 0 0 mix.rem(33);
-		height: mix.rem(33);
+	@media (max-width: $tablet) {
+		flex: 0 0 rem(33);
+		height: rem(33);
 		z-index: 5;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var.$white;
-		border-radius: mix.rem(8);
+		background-color: $white;
+		border-radius: rem(8);
 		box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
 	}
 	// .button-header__icon
 	&__icon {
-		flex: 0 0 mix.rem(23);
-		height: mix.rem(23);
+		flex: 0 0 rem(23);
+		height: rem(23);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -58,8 +58,8 @@
 		box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
 	}
 	& .header__container:last-child {
-		background-color: var.$green;
-		@media (max-width: point.$tablet) {
+		background-color: $green;
+		@media (max-width: $tablet) {
 			display: none;
 		}
 	}
@@ -73,13 +73,13 @@
 		justify-content: space-between;
 		align-items: center;
 		flex: 1 1 auto;
-		@include mix.adaptiveValue("min-height", 86, 40);
+		@include adaptiveValue("min-height", 86, 40);
 	}
 	// .header-top__logo
 	&__logo {
-		@media (max-width: point.$mobileBig) {
+		@media (max-width: $mobileBig) {
 			& :not(:last-child) {
-				margin-bottom: mix.rem(5);
+				margin-bottom: rem(5);
 			}
 		}
 	}
@@ -89,47 +89,47 @@
 	& > * {
 	}
 }
-@media (max-width: point.$tablet) {
+@media (max-width: $tablet) {
 	.header-top {
 		& > * {
-			@include mix.adaptiveValue("padding-top", 5, 15);
-			@include mix.adaptiveValue("padding-bottom", 5, 15);
+			@include adaptiveValue("padding-top", 5, 15);
+			@include adaptiveValue("padding-bottom", 5, 15);
 		}
 	}
 }
-@media (min-width: point.$tablet) {
+@media (min-width: $tablet) {
 	.header-top {
 		& > * {
-			@include mix.adaptiveValue("padding-top", 10, 5);
-			@include mix.adaptiveValue("padding-bottom", 10, 5);
+			@include adaptiveValue("padding-top", 10, 5);
+			@include adaptiveValue("padding-bottom", 10, 5);
 		}
 	}
 }
-@media (min-width: point.$pc) {
+@media (min-width: $pc) {
 	// .header-top__info
 	.header-top__info {
 		flex: 0 0 50%;
 	}
 }
-@media (max-width: point.$tablet) {
+@media (max-width: $tablet) {
 	.header-top {
-		@include mix.adaptiveValue("column-gap", 26, 6);
+		@include adaptiveValue("column-gap", 26, 6);
 	}
 }
 .logo {
 	// .logo__icon
 	&__icon {
 		padding-bottom: 17%;
-		@include mix.adaptiveValue("width", 260, 175);
+		@include adaptiveValue("width", 260, 175);
 	}
 	//
 	&__text {
 		align-content: center;
 		@extend %text-g_16_18_600;
-		@include mix.adaptiveValue("font-size", 16, 10);
+		@include adaptiveValue("font-size", 16, 10);
 	}
 }
-@media (max-width: point.$mobileBig) {
+@media (max-width: $mobileBig) {
 	.logo {
 		&__text {
 			font-weight: 500;
@@ -139,11 +139,11 @@
 		}
 	}
 }
-@media (min-width: point.$mobileBig) {
+@media (min-width: $mobileBig) {
 	.logo {
 		display: flex;
 		justify-content: start;
-		@include mix.adaptiveValue("gap", 16, 3);
+		@include adaptiveValue("gap", 16, 3);
 		&__text {
 		}
 	}
@@ -158,26 +158,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@include mix.adaptiveValue("column-gap", 26, 6);
+	@include adaptiveValue("column-gap", 26, 6);
 	// .info-top__column
 	&__column {
 		justify-items: center;
 		flex: 1 1 33.333%;
-		@media (min-width: point.$pc) {
+		@media (min-width: $pc) {
 			& :not(:last-child) {
-				margin-bottom: mix.rem(5);
+				margin-bottom: rem(5);
 			}
 		}
 	}
 }
-@media (max-width: point.$pc) {
+@media (max-width: $pc) {
 	.info-top__column {
 		justify-items: end;
 	}
 }
 .column-info {
 	& > :not(:last-child) {
-		margin-bottom: mix.rem(3);
+		margin-bottom: rem(3);
 	}
 	// .column-info__text
 	&__text {
@@ -212,7 +212,7 @@
 	&__callack {
 	}
 }
-@media (max-width: point.$pc) {
+@media (max-width: $pc) {
 	.column-info {
 		// .column-info__text
 		&__text {
@@ -238,7 +238,7 @@
 		}
 	}
 }
-@media (max-width: point.$tablet) {
+@media (max-width: $tablet) {
 	.column-info {
 		// .column-info__text
 		&__text {
@@ -255,7 +255,7 @@
 		}
 	}
 }
-@media (min-width: point.$pc) {
+@media (min-width: $pc) {
 	// .column-info__checkout
 	.column-info__checkout {
 		display: none;
@@ -276,11 +276,11 @@
 .bottom-right {
 	display: flex;
 	align-items: center;
-	gap: mix.rem(10);
+	gap: rem(10);
 	// .bottom-right__leng
 	&__leng {
 		@extend %text-g_16_18_600;
-		color: var.$white;
+		color: $white;
 	}
 	// .bottom-right__checkout
 	&__checkout {
