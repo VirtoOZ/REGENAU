@@ -5,6 +5,9 @@
 	flex: 1 1 auto;
 	// .questions__container
 	&__container {
+		@media (max-width: $mobileBig) {
+			padding: 0;
+		}
 	}
 	// .questions__wrapper
 	&__wrapper {
@@ -15,14 +18,14 @@
 	// .questions__border
 	&__border {
 		height: 100%;
-		// flex: 1 1 auto;
-		border-radius: rems(20);
-		align-items: center;
+		flex: 1 1 auto;
+		// align-items: center;
 		background-color: $white;
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-		@include adaptiveValue("gap", 30, 10);
+		@include AV("gap", 30, 10);
 		@media (min-width: $tablet) {
 			display: flex;
+			border-radius: rems(20);
 		}
 		@media (max-width: $tablet) {
 			& > :not(:last-child) {
@@ -32,16 +35,24 @@
 	}
 	// .questions__content
 	&__content {
-		margin-top: rems(30);
-		flex: 0 0 45%;
+		flex: 0 1 45%;
+		padding-right: rems(20);
+		color: $darkCol;
+		@include AV("font-size", 16, 14);
+		@include AV("padding-left", 70, 20);
+		@media (max-width: $tablet) {
+			margin-top: rems(30);
+		}
 	}
 	// .questions__image
 	&__image {
 		&-ibg {
 			border-radius: rems(10);
 			overflow: hidden;
-			flex: 0 0 55%;
+			flex: 0 1 55%;
 			padding-bottom: 71%;
+			border-radius: 12px;
+			box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 			@media (min-width: $tablet) {
 				padding-bottom: 46%;
 				img {
@@ -53,50 +64,5 @@
 			img {
 			}
 		}
-	}
-}
-.question {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: rems(10);
-
-	// .question__title
-	&__title {
-		margin-bottom: rems(20);
-		// padding: rems()
-	}
-	// .question__body
-	&__body {
-		// padding: rems(10);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: rems(10);
-		& > :nth-child(even) {
-			margin-left: 20%;
-		}
-		& > :nth-child(odd) {
-			margin-left: 10%;
-		}
-		:first-child {
-			margin-left: 0;
-		}
-	}
-	// .question__item
-	&__item {
-		display: flex;
-		align-items: center;
-		gap: rems(10);
-		background-color: $white;
-		padding: rems(10);
-		border-radius: rems(10);
-		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
-	}
-	// .question__icon
-	&__icon {
-	}
-	// .question__text
-	&__text {
 	}
 }

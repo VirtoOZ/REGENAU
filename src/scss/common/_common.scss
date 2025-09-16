@@ -13,7 +13,7 @@
 	font-weight: 600;
 	line-height: math.div(18, 16);
 	color: $mainTextCol;
-	@include adaptiveValue("font-size", 16, 14);
+	@include AV("font-size", 16, 14);
 }
 %text-g_14_20_400 {
 	@extend %text-g;
@@ -28,7 +28,7 @@
 	font-weight: 700;
 	line-height: math.div(20, 16);
 	color: $white;
-	@include adaptiveValue("font-size", 16, 15);
+	@include AV("font-size", 16, 15);
 }
 
 %text-g_14_20_600 {
@@ -46,7 +46,7 @@
 	font-weight: 400;
 	color: $mainTextCol;
 	line-height: 1.28;
-	@include adaptiveValue("font-size", 14, 12);
+	@include AV("font-size", 14, 12);
 }
 %text-i_22_24_500 {
 	font-weight: 500;
@@ -58,13 +58,13 @@
 	font-weight: 400;
 	color: $mainTextCol;
 	line-height: math.div(22, 14);
-	@include adaptiveValue("font-size", 14, 12);
+	@include AV("font-size", 14, 12);
 }
 %text-i_16_22_400 {
 	font-weight: 400;
 	color: $mainTextCol;
 	line-height: math.div(22, 16);
-	@include adaptiveValue("font-size", 16, 14);
+	@include AV("font-size", 16, 14);
 }
 
 %text-i_14_300 {
@@ -86,14 +86,14 @@
 	font-weight: 600;
 	color: $mainTextCol;
 	line-height: math.div(20, 18);
-	@include adaptiveValue("font-size", 18, 14);
+	@include AV("font-size", 18, 14);
 }
 %text-l_18_500 {
 	font-family: Lato;
 	font-weight: 500;
 	color: $mainTextCol;
 	line-height: 1;
-	@include adaptiveValue("font-size", 18, 14);
+	@include AV("font-size", 18, 14);
 }
 %text-l_20_28_400 {
 	font-weight: 400;
@@ -101,7 +101,7 @@
 	line-height: math.div(20, 28);
 	color: $darkCol;
 	letter-spacing: rems(0.4);
-	@include adaptiveValue("font-size", 20, 14);
+	@include AV("font-size", 20, 14);
 }
 
 %text-l_40_48_500 {
@@ -109,14 +109,14 @@
 	line-height: math.div(48, 40);
 	text-transform: uppercase;
 	color: $white;
-	@include adaptiveValue("font-size", 40, 26);
+	@include AV("font-size", 40, 26);
 }
 %text-l_48_54_600 {
 	font-family: Lato;
 	line-height: math.div(54, 48);
 	text-transform: uppercase;
-	color: $darkCol;
-	@include adaptiveValue("font-size", 48, 24);
+	// color: $darkCol;
+	@include AV("font-size", 48, 24);
 }
 //<Стили для текста>=================================
 
@@ -125,7 +125,7 @@
 	// text-align: center;
 	// .title-line
 	&-line {
-		@include adaptiveValue("margin-bottom", 40, 10);
+		@include AV("margin-bottom", 40, 10);
 		&::before {
 			content: "";
 			width: rems(29);
@@ -134,30 +134,42 @@
 			margin-bottom: em(17);
 		}
 	}
-	& > p:not(:last-child) {
-		margin-bottom: em(15);
-	}
+	// & > :not(:last-child) {
+	// 	margin-bottom: ems(20);
+	// }
+
 	// .title__title
 	&__title {
-		// text-align: center;
-		// padding: 0 rems(10);
-		margin-bottom: rems(20);
-		@extend %text-l_48_54_600;
-		@include adaptiveValue("font-size", 48, 32);
+		// position: relative;
+		// z-index: 2;
+		// padding: 0 rems(15);
+		// @extend %text-l_48_54_600;
+		font-weight: 600;
+		line-height: 1.18;
+		font-family: Lato;
+		text-transform: uppercase;
+		@include AV("font-size", 48, 32);
+		@media (min-width: $mobileBig) {
+			// text-align: center;
+		}
 	}
 	// .title__text
 	&__text {
 		// padding: 0 rems(10);
-		color: #4c4b47;
+		// color: #4c4b47;
 		font-weight: 400;
 		line-height: math.div(18, 16);
-		@include adaptiveValue("font-size", 16, 14);
+		@include AV("font-size", 16, 14);
 		span {
 			font-weight: 700;
 		}
 		a {
-			color: $blue;
+			// color: $blue;
 		}
+	}
+	// .title__tel
+	&__tel,
+	&__mail {
 	}
 }
 //<title>=================================
@@ -176,7 +188,7 @@
 		@extend %text-i_14_500;
 		// min-width: 200px;
 		flex: 0 0 50%;
-		@include adaptiveValue("column-gap", 12, 5);
+		@include AV("column-gap", 12, 5);
 		@media (max-width: 1250px) {
 		}
 		@media (max-width: $tablet) {
@@ -237,8 +249,8 @@
 	&__mail,
 	&__label,
 	&__sublabel {
-		@include adaptiveValue("padding-top", 5, 2.5);
-		@include adaptiveValue("padding-bottom", 5, 2.5);
+		@include AV("padding-top", 5, 2.5);
+		@include AV("padding-bottom", 5, 2.5);
 	}
 }
 
@@ -282,3 +294,59 @@
 	}
 }
 //<Стили для кнопок>=================================
+
+//<Блок Bricks>>=================================
+.bricks {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@include AV("padding-top", 30, 20);
+	@include AV("padding-bottom", 30, 20);
+	& > :not(:last-child) {
+		@include AV("margin-bottom", 40, 30);
+	}
+	// .bricks__title
+	&__title {
+		text-align: center;
+		// padding: rems()
+	}
+	// .bricks__body
+	&__body {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rems(10);
+		& > :nth-child(even) {
+			margin-left: 20%;
+		}
+		& > :nth-child(odd) {
+			margin-left: 10%;
+		}
+		:first-child {
+			margin-left: 0;
+		}
+	}
+	// .bricks__item
+	&__item {
+		min-width: 71%;
+		display: flex;
+		align-items: center;
+		gap: rems(10);
+		background-color: $white;
+		padding: rems(10);
+		border-radius: rems(10);
+		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
+	}
+	// .bricks__icon
+	&__icon {
+	}
+	// .bricks__text
+	&__text {
+		span {
+			font-weight: 600;
+		}
+	}
+}
+//<Блок Brick>>=================================

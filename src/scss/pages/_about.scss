@@ -6,8 +6,8 @@
 	// display: none;
 	// .about__container
 	&__container {
-		@include adaptiveValue("margin-top", 165, 100);
-		@include adaptiveValue("margin-bottom", 165, 100);
+		@include AV("margin-top", 165, 100);
+		@include AV("margin-bottom", 165, 100);
 	}
 	// .about__contant
 	&__contant {
@@ -27,7 +27,7 @@
 }
 @media (max-width: $tablet) {
 	.about__contant {
-		@include adaptiveValue("margin-bottom", 40, 20);
+		@include AV("margin-bottom", 40, 20);
 	}
 }
 
@@ -41,15 +41,15 @@
 
 @media (min-width: $tablet) {
 	.media-about__image-ibg {
-		@include adaptiveValue("margin-left", -150, -50);
+		@include AV("margin-left", -150, -50);
 	}
 }
 .content-about {
 	// .content-about__logo
 	&__logo {
 		width: rems(234);
-		@include adaptiveValue("margin-top", 16, 10);
-		@include adaptiveValue("margin-bottom", 35, 20);
+		@include AV("margin-top", 16, 10);
+		@include AV("margin-bottom", 35, 20);
 		img {
 			max-width: 100%;
 		}
@@ -59,8 +59,8 @@
 		position: relative;
 		z-index: 2;
 		@extend %text-l_48_54_600;
-		@include adaptiveValue("margin-right", -150, 15);
-		@include adaptiveValue("margin-bottom", 30, 15);
+		@include AV("margin-right", -150, 15);
+		@include AV("margin-bottom", 30, 15);
 	}
 	// .content-about__text
 	&__text {

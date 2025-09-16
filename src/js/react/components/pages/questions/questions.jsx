@@ -7,40 +7,41 @@ const Question = () => {
 				<div className="questions__container">
 					<div className="questions__wrapper">
 						<div className="questions__border">
-							<div className="questions__content question">
-								<div className="question__title title">
+							<div className="questions__content bricks">
+								<div className="bricks__title title">
 									<h1 className="title__title">Остались вопросы?</h1>
 								</div>
-								<div className="question__body">
-									<div className="question__item">
-										<div className="question__icon">
+								<div className="bricks__body">
+									<div className="bricks__item">
+										<div className="bricks__icon">
 											<img src="@img/icons/good.svg" alt="Icon good" />
 										</div>
-										<div className="question__text"><span>Поможем</span> определиться с выбором
+										<div className="bricks__text"><span>Поможем</span> определиться с выбором
 										</div>
 									</div>
-									<div className="question__item">
-										<div className="question__icon">
+									<div className="bricks__item">
+										<div className="bricks__icon">
 											<img src="@img/icons/good.svg" alt="Icon good" />
 										</div>
-										<div className="question__text"><span>Подскажем</span> где поближе купить
+										<div className="bricks__text"><span>Подскажем</span> где поближе купить
 										</div>
 									</div>
-									<div className="question__item">
-										<div className="question__icon">
+									<div className="bricks__item">
+										<div className="bricks__icon">
 											<img src="@img/icons/good.svg" alt="Icon good" />
 										</div>
-										<div className="question__text"><span>Подберём</span> надёжного продавца
+										<div className="bricks__text"><span>Подберём</span> надёжного продавца
 										</div>
 									</div>
-									<div className="question__item">
-										<div className="question__icon">
+									<div className="bricks__item">
+										<div className="bricks__icon">
 											<img src="@img/icons/good.svg" alt="Icon good" />
 										</div>
-										<div className="question__text"><span>Дадим ответы</span> на все вопросы
+										<div className="bricks__text"><span>Дадим ответы</span> на все вопросы
 										</div>
 									</div>
 								</div>
+								<button type="button" className="bricks__button button">Перезвонить вам?</button>
 							</div>
 							<div className="questions__image-ibg">
 								<img src="@img/main/question/questions.png" alt="Questions" />

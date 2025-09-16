@@ -10,7 +10,7 @@
 	&__container {
 		@media (min-width: $tablet) {
 			display: flex;
-			@include adaptiveValue("column-gap", 50, 10);
+			@include AV("column-gap", 50, 10);
 		}
 	}
 	// .withuse__contant

@@ -39,7 +39,7 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 90, 10);
+		@include AV("column-gap", 90, 10);
 		@media (max-width: $mobile) {
 		}
 	}

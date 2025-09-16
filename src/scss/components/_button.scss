@@ -14,13 +14,19 @@
 	font-weight: 600;
 	white-space: nowrap;
 	box-shadow: 0 4px 22.5px 0 rgba(169, 165, 165, 0.1);
-	@include adaptiveValue("padding-top", 15, 10);
-	@include adaptiveValue("padding-bottom", 15, 10);
-	@include adaptiveValue("padding-left", 26, 20);
-	@include adaptiveValue("padding-right", 26, 20);
-	@include adaptiveValue("font-size", 16, 14);
+	min-width: rems(260);
+	margin: 0 auto;
+	font-size: rems(16);
+	@include AV("padding-top", 20, 10);
+	@include AV("padding-bottom", 20, 10);
+	@include AV("padding-left", 50, 20);
+	@include AV("padding-right", 50, 20);
+	// @include AV("font-size", 16, 14);
+	@media (min-width: $mobileBig) {
+		font-weight: 700;
+	}
 	&-ico {
-		@include adaptiveValue("padding", 15, 10);
+		@include AV("padding", 15, 10);
 		&::before {
 			content: "";
 			// position: absolute;

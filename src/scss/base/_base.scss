@@ -15,8 +15,8 @@ textarea {
 // <BODY>=================================
 body {
 	background: $mainBgCol;
-	color: $mainCol;
-	// @include adaptiveValue("font-size", 25, 18);
+	color: $mainTextCol;
+	// @include AV("font-size", 25, 18);
 	font-weight: 500;
 	font-family: $fontFamily;
 	font-size: rems($fontSize);

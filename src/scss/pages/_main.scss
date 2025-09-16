@@ -50,7 +50,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		@include adaptiveValue("row-gap", 40, 20);
+		@include AV("row-gap", 40, 20);
 	}
 	// .content__subtitle
 	&__subtitle {
@@ -62,9 +62,9 @@
 		border-radius: rems(8);
 		box-shadow: 0 4px 30.4px 0 rgba(169, 165, 165, 0.25);
 		margin: 0 0 rems(5) 0;
-		// @include adaptiveValue("margin-top", 5, 165);
-		// @include adaptiveValue("margin-bottom", 5, 165);
-		@include adaptiveValue("padding", 15, 5);
+		// @include AV("margin-top", 5, 165);
+		// @include AV("margin-bottom", 5, 165);
+		@include AV("padding", 15, 5);
 		span {
 			font-weight: 700;
 		}
@@ -75,7 +75,7 @@
 		position: relative;
 		display: flex;
 		justify-content: flex-end;
-		@include adaptiveValue("margin-bottom", 40, 28);
+		@include AV("margin-bottom", 40, 28);
 		@media (min-width: $mobileSmall) {
 		}
 		// height: rems(100);
@@ -99,11 +99,11 @@
 		// align-self: flex-start;
 		// flex: 1 1auto;
 
-		@include adaptiveValue("flex-basis", 389, 278);
+		@include AV("flex-basis", 389, 278);
 	}
 	.content__abs {
 		position: relative;
-		@include adaptiveValue("min-height", 254, 215);
+		@include AV("min-height", 254, 215);
 	}
 	// .content__slider
 	&__slider {
@@ -114,10 +114,10 @@
 		top: 0;
 		left: 0;
 		// position: relative;
-		// @include adaptiveValue("margin-bottom", 5, 165);
-		// @include adaptiveValue("padding", 15, 5);
-		// @include adaptiveValue("max-width", 389, 278);
-		// @include adaptiveValue("height", 200, 215);
+		// @include AV("margin-bottom", 5, 165);
+		// @include AV("padding", 15, 5);
+		// @include AV("max-width", 389, 278);
+		// @include AV("height", 200, 215);
 		@media (min-width: $mobileSmall) {
 			// align-self: flex-end;
 		}
@@ -210,13 +210,13 @@
 	transform: scale(0.5) translateY(-100%);
 	// margin-bottom: -200px;
 	// height: rems(250);
-	// @include adaptiveValue("max-width", 389, 278);
-	// @include adaptiveValue("min-height", 150, 200);
-	// @include adaptiveValue("min-height", 284, 215);
-	@include adaptiveValue("padding-bottom", 20, 14);
-	@include adaptiveValue("padding-top", 20, 14);
-	@include adaptiveValue("padding-left", 20, 14);
-	@include adaptiveValue("padding-right", 20, 14);
+	// @include AV("max-width", 389, 278);
+	// @include AV("min-height", 150, 200);
+	// @include AV("min-height", 284, 215);
+	@include AV("padding-bottom", 20, 14);
+	@include AV("padding-top", 20, 14);
+	@include AV("padding-left", 20, 14);
+	@include AV("padding-right", 20, 14);
 	@media (max-width: $mobileSmall) {
 		min-width: 100%;
 	}

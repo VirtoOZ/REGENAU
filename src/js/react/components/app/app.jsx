@@ -1,6 +1,6 @@
 import {
 	Main, About, Advantages, HelpForm, Catalog,
-	Question, Consulting, Portfolio, Withuse, Blog
+	Questions, Consulting, Portfolio, Withuse, Blog, ContactUs
 } from '../pages/index.js';
 import Header from '../header/header.jsx';
 import Footer from '../footer/footer.jsx';
@@ -17,11 +17,12 @@ const App = () => {
 				<Route path="/Advantages" element={<Advantages />} />
 				<Route path="/HelpForm" element={<HelpForm />} />
 				<Route path="/Catalog" element={<Catalog />} />
-				<Route path="/Question" element={<Question />} />
+				<Route path="/Questions" element={<Questions />} />
 				<Route path="/Consulting" element={<Consulting />} />
 				<Route path="/Portfolio" element={<Portfolio />} />
 				<Route path="/Withuse" element={<Withuse />} />
 				<Route path="/Blog" element={<Blog />} />
+				<Route path="/ContactUs" element={<ContactUs />} />
 			</Routes>
 		</>
 	)

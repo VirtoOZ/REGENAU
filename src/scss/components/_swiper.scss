@@ -47,8 +47,8 @@
 // 	display: none !important;
 // }
 .swiper-slide {
-	// @include adaptiveValue("margin-left", 50, 20);
-	// @include adaptiveValue("margin-right", 50, 20);
+	// @include AV("margin-left", 50, 20);
+	// @include AV("margin-right", 50, 20);
 	flex-shrink: 0;
 	position: relative;
 	transition-property: transform;

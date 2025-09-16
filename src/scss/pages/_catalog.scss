@@ -49,7 +49,7 @@
 	}
 }
 .filter-catalog {
-	@include adaptiveValue("font-size", 16, 10);
+	@include AV("font-size", 16, 10);
 	& > :not(:last-child) {
 		margin-bottom: rems(10);
 	}
@@ -58,7 +58,7 @@
 		overflow: hidden;
 		@media (max-width: $tablet) {
 			display: flex;
-			@include adaptiveValue("gap", 50, 5, 0, 992, 320);
+			@include AV("gap", 50, 5, 0, 992, 320);
 		}
 		@media (min-width: $tablet) {
 			border: rems(1) solid #cfcfcf;
@@ -93,8 +93,8 @@
 	}
 	// .filter-catalog__body
 	&__body {
-		@include adaptiveValue("margin-top", 10, 30);
-		@include adaptiveValue("margin-bottom", 10, 30);
+		@include AV("margin-top", 10, 30);
+		@include AV("margin-bottom", 10, 30);
 		& > :not(:last-child) {
 			margin-bottom: rems(15);
 		}
@@ -118,8 +118,8 @@
 		border-radius: rems(8);
 		padding-left: rems(10);
 		padding-right: rems(10);
-		@include adaptiveValue("padding-top", 16, 18);
-		@include adaptiveValue("padding-bottom", 16, 18);
+		@include AV("padding-top", 16, 18);
+		@include AV("padding-bottom", 16, 18);
 	}
 }
 .filter-item {
@@ -196,8 +196,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: rems(6);
-		@include adaptiveValue("padding-left", 20, 0);
-		@include adaptiveValue("padding-right", 20, 0);
+		@include AV("padding-left", 20, 0);
+		@include AV("padding-right", 20, 0);
 		span {
 			padding: 0 rems(10);
 		}
