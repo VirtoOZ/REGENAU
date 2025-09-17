@@ -17,8 +17,10 @@
 	min-width: rems(260);
 	margin: 0 auto;
 	font-size: rems(16);
-	@include AV("padding-top", 20, 10);
-	@include AV("padding-bottom", 20, 10);
+	padding-top: rems(20);
+	padding-bottom: rems(20);
+	// @include AV("padding-top", 20, 10);
+	// @include AV("padding-bottom", 20, 10);
 	@include AV("padding-left", 50, 20);
 	@include AV("padding-right", 50, 20);
 	// @include AV("font-size", 16, 14);

@@ -307,8 +307,10 @@
 	}
 	// .bricks__title
 	&__title {
+		position: relative;
+		z-index: 2;
 		text-align: center;
-		// padding: rems()
+		text-shadow: 0 0 5px #fff;
 	}
 	// .bricks__body
 	&__body {

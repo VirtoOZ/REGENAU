@@ -1,22 +1,15 @@
-// @use "../../../../../scss/modules/brake-points" as point;
-// @use "../../../../../scss/variables" as var;
-// @use "../../../../../scss/modules/mixins" as mix;
-// @use "../../../../../scss/fonts/fonts";
-// @use "../../../../../scss/common";
-// @use "sass:math";
 @use "../abstracts" as *;
 
 .advantages {
 	padding: 5vh 0;
 	position: relative;
+	align-content: center;
 	min-height: 100vh;
-	// min-width: 0;
 	background-color: #f8f8f6;
 	// .advantages__title
 	&__title {
 		height: 10vh;
-		// margin: rems(50) 0 rems(20) 0;
-		// @include AV("margin-top", 50, 50);
+		text-align: center;
 	}
 	// .advantages__text
 	&__text {
@@ -33,7 +26,7 @@
 	}
 	// .advantages__slider
 	&__slider {
-		height: 80vh;
+		// height: 80vh;
 		// overflow: hidden;
 		@include AV("padding-right", 50, 20);
 		@include AV("padding-left", 50, 20);
@@ -160,7 +153,7 @@
 	&__image {
 		position: relative;
 		flex: 0 1 50%;
-		padding-bottom: 53%;
+		padding-bottom: 24%;
 		@media (max-width: $mobileSmall) {
 			padding-bottom: 100%;
 		}
@@ -173,7 +166,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
+			object-fit: cover;
 			@media (max-width: $mobileBig) {
 			}
 		}

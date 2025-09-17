@@ -12,7 +12,7 @@ const ContactUs = () => {
 						</div>
 						<div className="contactuse__callback bricks">
 							<div className="bricks__title title">
-								<h1 className="title__title">Техническая консультация</h1>
+								<h1 className="title__title">Вам перезвонит наш специалист</h1>
 							</div>
 							<div className="bricks__body">
 								<div className="bricks__item">

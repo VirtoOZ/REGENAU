@@ -5,7 +5,7 @@ const Advantages = () => {
 	return (
 		<>
 			<section className="advantages">
-				<div className="advantages__title title">
+				<div className="advantages__title title-line">
 					<h1 className="advantages__text title__title">Преимущества</h1>
 				</div>
 				<div className="advantages__control control">
