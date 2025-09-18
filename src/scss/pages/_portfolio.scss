@@ -81,9 +81,10 @@
 	}
 	// .portfolio__button-gift
 	&__button-gift {
+		min-width: rems(56);
 		&::before {
 			content: "";
-			background: url("@img/icons/gift.svg") 0 / cover no-repeat;
+			background: url("@img/icons/gift.svg") center / cover no-repeat;
 		}
 	}
 	// .portfolio__slider

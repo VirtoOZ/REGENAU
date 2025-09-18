@@ -19,6 +19,7 @@
 	font-size: rems(16);
 	padding-top: rems(20);
 	padding-bottom: rems(20);
+	transition: opacity 0.3s ease 0s;
 	// @include AV("padding-top", 20, 10);
 	// @include AV("padding-bottom", 20, 10);
 	@include AV("padding-left", 50, 20);
@@ -40,15 +41,8 @@
 			// z-index: 3;
 		}
 	}
-	&-telephone {
-		::before {
-			background: url("@img/icons/tel.svg") 0 / cover no-repeat;
-		}
-	}
-	&-gift {
-		::before {
-			background: url("@img/icons/gift.svg") 0 / cover no-repeat;
-		}
+	&-green {
+		background-color: $green;
 	}
 	@media (max-width: $tablet) {
 		&-telephone {
@@ -69,6 +63,11 @@
 			height: rems(33);
 			background-color: $blue;
 			border-radius: rems(8);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.6;
 		}
 	}
 }

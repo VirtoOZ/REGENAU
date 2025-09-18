@@ -1,0 +1,92 @@
+@use "../abstracts" as *;
+
+.portfolio-popup-done {
+	background-color: rgba(51, 51, 51, 0.75);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .portfolio-popup-done__wrapper
+	&__wrapper {
+	}
+	// .portfolio-popup-done__body
+	&__body {
+		box-shadow: 0 4px 11.3px 0 rgba(190, 190, 190, 0.45);
+		min-width: 33%;
+		background-color: $white;
+		border-radius: rems(20);
+		font-size: rems(16);
+		font-weight: 500;
+		line-height: 1.31;
+		position: relative;
+		overflow: hidden;
+		@include AV("padding-top", 60, 30);
+		@include AV("padding-left", 60, 10);
+		@include AV("padding-right", 60, 10);
+		@include AV("padding-bottom", 60, 10);
+		& > :not(:last-child) {
+			margin-bottom: rems(40);
+		}
+		&:after,
+		&:before {
+			content: "";
+			background: url("@img/main/advantage/item-3/adventage-item-3.png") center / cover no-repeat;
+			position: absolute;
+			width: 50%;
+			padding-bottom: 50%;
+		}
+		&:before {
+			transform: translate(35%, 77%);
+			right: 0%;
+			@include AV("bottom", 130, 0, 0, 1680, 992);
+		}
+		&:after {
+			transform: translate(-55%, -15%);
+			left: 0;
+			top: 0;
+		}
+	}
+	// .portfolio-popup-done__close
+	&__close {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		width: rems(10);
+		height: rems(10);
+		padding: rems(28);
+		transition: transform 0.5s ease 0s;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			width: 50%;
+			height: rems(1.5);
+			background-color: $darkCol;
+			top: 50%;
+			left: 25%;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+	// .portfolio-popup-done__title
+	&__title {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+	// .portfolio-popup-done__button
+	&__button {
+	}
+}
