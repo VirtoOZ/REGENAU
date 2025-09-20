@@ -123,6 +123,7 @@
 //<title>=================================
 .title {
 	// text-align: center;
+
 	// .title-line
 	&-line {
 		@include AV("margin-bottom", 40, 10);
@@ -149,6 +150,7 @@
 		font-family: Lato;
 		text-transform: uppercase;
 		@include AV("font-size", 48, 32);
+		@include AV("margin-bottom", 40, 10);
 		@media (min-width: $mobileBig) {
 			// text-align: center;
 		}

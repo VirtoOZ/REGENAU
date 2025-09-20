@@ -8,27 +8,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 0 rems(10);
 	// .portfolio-popup-done__wrapper
 	&__wrapper {
-	}
-	// .portfolio-popup-done__body
-	&__body {
+		min-width: 47%;
 		box-shadow: 0 4px 11.3px 0 rgba(190, 190, 190, 0.45);
-		min-width: 33%;
 		background-color: $white;
 		border-radius: rems(20);
-		font-size: rems(16);
-		font-weight: 500;
-		line-height: 1.31;
 		position: relative;
 		overflow: hidden;
-		@include AV("padding-top", 60, 30);
-		@include AV("padding-left", 60, 10);
-		@include AV("padding-right", 60, 10);
-		@include AV("padding-bottom", 60, 10);
-		& > :not(:last-child) {
-			margin-bottom: rems(40);
-		}
 		&:after,
 		&:before {
 			content: "";
@@ -38,9 +26,10 @@
 			padding-bottom: 50%;
 		}
 		&:before {
-			transform: translate(35%, 77%);
+			transform: translate(35%, 38%);
 			right: 0%;
-			@include AV("bottom", 130, 0, 0, 1680, 992);
+			bottom: 0;
+			// @include AV("bottom", 130, 0, 0, 1680, 992);
 		}
 		&:after {
 			transform: translate(-55%, -15%);
@@ -48,10 +37,29 @@
 			top: 0;
 		}
 	}
+	// .portfolio-popup-done__body
+	&__body {
+		font-size: rems(16);
+		font-weight: 500;
+		line-height: 1.31;
+		@include AV("padding-top", 80, 30);
+		@include AV("padding-bottom", 80, 30);
+		& > :not(:last-child) {
+			margin-bottom: rems(40);
+		}
+		@media (max-width: $mobile) {
+			@include AV("padding-left", 80, 10);
+			@include AV("padding-right", 80, 10);
+		}
+		@media (min-width: $mobile) {
+			max-width: 52%;
+			margin: 0 auto;
+		}
+	}
 	// .portfolio-popup-done__close
 	&__close {
 		position: absolute;
-		z-index: 2;
+		z-index: 3;
 		top: 0;
 		right: 0;
 		width: rems(10);
